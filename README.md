@@ -23,29 +23,7 @@ LOL
 ⡯⣳⠯⠚⢊⠡⡂⢂⠨⠊⠔⡑⠬⡸⣘⢬⢪⣪⡺⡼⣕⢯⢞⢕⢝⠎⢻⢼⣀⠀
 ⠁⡂⠔⡁⡢⠣⢀⠢⠀⠅⠱⡐⡱⡘⡔⡕⡕⣲⡹⣎⡮⡏⡑⢜⢼⡱⢩⣗⣯⣟
 ⢀⢂⢑⠀⡂⡃⠅⠊⢄⢑⠠⠑⢕⢕⢝⢮⢺⢕⢟⢮⢊⢢⢱⢄⠃⣇⣞⢞⣞⢾
-⢀⠢⡑⡀⢂⢊⠠⠁⡂⡐⠀⠅⡈⠪⠪⠪⠣⠫⠑⡁⢔⠕⣜⣜⢦⡰⡎⡯⡾⡽
 
-feijsaf
-asifeiisdd
-fsiejgds
-sfasijdif
-fsaiijdife
-penis
-asnfiasjinvd
-sdifjsdgisdnvi
-sidjfijfesgijfds
-sdgidinigd PENISNI PENIS PNIESPNIE PNIESPNIE PNEI
-wedewdwed
-wdwedwd
-wdewdw
-dwedwd
-ddw
-dwd
 
- test
-dfada
- sada
-????????????
-
-Bruh
+KahShen
 
