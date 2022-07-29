@@ -24,12 +24,6 @@ LOL
 ⠁⡂⠔⡁⡢⠣⢀⠢⠀⠅⠱⡐⡱⡘⡔⡕⡕⣲⡹⣎⡮⡏⡑⢜⢼⡱⢩⣗⣯⣟
 ⢀⢂⢑⠀⡂⡃⠅⠊⢄⢑⠠⠑⢕⢕⢝⢮⢺⢕⢟⢮⢊⢢⢱⢄⠃⣇⣞⢞⣞⢾
 ⢀⠢⡑⡀⢂⢊⠠⠁⡂⡐⠀⠅⡈⠪⠪⠪⠣⠫⠑⡁⢔⠕⣜⣜⢦⡰⡎⡯⡾⡽
-<<<<<<< HEAD
-
- test
-dfada
- sada
-=======
 feijsaf
 asifeiisdd
 fsiejgds
@@ -48,7 +42,10 @@ wdewdw
 dwedwd
 ddw
 dwd
->>>>>>> 9d69e55ae6f61e532df646f5c4333faab5565e49
+
+ test
+dfada
+ sada
 ????????????
 
 Bruh
