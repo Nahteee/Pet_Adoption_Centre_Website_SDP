@@ -24,13 +24,32 @@ LOL
 ⠁⡂⠔⡁⡢⠣⢀⠢⠀⠅⠱⡐⡱⡘⡔⡕⡕⣲⡹⣎⡮⡏⡑⢜⢼⡱⢩⣗⣯⣟
 ⢀⢂⢑⠀⡂⡃⠅⠊⢄⢑⠠⠑⢕⢕⢝⢮⢺⢕⢟⢮⢊⢢⢱⢄⠃⣇⣞⢞⣞⢾
 ⢀⠢⡑⡀⢂⢊⠠⠁⡂⡐⠀⠅⡈⠪⠪⠪⠣⠫⠑⡁⢔⠕⣜⣜⢦⡰⡎⡯⡾⡽
+<<<<<<< HEAD
+
+ test
+dfada
+ sada
+=======
 feijsaf
 asifeiisdd
 fsiejgds
 sfasijdif
 fsaiijdife
 penis
+<<<<<<< HEAD
 asnfiasjinvd
 sdifjsdgisdnvi
 sidjfijfesgijfds
 sdgidinigd PENISNI PENIS PNIESPNIE PNIESPNIE PNEI
+=======
+wedewdwed
+wdwedwd
+wdewdw
+dwedwd
+ddw
+dwd
+>>>>>>> 9d69e55ae6f61e532df646f5c4333faab5565e49
+????????????
+
+Bruh
+>>>>>>> f07f7eb5f25017680e8fe2599f9fa84716db05e4
