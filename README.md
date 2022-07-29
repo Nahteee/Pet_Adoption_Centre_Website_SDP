@@ -2,6 +2,7 @@
 Pet Adoption Centre Website
 hI ETHAN
 xd
+<<<<<<< HEAD
 LOL
 
 ⣿⡟⢰⡌⠿⢿⣿⡾⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
@@ -22,3 +23,5 @@ LOL
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⡀⠛⠿⣿⣫⣾
 
 hii
+=======
+>>>>>>> parent of 107402d (Update README.md)
