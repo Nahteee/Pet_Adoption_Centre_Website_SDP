@@ -24,6 +24,7 @@ LOL
 ⠁⡂⠔⡁⡢⠣⢀⠢⠀⠅⠱⡐⡱⡘⡔⡕⡕⣲⡹⣎⡮⡏⡑⢜⢼⡱⢩⣗⣯⣟
 ⢀⢂⢑⠀⡂⡃⠅⠊⢄⢑⠠⠑⢕⢕⢝⢮⢺⢕⢟⢮⢊⢢⢱⢄⠃⣇⣞⢞⣞⢾
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ⢀⠢⡑⡀⢂⢊⠠⠁⡂⡐⠀⠅⡈⠪⠪⠪⠣⠫⠑⡁⢔⠕⣜⣜⢦⡰⡎⡯⡾⡽
@@ -49,3 +50,29 @@ addadadadadaa
 
 xddddddd-Man Yin
 >>>>>>> parent of cad8082 (ETHAN)
+=======
+⢀⠢⡑⡀⢂⢊⠠⠁⡂⡐⠀⠅⡈⠪⠪⠪⠣⠫⠑⡁⢔⠕⣜⣜⢦⡰⡎⡯⡾⡽
+feijsaf
+asifeiisdd
+fsiejgds
+sfasijdif
+fsaiijdife
+penis
+<<<<<<< HEAD
+asnfiasjinvd
+sdifjsdgisdnvi
+sidjfijfesgijfds
+sdgidinigd PENISNI PENIS PNIESPNIE PNIESPNIE PNEI
+=======
+wedewdwed
+wdwedwd
+wdewdw
+dwedwd
+ddw
+dwd
+
+ test
+dfada
+ sada
+????????????
+>>>>>>> a16bcda971954779e11e0764066720944ddc6937
