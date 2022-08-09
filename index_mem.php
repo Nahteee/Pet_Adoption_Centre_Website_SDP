@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['username']))  //redirects to login.html is session is not set
-    header("Location: login.html");
+if (!isset($_SESSION['username']))  //do not allow non members to access this page
+    header("Location: login.html"); //redirects to login.html is session is not set
 ?>
 <!DOCTYPE html>
 <html>
