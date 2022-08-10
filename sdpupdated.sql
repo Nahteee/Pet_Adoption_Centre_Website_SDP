@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 09, 2022 at 03:21 PM
+-- Generation Time: Aug 10, 2022 at 03:52 PM
 -- Server version: 8.0.27
 -- PHP Version: 7.4.26
 
@@ -157,11 +157,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(32) NOT NULL,
   `password` varchar(50) NOT NULL,
   `role` tinytext NOT NULL,
-  `IC` decimal(10,0) NOT NULL,
+  `IC` text NOT NULL,
   `email` varchar(50) NOT NULL,
   `first_name` varchar(32) NOT NULL,
   `last_name` varchar(100) NOT NULL,
-  `phone` decimal(10,0) NOT NULL,
+  `phone` text NOT NULL,
   `income` int NOT NULL,
   `address` text NOT NULL,
   PRIMARY KEY (`ID`),
@@ -173,9 +173,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`ID`, `username`, `password`, `role`, `IC`, `email`, `first_name`, `last_name`, `phone`, `income`, `address`) VALUES
-(0, 'john', '912ec803b2ce49e4a541068d495ab570', 'admin', '1234341234', 'john@gmail.com', 'john', 'le deil stewardson', '123453893', 5000, '308 Negra Arroyo Lane'),
-(1, 'jason', 'jasonpass', 'member', '349876454', 'jasonkkddg@gmail.com', 'jason', 'kim jom seol', '12489634', 4509, 'Komplek Pasar Keramat D4 Jln Keramat Dalam Kampung Dato Keramat Mala'),
-(2, 'nikenick', 'aaaa', 'owner', '349876454', 'anroneos@ahlksdj.com', 'nick', 'samson', '123453893', 79328, 'djdjdfj dkjafaljsdfld, sfaokflfa,c aldf,f alffafla, sdfs84, 74494');
+(0, 'nikenick', 'aaaa', 'owner', '349876454', 'anroneos@ahlksdj.com', 'nick', 'samson', '123453893', 79328, 'djdjdfj dkjafaljsdfld, sfaokflfa,c aldf,f alffafla, sdfs84, 74494'),
+(1, 'supertsumu', 'tsumupass', 'member', '040303141529', 'damienshanming@gmail.com', 'Damien', 'Wong', '0123330102', 1000000, '2,Jalan Kenyalang 11/13, Bayu Damansara');
 
 --
 -- Constraints for dumped tables
