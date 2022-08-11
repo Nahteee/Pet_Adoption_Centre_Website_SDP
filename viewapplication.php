@@ -1,0 +1,69 @@
+<?php 
+
+include("conn.php");
+$result = mysqli_query($con, "SELECT * FROM centre_pages");
+?>
+
+<html>
+<body>
+	<title>View applications as Admin</title>
+	<h2>Adoption centre page applications</h2>
+	<br>
+
+	<table>
+		<tr>
+			<td>User ID</td>
+			<td>Adoption Centre Name</td>
+			<td>SSM</td>
+			<td>Address</td>
+			<td>Phone Number</td>
+			<td>Email</td>
+			<td>Description</td>
+			<td>Verify</td>
+			<td>Delete Application</td>
+		</tr>
+		<?php
+		while($row = mysqli_fetch_array($result)) {
+			echo "<tr>";
+			echo "<td>";
+			echo $row['user_ID'];
+			echo "</td>";
+
+			echo "<td>";
+			echo $row['centre_name'];
+			echo "</td>";
+
+			echo "<td>";
+			echo $row['ssm'];
+			echo "</td>";
+
+			echo "<td>";
+			echo $row['location'];
+			echo "</td>";
+
+			echo "<td>";
+			echo $row['phone'];
+			echo "</td>";
+
+			echo "<td>";
+			echo $row['email'];
+			echo "</td>";
+			
+			echo "<td>";
+			echo "Placeholder for description"; //for some reason, trying to show the description shows me an error.
+			//it might be because description is a text data type. Have to test that out later.
+			echo "</td>";
+			
+			echo "<td>";
+			echo "Placeholder for verify button";
+			echo "</td>";
+			
+			echo "<td>";
+			echo "Placeholder for delete button";
+			echo "</td>";
+		}
+		mysqli_close($con);
+		?>
+	</table>
+</body>
+</html>
