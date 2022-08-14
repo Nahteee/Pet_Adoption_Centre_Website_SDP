@@ -15,15 +15,18 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         if  ($row["username"] == $inputuser){
             if ($row["password"] == $inputpass){
+                $_SESSION["ID"] = $row["ID"];
                 $_SESSION["firstname"] = $row["first_name"];
                 $_SESSION["lastname"] = $row["last_name"];
                 $_SESSION["phone"] = $row["phone"];
                 $_SESSION["IC"] = $row["IC"];
                 $_SESSION["email"] = $row["email"];
+                $_SESSION["address"] = $row["address"];
+                $_SESSION["income"] = $row["income"];
                 $_SESSION["username"] = $row["username"];
                 $_SESSION["userRole"] = $row["role"];
                 $success = 1;
-                echo '<script type="text/JavaScript"> window.location.href = "/sdp/index_mem.php"; </script>'; 
+                echo '<script type="text/JavaScript"> window.location.href = "index_mem.php"; </script>'; 
                 #break 1;
             }
 
@@ -34,6 +37,6 @@ if ($result->num_rows > 0) {
 }
 
 if ($success == 0){
-    echo '<script type="text/JavaScript"> alert("Username or password incorrect."); window.location.href = "/sdp/login.html"; </script>';
+    echo '<script type="text/JavaScript"> alert("Username or password incorrect."); window.location.href = "login.html"; </script>';
 }
 ?>
