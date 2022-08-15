@@ -9,7 +9,11 @@
 	<h2>Adoption Centre Owner Homepage </h2>
 
 	<p>
-		<a href="">View your adoption centre pages</a>
+		<?php
+			echo "<a href=editpage.php?id=";
+			echo 3; //placeholder, change later
+			echo "Edit page</a>";
+		?>
 	</p>
 	<p>
 		<a href="centreform.html">Apply for an adoption centre page</a>

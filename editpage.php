@@ -1,16 +1,13 @@
 <?php include("conn.php");
 
 $id = intval($_GET['id']); 
-$result = mysqli_query($con,"SELECT * FROM centre_pages WHERE id=$id");
+$result = mysqli_query($con,"SELECT * FROM centre_pages WHERE id=3");
 while($row = mysqli_fetch_array($result))
 {
 ?>
 
-    <h2>Edit Page Details</h2>
-    <h4>Please enter any changes below: </h4>
-    <br>
-    <form action="updatecentre.php" method="post" enctype="multipart/form-data">
-    	<input type="hidden" name="id" value="<?php echo $row['ID'] ?>">
+<form action="updatecentre.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?php echo $row['ID'] ?>">
         <p>
         Centre name:
         <input type="text" name="centreName" required="required" value="<?php echo $row['centre_name'] ?>">
@@ -21,7 +18,7 @@ while($row = mysqli_fetch_array($result))
         </p>
         <p>
         Address:
-        <textarea type="text" name="address" required="required" value="<?php echo $row['location'] ?>"> </textarea>
+        <textarea type="text" name="address" required="required"> <?php echo $row['location'] ?> </textarea>
         </p>
         <p>
         Phone number:
@@ -33,7 +30,7 @@ while($row = mysqli_fetch_array($result))
         </p>
         <p>
         Centre description:
-        <textarea type="text" name="centreDesc" value="<?php echo $row['description'] ?>"> </textarea>
+        <textarea type="text" name="centreDesc"> <?php echo $row['description'] ?> </textarea>
         </p>
         <p>
         Centre photo:
@@ -42,8 +39,9 @@ while($row = mysqli_fetch_array($result))
         <input type="submit" value="Submit Application">
     </form>
 
+
 <?php
 }
 
 mysqli_close($con);
-?>
+?> 
