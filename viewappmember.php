@@ -1,12 +1,12 @@
 <?php 
 
 include("conn.php");
-$result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = 13") //replace 13 with user ID from session variable when logging in);
+$result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = 13"); //replace 13 with user ID from session variable when logging in
 ?>
 
 <html>
 <body>
-	<title>View applications as Adoption Centre Owner/title>
+	<title>View applications as Centre Owner</title>
 	<h2>Adoption centre page applications</h2>
 	<br>
 
@@ -18,7 +18,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = 13") //
 			<td>Phone Number</td>
 			<td>Email</td>
 			<td>Description</td>?
-			<td>Verified</td>
+			<td>Verify</td>
 		</tr>
 		<?php
 		while($row = mysqli_fetch_array($result)) {
