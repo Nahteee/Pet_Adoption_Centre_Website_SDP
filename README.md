@@ -16,6 +16,7 @@
 **CHANGES TO DATABASE**
 1. Added a new column in centre_pages called centre_pic with the mediumblob data type
 2. Probably need to add a new table called centre_images...
+3. Added auto increment for ID column
 
 **INTEGRATION NOTES**
 - User_ID values in some files have to be replaced with session values
