@@ -4,7 +4,7 @@
     <h2>Register as an Adoption Centre Owner</h2>
     <h4>Please enter your details below: </h4>
     <br>
-    <form action="centreinsert.php" method="post">
+    <form action="centreinsert.php" method="post" enctype="multipart/form-data">
         <p>
         userID(placeholder):
         <input type="text" name="userID" required="required">
@@ -32,6 +32,10 @@
         <p>
         Centre description:
         <textarea type="text" name="centreDesc"> </textarea>
+        </p>
+        <p>
+        Centre photo:
+        <input type="file" name="centrePic" id="centrePic">
         </p>
         <input type="submit" value="Submit Application">
     </form>

@@ -1,7 +1,7 @@
 <?php 
 
 include("conn.php");
-$result = mysqli_query($con, "SELECT * FROM centre_pages");
+$result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 0");
 ?>
 
 <html>
@@ -18,7 +18,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages");
 			<td>Address</td>
 			<td>Phone Number</td>
 			<td>Email</td>
-			<td>Description</td>
+			<td>Description</td>?
 			<td>Verify</td>
 			<td>Delete Application</td>
 		</tr>
@@ -50,17 +50,19 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages");
 			echo "</td>";
 			
 			echo "<td>";
-			echo "Placeholder for description"; //for some reason, trying to show the description shows me an error.
-			//it might be because description is a text data type. Have to test that out later.
+			echo $row['description'];
 			echo "</td>";
 			
 			echo "<td>";
-			echo "Placeholder for verify button";
-			echo "</td>";
+			echo "<a href=\"verifyapplication.php?id=";
+			echo $row['ID'];
+			echo "\">Verify</a></td>";
 			
-			echo "<td>";
-			echo "Placeholder for delete button";
-			echo "</td>";
+			echo "<td><a href=\"deleteapplication.php?id=";
+			echo $row['ID'];
+			echo "\" onClick=\"return confirm('Delete ";
+			echo $row['centre_name'];
+			echo " details?');\">Delete</a></td></tr>";
 		}
 		mysqli_close($con);
 		?>
