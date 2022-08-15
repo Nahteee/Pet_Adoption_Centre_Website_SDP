@@ -17,7 +17,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = 13"); /
 			<td>Address</td>
 			<td>Phone Number</td>
 			<td>Email</td>
-			<td>Description</td>?
+			<td>Description</td>
 			<td>Verify</td>
 		</tr>
 		<?php

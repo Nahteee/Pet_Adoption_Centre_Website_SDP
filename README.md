@@ -9,8 +9,8 @@
 5. View submitted applications and their status
 
 **TODO**
-1. View finished centre page as member //in progress
-2. Edit page details as centre owner
+1. View finished centre page as member 
+2. Edit page details as centre owner //in progress, unfinished
 3. Centre page comments
 
 **CHANGES TO DATABASE**
@@ -18,7 +18,8 @@
 2. Probably need to add a new table called centre_images...
 
 **INTEGRATION NOTES**
-- User_ID values in centreinsert.php, centreform.html and viewappmember.php have to be replaced with session values
+- User_ID values in some files have to be replaced with session values
+- Files affected: centreform.html, centreinsert.php, viewappmember.php, viewpages.php
 
 ⠀⠀⠀⡯⡯⡾⠝⠘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⠘⡮⣣⠪⠢⡑⡌
 ⠀⠀⠀⠟⠝⠈⠀⠀⠀⠡⠀⠠⢈⠠⢐⢠⢂⢔⣐⢄⡂⢔⠀⡁⢉⠸⢨⢑⠕⡌

@@ -18,7 +18,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 0");
 			<td>Address</td>
 			<td>Phone Number</td>
 			<td>Email</td>
-			<td>Description</td>?
+			<td>Description</td>
 			<td>Verify</td>
 			<td>Delete Application</td>
 		</tr>
