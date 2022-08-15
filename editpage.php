@@ -1,12 +1,12 @@
 <?php include("conn.php");
 
 $id = intval($_GET['id']); 
-$result = mysqli_query($con,"SELECT * FROM centre_pages WHERE id=3");
+$result = mysqli_query($con,"SELECT * FROM centre_pages WHERE id=6");
 while($row = mysqli_fetch_array($result))
 {
 ?>
 
-<form action="updatecentre.php" method="post" enctype="multipart/form-data">
+<form action="updatepage.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $row['ID'] ?>">
         <p>
         Centre name:

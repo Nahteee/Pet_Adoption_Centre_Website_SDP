@@ -10,9 +10,7 @@
 
 	<p>
 		<?php
-			echo "<a href=editpage.php?id=";
-			echo 3; //placeholder, change later
-			echo "Edit page</a>";
+			echo "<a href=editpage.php?id=6>Edit page</a>"; //change id to $id during integration
 		?>
 	</p>
 	<p>
