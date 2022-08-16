@@ -20,7 +20,7 @@
 3. Added auto increment for ID column
 
 **INTEGRATION NOTES**
-- User_ID values in some files have to be replaced with session values
+- User_ID values in some files have to be replaced with session values from login
 - Files affected: centreform.html, centreinsert.php, viewappmember.php, viewpages.php, centreowner.php, editpage.php
 
 **BUGS**
