@@ -2,7 +2,7 @@
 //PHP for deleting a page application (admin)
 
 
-include("conn.php");
+include("../conn.php");
 
 $id = intval($_GET['id']);
 

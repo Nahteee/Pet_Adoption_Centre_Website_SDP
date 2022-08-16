@@ -1,7 +1,7 @@
 <?php 
 //Page for admin to view page applications
 
-include("conn.php");
+include("../conn.php");
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 0");
 ?>
 
