@@ -1,4 +1,5 @@
 <?php 
+//PHP to send new applications
 
 include("conn.php");
 

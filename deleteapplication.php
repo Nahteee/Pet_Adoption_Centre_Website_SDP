@@ -1,4 +1,6 @@
 <?php 
+//PHP for deleting a page application (admin)
+
 
 include("conn.php");
 

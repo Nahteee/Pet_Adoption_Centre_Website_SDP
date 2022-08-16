@@ -1,55 +1,35 @@
-<?php 
-//Page for admin to view page applications
+<?php
+//Page for members to browse through adoption centres
 
 include("conn.php");
-$result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 0");
+
+$result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 ?>
 
 <html>
 <body>
-	<title>View applications as Admin</title>
-	<h2>Adoption centre page applications</h2>
+	<title>Browse Adoption Centre Pages</title>
+	<h2>All Adoption Centres</h2>
 	<br>
 
 	<table>
 		<tr>
-			<td>User ID</td>
-			<td>Adoption Centre Name</td>
-			<td>SSM</td>
+			<td>Centre Name</td>
 			<td>Address</td>
-			<td>Phone Number</td>
-			<td>Email</td>
 			<td>Description</td>
-			<td>Verify</td>
-			<td>Delete Application</td>
 		</tr>
+
 		<?php
 		while($row = mysqli_fetch_array($result)) {
 			echo "<tr>";
 			echo "<td>";
-			echo $row['user_ID'];
-			echo "</td>";
-
-			echo "<td>";
 			echo $row['centre_name'];
-			echo "</td>";
-
-			echo "<td>";
-			echo $row['ssm'];
 			echo "</td>";
 
 			echo "<td>";
 			echo $row['location'];
 			echo "</td>";
 
-			echo "<td>";
-			echo $row['phone'];
-			echo "</td>";
-
-			echo "<td>";
-			echo $row['email'];
-			echo "</td>";
-			
 			echo "<td>";
 			echo $row['description'];
 			echo "</td>";

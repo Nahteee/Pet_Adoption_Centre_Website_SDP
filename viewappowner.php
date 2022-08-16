@@ -1,4 +1,5 @@
 <?php 
+//Page for owners to view their sent applications
 
 include("conn.php");
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = 13"); //replace 13 with user ID from session variable when logging in
