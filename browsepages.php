@@ -21,10 +21,10 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 
 		<?php
 		while($row = mysqli_fetch_array($result)) {
-			echo "<tr>";
 			echo "<td>";
-			echo $row['centre_name'];
-			echo "</td>";
+			echo "<a href=\"viewpages.php?id=";
+			echo $row['ID'];
+			echo "\">" . $row['centre_name'] . "</a></td>";
 
 			echo "<td>";
 			echo $row['location'];
@@ -34,16 +34,6 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 			echo $row['description'];
 			echo "</td>";
 			
-			echo "<td>";
-			echo "<a href=\"verifyapplication.php?id=";
-			echo $row['ID'];
-			echo "\">Verify</a></td>";
-			
-			echo "<td><a href=\"deleteapplication.php?id=";
-			echo $row['ID'];
-			echo "\" onClick=\"return confirm('Delete ";
-			echo $row['centre_name'];
-			echo " details?');\">Delete</a></td></tr>";
 		}
 		mysqli_close($con);
 		?>

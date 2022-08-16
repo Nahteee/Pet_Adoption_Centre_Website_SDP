@@ -11,7 +11,7 @@
 
 	<p>
 		<?php
-			echo "<a href=viewpages.php?id=6>View owned pages</a>"; //change id to $id during integration
+			echo "<a href=viewownedpages.php?id=6>View owned pages</a>"; //change id to $id during integration
 		?>
 	</p>
 	<p>
