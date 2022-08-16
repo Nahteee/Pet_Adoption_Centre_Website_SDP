@@ -13,6 +13,7 @@
 
 **TODO**
 1. Page design 
+2. Fix and find integration bugs
 
 **CHANGES TO DATABASE**
 1. Added a new column in centre_pages called centre_pic with the mediumblob data type
@@ -25,6 +26,7 @@
 
 **BUGS**
 1. Submitting and editing applications - forms are vulnerable to an SQL injection(do NOT enter single quotation marks) page works otherwise.
+2. centreinsert.php - Error: Cannot add or update a child row: a foreign key constraint fails; Can't submit application cus of this, maybe will work once we use session values instead of entering userID manually
 
 ⠀⠀⠀⡯⡯⡾⠝⠘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⠘⡮⣣⠪⠢⡑⡌
 ⠀⠀⠀⠟⠝⠈⠀⠀⠀⠡⠀⠠⢈⠠⢐⢠⢂⢔⣐⢄⡂⢔⠀⡁⢉⠸⢨⢑⠕⡌
