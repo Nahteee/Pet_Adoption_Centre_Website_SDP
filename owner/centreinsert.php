@@ -1,7 +1,7 @@
 <?php 
 //PHP to send new applications
 
-include("conn.php");
+include("../conn.php");
 
 $image = $_FILES['centrePic']['name'];
 

@@ -1,7 +1,7 @@
 <?php 
 //PHP to edit centre details
 
-include("conn.php");
+include("../conn.php");
 
 $id = intval($_GET['id']); 
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE id=6");

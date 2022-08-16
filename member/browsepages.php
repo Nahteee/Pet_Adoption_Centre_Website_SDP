@@ -1,7 +1,7 @@
 <?php
 //Page for members to browse through adoption centres
 
-include("conn.php");
+include("../conn.php");
 
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 ?>

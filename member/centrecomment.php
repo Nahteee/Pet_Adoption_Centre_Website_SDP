@@ -1,7 +1,7 @@
 <?php 
 //PHP to send comments for centre pages
 
-include("conn.php");
+include("../conn.php");
 
 $sql="INSERT INTO centre_comments (user_ID, comment, centre_ID)
 

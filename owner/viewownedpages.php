@@ -1,7 +1,7 @@
 <?php
 //Page where owners can view all their owned pages
 
-include("conn.php");
+include("../conn.php");
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = 11 AND verified = 1"); //replace 11 with user ID from session variable when logging in
 ?>
 

@@ -1,7 +1,7 @@
 <?php
 //PHP to update table after editing centre details
 
-include("conn.php");
+include("../conn.php");
 
 $sql = "UPDATE centre_pages 
 

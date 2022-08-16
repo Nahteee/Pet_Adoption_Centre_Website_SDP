@@ -1,7 +1,7 @@
 <?php
 //View a selected centre page in more detail
 
-include("conn.php");
+include("../conn.php");
 
 $id = intval($_GET['id']); 
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE id=$id");
