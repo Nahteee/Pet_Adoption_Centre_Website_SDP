@@ -9,19 +9,19 @@
 5. View submitted applications and their status
 6. Edit page details
 7. View approved centre pages as member
+8. Centre page comments
 
 **TODO**
-1. Centre page comments
-2. Page design 
+1. Page design 
 
 **CHANGES TO DATABASE**
 1. Added a new column in centre_pages called centre_pic with the mediumblob data type
-2. Probably need to add a new table called centre_images...
-3. Added auto increment for ID column
+2. Added auto increment for ID column
+3. Added new column to centre_comments called centre_ID
 
 **INTEGRATION NOTES**
 - User_ID values in some files have to be replaced with session values from login
-- Files affected: centreform.html, centreinsert.php, viewappmember.php, viewpages.php, centreowner.php, editpage.php
+- Files affected: centreform.html, centreinsert.php, viewappmember.php, viewpages.php, centreowner.php, editpage.php, viewpages.php
 
 **BUGS**
 1. Submitting and editing applications - forms are vulnerable to an SQL injection(do NOT enter single quotation marks) page works otherwise.
