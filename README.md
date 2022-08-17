@@ -10,10 +10,11 @@
 6. Edit page details
 7. View approved centre pages as member
 8. Centre page comments
+9. Centre owner login and added sessions
 
 **TODO**
 1. Page design 
-2. Fix and find integration bugs
+2. Implement sessions across needed pages
 
 **CHANGES TO DATABASE**
 1. Added a new column in centre_pages called centre_pic with the mediumblob data type

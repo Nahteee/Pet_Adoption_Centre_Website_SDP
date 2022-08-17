@@ -1,3 +1,6 @@
+<?php include("session.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <!--Adoption Centre Owner Homepage; view owned pages, apply for pages, view sent applications<-->
@@ -11,14 +14,16 @@
 
 	<p>
 		<?php
-			echo "<a href=viewownedpages.php?id=6>View owned pages</a>"; //change id to $id during integration
+			echo "<a href=viewownedpages.php?id=3>View owned pages</a>"; //add session
 		?>
 	</p>
 	<p>
 		<a href="centreform.html">Apply for an adoption centre page</a>
 	</p>
 	<p>
-		<a href="viewappowner.php">View page applications</a>
+		<?php
+			echo "<a href=viewownedpages.php?id=3>View page applications</a>"; //add session
+		?>
 	</p>
 </body>
 </html>

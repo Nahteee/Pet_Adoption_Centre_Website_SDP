@@ -4,7 +4,7 @@
 include("../conn.php");
 
 $id = intval($_GET['id']); 
-$result = mysqli_query($con,"SELECT * FROM centre_pages WHERE id=6");
+$result = mysqli_query($con,"SELECT * FROM centre_pages WHERE ID=$id");
 while($row = mysqli_fetch_array($result))
 {
 ?>
