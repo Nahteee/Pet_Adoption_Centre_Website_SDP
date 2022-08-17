@@ -6,3 +6,4 @@ if ($logout == 1) {
     echo '<script type="text/JavaScript"> window.location.href = "login.html"; </script>'; 
 }
 ?>
+
