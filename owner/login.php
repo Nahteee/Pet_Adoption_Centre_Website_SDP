@@ -22,4 +22,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			echo "Wrong username or password";
 		}
 }
+mysqli_close($con);
 ?>

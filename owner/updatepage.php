@@ -20,4 +20,7 @@ if (!mysqli_query($con, $sql)) {
 else {
     echo "Page updated!";
 }
+
+mysqli_close($con);
+
 ?>
