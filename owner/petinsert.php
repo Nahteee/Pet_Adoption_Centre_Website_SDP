@@ -1,5 +1,5 @@
 <?php 
-//PHP to send new applications
+//PHP to add new pets 
 
 include("../conn.php");
 include("session.php");

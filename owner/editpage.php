@@ -5,8 +5,10 @@ include("../conn.php");
 
 $id = intval($_GET['id']); 
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE ID=$id");
-while($row = mysqli_fetch_array($result))
-{
+$pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
+
+while($row = mysqli_fetch_array($result)) {
+
 ?>
 
 <form action="updatepage.php" method="post" enctype="multipart/form-data">
@@ -42,8 +44,45 @@ while($row = mysqli_fetch_array($result))
         <input type="submit" value="Submit Application">
     </form>
 
+    <table>
+        <tr>
+                <td>Pet's Name</td>
+                <td>Pet's Age</td>
+                <td>Species</td>
+                <td>Breed</td>
+                <td>Edit details</td>
+        </tr>
+        <?php
+        while($row = mysqli_fetch_array($pets)) {
+                echo "<tr>";
+                echo "<td>";
+                echo $row['name'];
+                echo "</td>";
 
-<?php
+                echo "<td>";
+                echo $row['age'];
+                echo "</td>";
+
+                echo "<td>";
+                echo $row['species'];
+                echo "</td>";
+
+                echo "<td>";
+                echo $row['breed'];
+                echo "</td>";
+
+                echo "<td>";
+                echo "<a href=\"editpet.php?id=";
+                echo $row['ID'];
+                echo "\">Edit</a></td>";
+
+                
+                echo "<td><a href=\"deletepet.php?id=";
+                echo $row['ID'];
+                echo "\" onClick=\"return confirm('Delete ";
+                echo $row['name'];
+                echo " details?');\">Delete</a></td></tr>";;
+        }
 }
 
 mysqli_close($con);
