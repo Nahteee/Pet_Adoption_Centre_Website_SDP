@@ -14,7 +14,9 @@
 
 	<p>
 		<?php
-			echo "<a href=viewownedpages.php?id=3>View owned pages</a>"; //add session
+			echo "<a href=\"viewownedpages.php?id=";
+			echo $_SESSION['userID'];
+			echo "\">View owned pages</a>";
 		?>
 	</p>
 	<p>
@@ -22,8 +24,15 @@
 	</p>
 	<p>
 		<?php
-			echo "<a href=viewownedpages.php?id=3>View page applications</a>"; //add session
+			echo "<a href=\"viewappowner.php?id=";
+			echo $_SESSION['userID'];
+			echo "\">View page applications</a>";
 		?>
 	</p>
+	<p>
+		<?php
+			echo "<a href=\"logout.php";
+			echo "\">Logout</a>";
+		?>
 </body>
 </html>

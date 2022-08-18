@@ -3,7 +3,7 @@
 
 include("../conn.php");
 $id = intval($_GET['id']);
-$result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = 13"); //replace 13 with user ID from session variable when logging in
+$result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id"); //replace 13 with user ID from session variable when logging in
 ?>
 
 <html>

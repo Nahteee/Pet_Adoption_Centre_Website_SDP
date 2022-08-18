@@ -14,11 +14,6 @@
 
 **TODO**
 1. Page design 
-2. Implement sessions across needed pages
-
-**INTEGRATION NOTES**
-- User_ID values in some files have to be replaced with session values from login
-- Files affected: centreform.html, centreinsert.php, viewappmember.php, viewpages.php, centreowner.php, editpage.php, viewpages.php
 
 **BUGS**
 1. Submitting and editing applications - forms are vulnerable to an SQL injection(do NOT enter single quotation marks) page works otherwise.
