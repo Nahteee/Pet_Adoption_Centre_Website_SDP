@@ -1,3 +1,6 @@
+<?php
+$id = intval($_GET['id']); 
+?>
 <html>
 <!--Page to fill up form to add a new pet<-->
 
@@ -7,6 +10,7 @@
     <h4>Please enter your pet's details below: </h4>
     <br>
     <form action="petinsert.php" method="post" enctype="multipart/form-data">
+        <input type = "hidden" name = "centreID" value = "<?php echo "$id" ?>">
         <p>
         Pet Name:
         <input type="text" name="petName" required="required">
@@ -23,7 +27,7 @@
         Pet Breed:
         <input type="text" name="petBreed" required="required">
         </p>
-        Centre photo:
+        Pet photo:
         <input type="file" name="petPic" id="centrePic">
         </p>
         <input type="submit" value="Submit Application">

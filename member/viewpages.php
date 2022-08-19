@@ -6,6 +6,7 @@ include("../conn.php");
 $id = intval($_GET['id']); 
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE ID=$id");
 $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$id");
+$pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 
 		while($row = mysqli_fetch_array($result)) {
 			echo "<td>";
@@ -22,7 +23,31 @@ $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$i
 			echo "</td>";
 			
 		}
+
+		echo "<p>";
+
+		while($row = mysqli_fetch_array($pets)) {
+			echo "<td>";
+			echo $row['name'];
+			echo "</td>";
+
+			echo "<td>";
+			echo $row['age'];
+			echo "</td>";
+
+			echo "<td>";
+			echo $row['species'];
+			echo "</td>";
+
+			echo "<td>";
+			echo $row['breed'];
+			echo "</td>";
+			
+		}
 ?>
+
+
+
 <form action = "centrecomment.php" method = "post">
 	<p>
 		<input type="hidden" name="centreId" value="<?php echo $id ?>">

@@ -44,6 +44,12 @@ while($row = mysqli_fetch_array($result)) {
         <input type="submit" value="Submit Application">
     </form>
 
+<?php 
+echo "<a href=\"petform.php?id=";
+echo $row['ID'];
+echo "\">Add pet</a>";
+?>
+
     <table>
         <tr>
                 <td>Pet's Name</td>
@@ -51,6 +57,7 @@ while($row = mysqli_fetch_array($result)) {
                 <td>Species</td>
                 <td>Breed</td>
                 <td>Edit details</td>
+                <td>Delete record</td>
         </tr>
         <?php
         while($row = mysqli_fetch_array($pets)) {
@@ -83,6 +90,7 @@ while($row = mysqli_fetch_array($result)) {
                 echo $row['name'];
                 echo " details?');\">Delete</a></td></tr>";;
         }
+
 }
 
 mysqli_close($con);
