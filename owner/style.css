@@ -6,7 +6,7 @@
   border-radius: 5px;
 }
 
-input[type=text] {
+input {
   width: 30%;
   padding:  12px 20px;
   margin: 8px 0;
@@ -23,6 +23,17 @@ input[type=submit], input[type=button] {
   margin: 4px 2px;
   border: none;
   cursor: pointer;
+}
+
+textarea {
+  width: 30%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
 }
 
 /* Style the header with a grey background and some padding */

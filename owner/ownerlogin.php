@@ -20,11 +20,11 @@
     <br>
     <form action = "login.php" method="post">
         <p>
-        <label for = "username">Username</label>
+        <label for = "username">Username <br> </label>
         <input type="text" name="username" required="required">
     </p>
     <p>
-        <label for ="password">Password</label>
+        <label for ="password">Password<br> </label>
         <input type="text" name="password" required="required">
     </p>
         <input type="submit" value="Login">
