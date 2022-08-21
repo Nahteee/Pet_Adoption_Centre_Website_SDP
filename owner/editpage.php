@@ -10,35 +10,41 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 while($row = mysqli_fetch_array($result)) {
 
 ?>
-
+<html>
+<head>
+        <link rel = "stylesheet" href = "style.css">
+</head>
+<title> Edit centre details </title>
+<body>
+        <div class = "center">
 <form action="updatepage.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $row['ID'] ?>">
         <p>
-        Centre name:
+        Centre name: <br>
         <input type="text" name="centreName" required="required" value="<?php echo $row['centre_name'] ?>">
         </p>
         <p>
-        SSM:
+        SSM: <br>
         <input type="text" name="centreSSM" required="required" value="<?php echo $row['ssm'] ?>">
         </p>
         <p>
-        Address:
+        Address: <br>
         <textarea type="text" name="address" required="required"> <?php echo $row['location'] ?> </textarea>
         </p>
         <p>
-        Phone number:
+        Phone number: <br>
         <input type="tel" name="centrePhone" required="required" value="<?php echo $row['phone'] ?>">
         </p>
         <p>
-        Your email:
+        Your email: <br>
         <input type="email" name="centreEmail" required="required" value="<?php echo $row['email'] ?>">
         </p>
         <p>
-        Centre description:
+        Centre description: <br>
         <textarea type="text" name="centreDesc"> <?php echo $row['description'] ?> </textarea>
         </p>
         <p>
-        Centre photo:
+        Centre photo: <br>
         <input type="file" name="centrePic" id="centrePic">
         </p>
         <input type="submit" value="Submit Application">
@@ -90,6 +96,8 @@ echo "\">Add pet</a>";
                 echo $row['name'];
                 echo " details?');\">Delete</a></td></tr>";;
         }
+        echo "</table>";
+        echo "</div>";
 
 }
 

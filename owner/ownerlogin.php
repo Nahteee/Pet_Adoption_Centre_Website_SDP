@@ -29,6 +29,9 @@
     </p>
         <input type="submit" value="Login">
     </form>
+    <p>
+    <a href = "ownerregister.html"> Register to be an Adoption Centre owner here </a>
+</p>
 </div>
 </body>
 </html>

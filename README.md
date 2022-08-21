@@ -21,6 +21,7 @@
 
 **BUGS**
 1. Submitting and editing applications - forms are vulnerable to an SQL injection(do NOT enter single quotation marks) page works otherwise.
+2. comment; time no default value
 
 ⠀⠀⠀⡯⡯⡾⠝⠘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⠘⡮⣣⠪⠢⡑⡌
 ⠀⠀⠀⠟⠝⠈⠀⠀⠀⠡⠀⠠⢈⠠⢐⢠⢂⢔⣐⢄⡂⢔⠀⡁⢉⠸⢨⢑⠕⡌
