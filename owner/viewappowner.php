@@ -3,24 +3,28 @@
 
 include("../conn.php");
 $id = intval($_GET['id']);
-$result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id"); //replace 13 with user ID from session variable when logging in
+$result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
 ?>
 
 <html>
 <body>
+	<head>
+		<link rel = "stylesheet" href = "style.css">
+	</head>
 	<title>View applications as Centre Owner</title>
+	<div class = "center">
 	<h2>Adoption centre page applications</h2>
 	<br>
-
+	<body>
 	<table>
 		<tr>
-			<td>Adoption Centre Name</td>
-			<td>SSM</td>
-			<td>Address</td>
-			<td>Phone Number</td>
-			<td>Email</td>
-			<td>Description</td>
-			<td>Verify</td>
+			<th>Centre Name</th>
+			<th>SSM</th>
+			<th>Address</th>
+			<th>Phone Number</th>
+			<th>Email</th>
+			<th>Description</th>
+			<th> </th>
 		</tr>
 		<?php
 		while($row = mysqli_fetch_array($result)) {
@@ -61,5 +65,6 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id"); 
 		mysqli_close($con);
 		?>
 	</table>
+</div>
 </body>
 </html>

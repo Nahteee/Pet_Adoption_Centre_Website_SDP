@@ -7,32 +7,44 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel = "stylesheet" href = "style.css">
 	<title>Adoption Centre Owner Homepage</title>
 </head>
 <body>
+	<div class = "center">
 	<h2>Adoption Centre Owner Homepage </h2>
 
 	<p>
+		<button>
 		<?php
-			echo "<a href=\"viewownedpages.php?id=";
+			echo "<a class = \"buttonlink\" href=\"viewownedpages.php?id=";
 			echo $_SESSION['userID'];
 			echo "\">View owned pages</a>";
 		?>
+	</button>
 	</p>
 	<p>
-		<a href="centreform.html">Apply for an adoption centre page</a>
+		<button>
+		<a  class = "buttonlink" href="centreform.html">Apply for an adoption centre page</a>
+	</button>
 	</p>
 	<p>
+		<button>
 		<?php
-			echo "<a href=\"viewappowner.php?id=";
+			echo "<a class = \"buttonlink\" href=\"viewappowner.php?id=";
 			echo $_SESSION['userID'];
 			echo "\">View page applications</a>";
 		?>
+	</button>
 	</p>
 	<p>
+		<button>
 		<?php
-			echo "<a href=\"logout.php";
+			echo "<a class = \"buttonlink\"  href=\"logout.php";
 			echo "\">Logout</a>";
 		?>
+	</button>
+	</p>
+</div>
 </body>
 </html>

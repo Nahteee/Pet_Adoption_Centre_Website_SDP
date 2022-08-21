@@ -7,6 +7,11 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND
 ?>
 
 <html>
+<head>
+	<link rel = "stylesheet" href = "style.css">
+</head>
+<title>View owned pages</title>
+<div class = "center">
 <body>
 	<title>View Adoption Centre Pages</title>
 	<h2>Owned Adoption Centres</h2>
@@ -14,9 +19,9 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND
 
 	<table>
 		<tr>
-			<td>Adoption Centre Name</td>
-			<td>Visit Page</td>
-			<td>Edit Details</td>
+			<th>Adoption Centre Name</th>
+			<th> </th>
+			<th> </th>
 		</tr>
 		<?php
 		while($row = mysqli_fetch_array($result)) {
@@ -39,5 +44,6 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND
 		mysqli_close($con);
 		?>
 	</table>
+</div>
 </body>
 </html>

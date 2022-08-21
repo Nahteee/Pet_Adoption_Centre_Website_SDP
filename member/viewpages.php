@@ -7,25 +7,23 @@ $id = intval($_GET['id']);
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE ID=$id");
 $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$id");
 $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
+$row = mysqli_fetch_array($result);
+?>
 
-		while($row = mysqli_fetch_array($result)) {
-			echo "<td>";
-			echo "<a href=\"viewpages.php?id=";
-			echo $row['ID'];
-			echo "\">" . $row['centre_name'] . "</a></td>";
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel = "stylesheet" href = "style.css">
+	<title>Centre Page</title>
+</head>
+<body>
+	<div class = "center">
+		pooop
+	</div>
+<p>
 
-			echo "<td>";
-			echo $row['location'];
-			echo "</td>";
-
-			echo "<td>";
-			echo $row['description'];
-			echo "</td>";
-			
-		}
-
-		echo "<p>";
-
+	<?php
 		while($row = mysqli_fetch_array($pets)) {
 			echo "<td>";
 			echo $row['name'];
@@ -45,7 +43,7 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 			
 		}
 ?>
-
+</p>
 
 
 <form action = "centrecomment.php" method = "post">
@@ -73,3 +71,5 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 		} 
 
 ?>
+</body>
+</html>
