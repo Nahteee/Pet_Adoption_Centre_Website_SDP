@@ -19,6 +19,7 @@ echo "role is " . $_SESSION["userRole"] . ".<br>"
 <a href=".php">Send a Bug Report</a>
 <a href="feedback.php">give us FeedBack</a>
 
+
 <form action="logout.php" method="POST">
     <input type="hidden" name="destroySession" value="1">
     <input type="submit" value="log out" />
