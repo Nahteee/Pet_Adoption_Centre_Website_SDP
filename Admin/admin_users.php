@@ -17,10 +17,10 @@ include("../conn.php");
 
 <body>
   <header>
-    <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+    <a href="admin_users.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
     <nav>
       <ul>
-        <li> <a href="admin_products.php" id="selected">Products</a> </li>
+        <li> <a href="admin_users.php" id="selected">Products</a> </li>
         <li> <a href="admin_orders.php">Orders</a> </li>
         <li> <a href="admin_view_customers.php">Customers</a> </li>
       </ul>
@@ -30,53 +30,55 @@ include("../conn.php");
   <main>
     <section class="main-wrapper">
       <div class="box-header">
-        <h1>Products List</h1>
-        <a href="admin_add_products.php" class="add">Add New Product ➕</a>
+        <h1>Members</h1>
+        <!-- <a href="admin_add_products.php" class="add">Add New Product ➕</a> -->
       </div>
       <table>
         <tr>
-          <th>Product ID</th>
-          <th>Image</th>
-          <th>Product Name</th>
-          <th>Price (RM)</th>
-          <th>Quantity</th>
-          <th>Category</th>
+          <th>User ID</th>
+          <th>Username</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
           <th>Edit</th>
           <th>Delete</th>
         </tr>
         <?php
-          $result=mysqli_query($con,"SELECT * FROM product");
+          $result=mysqli_query($con,"SELECT * FROM users WHERE role='member'");
           while($row=mysqli_fetch_array($result)){
-            $product_image = "default1.jpg";
-        		if ($row['product_image']!=""){
-        			$product_image = $row['product_image'];
-        		}
+            // $product_image = "default1.jpg";
+        		// if ($row['product_image']!=""){
+        		// 	$product_image = $row['product_image'];
+        		// }
         		echo "<tr>"; // alternative way is : echo ‘<trbgcolor="#99FF66">’;
         		echo "<td>";
-        		echo $row['id'];
+        		echo $row['ID'];
+        		echo "</td>";
+            echo "<td>";
+        		echo $row['username'];
+        		echo "</td>";
+        		// echo "<td>";
+        		// echo '<img style="vertical-align: middle; margin-left: 10px; padding-right: 0px" src="'.$product_image.'" width="60px">';
+        		// echo "</td>";
+        		echo "<td>";
+        		echo $row['first_name'];
+        		echo "</td>";
+        		// echo "<td>";
+        		// echo number_format($row['product_price'],2);
+        		// echo "</td>";
+        		echo "<td>";
+        		echo $row['last_name'];
         		echo "</td>";
         		echo "<td>";
-        		echo '<img style="vertical-align: middle; margin-left: 10px; padding-right: 0px" src="'.$product_image.'" width="60px">';
-        		echo "</td>";
-        		echo "<td>";
-        		echo $row['product_name'];
-        		echo "</td>";
-        		echo "<td>";
-        		echo number_format($row['product_price'],2);
-        		echo "</td>";
-        		echo "<td>";
-        		echo $row['product_qty'];
-        		echo "</td>";
-        		echo "<td>";
-        		echo $row['Category'];
+        		echo $row['phone'];
         		echo "</td>";
         		echo "<td><a href=\"admin_edit_product.php?id="; //edit.php will be created in Lab 8
-        		echo $row['id'];
+        		echo $row['ID'];
         		echo "\">Edit</a></td>";
         		echo "<td><a href=\"admin_delete_products.php?id="; //hyperlink to delete.php page with ‘id’ parameter
-        		echo $row['id'];
+        		echo $row['ID'];
         		echo "\" onClick=\"return confirm('Delete "; //JavaScript to confirm the deletion of the record
-        		echo $row['product_name'];
+        		echo $row['first_name'];
         		echo " details?');\">Delete</a></td></tr>";
         		}
         		mysqli_close($con);//to close the database connection

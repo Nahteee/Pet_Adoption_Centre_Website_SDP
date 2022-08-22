@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	if($rowcount==1)  {
 		$_SESSION['mySession']=$username;
 		$_SESSION['admin_id']=$id;
-		header("location: admin_products.php");
+		header("location: admin_users.php");
 	}
 	else  {
 		echo "<script>alert('Your Login Name or Password is invalid. Please re login');</script>";
@@ -56,14 +56,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         <form method="post">
           <p><strong>Username</strong></p>
           <div class="text-box">
-	            <img src="../images/username.png" alt="">
+	            <img src="../Imgs/username.png" alt="">
 							<div class="">
 	            	<input type="text" name="username" required="required" placeholder="Type in your username">
 							</div>
           </div>
           <p><strong>Password</strong></p>
           <div class="text-box">
-            <img src="../images/password.png" alt="">
+            <img src="../Imgs/password.png" alt="">
 						<div class="">
 							<input type="password" name="password" required="required" placeholder="Type in your password">
 						</div>
@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
   <footer>
     <div class="company-name">
-      <a href="../index.php">EcoFresh&nbsp;</a>
+      <a href="../index.php">ForeverHome&nbsp;</a>
       <p>© 2022 Company, Inc</p>
     </div>
   </footer>
