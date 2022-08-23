@@ -80,22 +80,22 @@ include("../conn.php");
         		echo "<td>";
         		echo $row['phone'];
         		echo "</td>";
-        		echo "<td><a href=\"admin_view_info_user.php?id="; //edit.php will be created in Lab 8
-        		echo $row['ID'];
-        		echo "\">View</a></td>";
-            // echo "<td id='fix'>
-            // <button data-modal-target='#modal'>Open Modal</button>
-            // <div class='modal' id='modal'>
-            //   <div class='modal-header'>
-            //     <div class='title'>Example Modal</div>
-            //     <button data-close-button class='close-button'>&times;</button>
-            //   </div>
-            //   <div class='modal-body'>";
-            // echo $row['last_name'];
-            // echo "
-            //   </div>
-            // </div>
-            // <div id='overlay'></div></td>";
+        		// echo "<td><a href=\"admin_view_info_user.php?id="; //edit.php will be created in Lab 8
+        		// echo $row['ID'];
+        		// echo "\">View</a></td>";
+            echo "<td id='fix'>
+            <button data-modal-target='#modal'>Open Modal</button>
+            <div class='modal' id='modal'>
+              <div class='modal-header'>
+                <div class='title'>Example Modal</div>
+                <button data-close-button class='close-button'>&times;</button>
+              </div>
+              <div class='modal-body'>";
+            echo $row['last_name'];
+            echo "
+              </div>
+            </div>
+            <div id='overlay'></div></td>";
         		echo "<td><a href=\"admin_delete_users.php?id="; //hyperlink to delete.php page with ‘id’ parameter
         		echo $row['ID'];
         		echo "\" onClick=\"return confirm('Delete "; //JavaScript to confirm the deletion of the record
