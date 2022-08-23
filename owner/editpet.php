@@ -11,7 +11,7 @@ while($row = mysqli_fetch_array($result)) {
 ?>
 <html>
 <head>
-        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "../style.css">
 </head>
 <title>Edit pet details</title>
 <body>
