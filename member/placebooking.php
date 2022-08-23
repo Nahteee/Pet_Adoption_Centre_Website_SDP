@@ -31,8 +31,9 @@ while($row = mysqli_fetch_array($pets)) {
 	
 
 ?>
+
 Adoption remarks: <br>
-<form>
+<form action = "sendbooking.php" method = "post">
 	<input type = "hidden" name = "petID" value = "<?php echo $row['ID']; ?>">
 	<input type = "hidden" name = "userID" value = "<?php echo $_SESSION['userID']; ?>">
 	<input type = "hidden" name = "species" value = "<?php echo $row['species']; ?>">
