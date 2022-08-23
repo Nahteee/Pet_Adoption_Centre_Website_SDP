@@ -2,13 +2,28 @@
   margin: 0 auto;
   text-align: center;
   padding: 150px;
-  max-width: 1000px;
+  max-width: 1500px;
   border-radius: 5px;
 }
 
 .buttonlink {
   text-decoration: none;
   color: white;
+}
+
+.container {
+  padding: 10px;
+}
+
+.child {
+  width: 33.3%;
+  float: left;
+}
+
+.comment {
+  padding: 12px;
+  text-align: left;
+  border: 2px solid grey;
 }
 
 button {
@@ -69,7 +84,6 @@ textarea {
   background-color: #f8f8f8;
   resize: none;
 }
-
 
 /* Style the header with a grey background and some padding */
 .header {

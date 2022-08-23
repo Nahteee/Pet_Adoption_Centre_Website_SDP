@@ -7,20 +7,25 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 ?>
 
 <html>
+<head>
+	<link rel = "stylesheet" href = "style.css">
+</head>
 <body>
 	<title>Browse Adoption Centre Pages</title>
+	<div class = "center">
 	<h2>All Adoption Centres</h2>
 	<br>
 
 	<table>
-		<tr>
-			<td>Centre Name</td>
-			<td>Address</td>
-			<td>Description</td>
-		</tr>
 
 		<?php
 		while($row = mysqli_fetch_array($result)) {
+			echo "<tr>";
+
+			echo "<td>";
+			echo "<img src = '../uploads/" . $row['centre_pic'] . "' style = 'width:100px; height:auto;'>";
+			echo "</td>";
+
 			echo "<td>";
 			echo "<a href=\"viewpages.php?id=";
 			echo $row['ID'];
@@ -33,10 +38,13 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 			echo "<td>";
 			echo $row['description'];
 			echo "</td>";
+			echo "</tr>";
 			
 		}
 		mysqli_close($con);
 		?>
+
 	</table>
+</div>
 </body>
 </html>

@@ -14,14 +14,17 @@
 10. Added pet functions
 
 **Finished Design**
-1. Form pages //in progress
+1. Form pages
+2. "home" pages
+3. browsing pages
 
 **TODO**
-1. Page design for literally everything else
+1. Add headers to everything
+2. Maybe improve the design (its poopoo)
 
 **BUGS**
 1. Submitting and editing applications - forms are vulnerable to an SQL injection(do NOT enter single quotation marks) page works otherwise.
-2. comment; time no default value
+2. image uploading does not work help lol
 
 ⠀⠀⠀⡯⡯⡾⠝⠘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⠘⡮⣣⠪⠢⡑⡌
 ⠀⠀⠀⠟⠝⠈⠀⠀⠀⠡⠀⠠⢈⠠⢐⢠⢂⢔⣐⢄⡂⢔⠀⡁⢉⠸⢨⢑⠕⡌

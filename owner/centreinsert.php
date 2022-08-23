@@ -2,16 +2,21 @@
 //PHP to send new applications
 
 include("../conn.php");
-include("session.php");
+include("../session.php");
 
-$image = $_FILES['centrePic']['name'];
+$target_dir = "../uploads/";
+$target_file = $target_dir . basename($FILES["centrePic"]["name"]);
 $id = $_SESSION['userID'];
+
+if(move_uploaded_file($FILES["centrePic"]["tmp_name"], $target_file)) {
+    $file_name = basename($FILES["centrePic"]["name"]);
+}
 
 $sql="INSERT INTO centre_pages (user_ID, centre_name, ssm, location, phone, email, description, verified, centre_pic)
 
 VALUES
 
-('$id', '$_POST[centreName]', '$_POST[centreSSM]', '$_POST[address]', '$_POST[centrePhone]', '$_POST[centreEmail]', '$_POST[centreDesc]', 0, '$image')";
+('$id', '$_POST[centreName]', '$_POST[centreSSM]', '$_POST[address]', '$_POST[centrePhone]', '$_POST[centreEmail]', '$_POST[centreDesc]', 0, '$file_name')";
 
 if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
