@@ -40,17 +40,6 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 	<?php
 		while($row = mysqli_fetch_array($pets)) {
 			echo "<div class = 'child'>";
-			if ($row["image_name"] == "") {
-				echo $row['name'];
-
-				echo $row['age'];
-
-				echo $row['species'];
-
-				echo $row['breed'];
-				echo "<br>";
-			}
-			else {
 				echo "<img src = '../uploads/" . $row['image_name'] . "' style = 'width: 250px; height: auto;'>";
 				echo "<br>";
 				echo "<br>";
@@ -61,8 +50,10 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 				echo "Species: " . $row['species'] . "<br>";
 
 				echo "Breed: " . $row['breed'] . "<br";
-				echo "<br>";
-			}
+				echo "<br><br><br>";
+				echo "<button class = 'small' onclick = \"window.location='placebooking.php?id=";
+				echo $row['ID'];
+				echo "';\"> Adopt Me! </button>";
 			echo "</div>";
 		}
 	?>
@@ -100,6 +91,7 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 		<textarea type = "text"  name = "centreComment"> </textarea>
 	<input type = "submit" value = "Submit comment">
 </form>
+
 
 <?php
 //display comments

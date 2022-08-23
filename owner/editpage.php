@@ -12,7 +12,7 @@ while($row = mysqli_fetch_array($result)) {
 ?>
 <html>
 <head>
-        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "../style.css">
 </head>
 <title> Edit centre details </title>
 <body>
@@ -49,21 +49,16 @@ while($row = mysqli_fetch_array($result)) {
         </p>
         <input type="submit" value="Submit Application">
     </form>
-
-<?php 
-echo "<a href=\"petform.php?id=";
-echo $row['ID'];
-echo "\">Add pet</a>";
-?>
+<br> <br> <br>
 
     <table>
         <tr>
-                <td>Pet's Name</td>
-                <td>Pet's Age</td>
-                <td>Species</td>
-                <td>Breed</td>
-                <td>Edit details</td>
-                <td>Delete record</td>
+                <th>Pet's Name</th>
+                <th>Pet's Age</th>
+                <th>Species</th>
+                <th>Breed</th>
+                <th>Edit details</th>
+                <th>Delete record</th>
         </tr>
         <?php
         while($row = mysqli_fetch_array($pets)) {
@@ -97,9 +92,17 @@ echo "\">Add pet</a>";
                 echo " details?');\">Delete</a></td></tr>";;
         }
         echo "</table>";
-        echo "</div>";
 
-}
-
+} ?>
+<br> <br>
+<button>
+<?php 
+echo "<a class = 'buttonlink' href=\"petform.php?id=";
+echo $row['ID'];
+echo "\">Add pet</a>";
+?>
+</button>
+</div>
+<?php
 mysqli_close($con);
 ?> 

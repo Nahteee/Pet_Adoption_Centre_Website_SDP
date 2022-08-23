@@ -1,3 +1,7 @@
+* {
+  font-family: Arial;
+}
+
 .center {
   margin: 0 auto;
   text-align: center;
@@ -9,6 +13,21 @@
 .buttonlink {
   text-decoration: none;
   color: white;
+}
+
+.container {
+  padding: 10px;
+}
+
+.child {
+  width: 33.3%;
+  float: left;
+}
+
+.comment {
+  border: 3px solid grey;
+  text-align: left;
+  padding: 20px;
 }
 
 button {
@@ -26,27 +45,26 @@ button {
 
 button.small {
   background-color: #3eb33e;
-  magin: 4px 2px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
-  padding: 12px;
+  padding: 10px;
   width:  100px;
   text-decoration: none;
   cursor: pointer;
   border: none;
-
 }
 
 table {
   width: 100%;
   padding: 8px;
+  border-collapse: collapse;
 }
 
 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px;
   background-color: #3eb33e;
-  border: 8px solid #3eb33e;
+  color: white;
+  font-size: 16px;
 }
 
 td {

@@ -41,7 +41,7 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-    echo "Page updated!";
+    header("location: ../member/viewpages.php?id=" . $_POST['id']);
 }
 
 mysqli_close($con);

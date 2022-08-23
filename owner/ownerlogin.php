@@ -4,14 +4,6 @@
 <head>
     <link rel="stylesheet" href="../style.css">
 </head>
-<div class="header">
-  <a href="#default" class="logo"> <img src = "../ForeverHome_Logo.png" style = "width:100px; height:100px;"></a>
-  <div class="header-right">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a class = "active" href="ownerlogin.php">Login</a>
-  </div>
-</div>
 <title>Login as Centre Owner</title>
 <body>
     <div class = "center">
