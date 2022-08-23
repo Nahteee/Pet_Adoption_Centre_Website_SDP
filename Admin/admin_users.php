@@ -12,17 +12,25 @@ include("../conn.php");
   <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/style.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
+  <!-- <link rel="stylesheet" href="../CSS/bootstrap.css" /> -->
+  <!-- <script src="../JS/jquery-3.3.1.min.js"></script> -->
+  <!-- <script src="../JS/bootstrap.js"></script> -->
+  <script defer src="../JS/script.js"></script>
   <title></title>
 </head>
 
 <body>
   <header>
-    <a href="admin_users.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+    <a href="admin_users.php" class="header-brand"><img src="../Imgs/ForeverHome Logo.png" alt=""></a>
     <nav>
       <ul>
-        <li> <a href="admin_users.php" id="selected">Products</a> </li>
-        <li> <a href="admin_orders.php">Orders</a> </li>
-        <li> <a href="admin_view_customers.php">Customers</a> </li>
+        <li> <a href="admin_users.php" id="selected">Users</a> </li>
+        <li> <a href="admin_pets.php">Pets</a> </li>
+        <li> <a href="admin_centres.php">Centres</a> </li>
+        <li> <a href="admin_view_customers.php">Forum</a> </li>
+        <li> <a href="admin_view_customers.php">Tickets</a> </li>
+        <li> <a href="admin_view_customers.php">Feedback</a> </li>
+        <li> <a href="admin_view_customers.php">Page Requests</a> </li>
       </ul>
       <a href="admin_logout.php" class="header-cases">Logout</a>
     </nav>
@@ -40,7 +48,7 @@ include("../conn.php");
           <th>First Name</th>
           <th>Last Name</th>
           <th>Phone Number</th>
-          <th>Edit</th>
+          <th>View Details</th>
           <th>Delete</th>
         </tr>
         <?php
@@ -72,10 +80,97 @@ include("../conn.php");
         		echo "<td>";
         		echo $row['phone'];
         		echo "</td>";
-        		echo "<td><a href=\"admin_edit_product.php?id="; //edit.php will be created in Lab 8
+        		echo "<td><a href=\"admin_view_info_user.php?id="; //edit.php will be created in Lab 8
         		echo $row['ID'];
-        		echo "\">Edit</a></td>";
-        		echo "<td><a href=\"admin_delete_products.php?id="; //hyperlink to delete.php page with ‘id’ parameter
+        		echo "\">View</a></td>";
+            // echo "<td id='fix'>
+            // <button data-modal-target='#modal'>Open Modal</button>
+            // <div class='modal' id='modal'>
+            //   <div class='modal-header'>
+            //     <div class='title'>Example Modal</div>
+            //     <button data-close-button class='close-button'>&times;</button>
+            //   </div>
+            //   <div class='modal-body'>";
+            // echo $row['last_name'];
+            // echo "
+            //   </div>
+            // </div>
+            // <div id='overlay'></div></td>";
+        		echo "<td><a href=\"admin_delete_users.php?id="; //hyperlink to delete.php page with ‘id’ parameter
+        		echo $row['ID'];
+        		echo "\" onClick=\"return confirm('Delete "; //JavaScript to confirm the deletion of the record
+        		echo $row['first_name'];
+        		echo " details?');\">Delete</a></td></tr>";
+        		}
+        		//to close the database connection
+        ?>
+      </table>
+      <div class="box-header">
+        <h1>Owners</h1>
+        <!-- <a href="admin_add_products.php" class="add">Add New Product ➕</a> -->
+      </div>
+      <table>
+        <tr>
+          <th>User ID</th>
+          <th>Username</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
+          <th>View Details</th>
+          <th>Delete</th>
+        </tr>
+
+
+        <?php
+          $result=mysqli_query($con,"SELECT * FROM users WHERE role='owner'");
+          while($row=mysqli_fetch_array($result)){
+            // $product_image = "default1.jpg";
+        		// if ($row['product_image']!=""){
+        		// 	$product_image = $row['product_image'];
+        		// }
+        		echo "<tr>"; // alternative way is : echo ‘<trbgcolor="#99FF66">’;
+        		echo "<td>";
+        		echo $row['ID'];
+        		echo "</td>";
+            echo "<td>";
+        		echo $row['username'];
+        		echo "</td>";
+        		// echo "<td>";
+        		// echo '<img style="vertical-align: middle; margin-left: 10px; padding-right: 0px" src="'.$product_image.'" width="60px">';
+        		// echo "</td>";
+        		echo "<td>";
+        		echo $row['first_name'];
+        		echo "</td>";
+        		// echo "<td>";
+        		// echo number_format($row['product_price'],2);
+        		// echo "</td>";
+        		echo "<td>";
+        		echo $row['last_name'];
+        		echo "</td>";
+        		echo "<td>";
+        		echo $row['phone'];
+        		echo "</td>";
+
+            // echo "<td id='fix'>
+            // <button data-modal-target='#modal'>Open Modal</button>
+            // <div class='modal' id='modal'>
+            //   <div class='modal-header'>
+            //     <div class='title'>Example Modal</div>
+            //     <button data-close-button class='close-button'>&times;</button>
+            //   </div>
+            //   <div class='modal-body'>";
+            //
+            //   echo $row['last_name'];
+            //     // Lorem ipsum
+            // echo "
+            //   </div>
+            // </div>
+            // <div id='overlay'></div></td>";
+
+        		echo "<td><a href=\"admin_view_info_user.php?id="; //edit.php will be created in Lab 8
+        		echo $row['ID'];
+        		echo "\">View</a></td>";
+        		echo "<td><a href=\"admin_delete_users.php?id="; //hyperlink to delete.php page with ‘id’ parameter
         		echo $row['ID'];
         		echo "\" onClick=\"return confirm('Delete "; //JavaScript to confirm the deletion of the record
         		echo $row['first_name'];
@@ -84,6 +179,7 @@ include("../conn.php");
         		mysqli_close($con);//to close the database connection
         ?>
       </table>
+
     </section>
   </main>
   <footer>
@@ -99,6 +195,7 @@ include("../conn.php");
         </nav>
       </div>
   </footer>
+
 </body>
 
 </html>

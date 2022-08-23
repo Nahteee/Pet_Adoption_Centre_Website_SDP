@@ -6,7 +6,7 @@
 	$id = intval($_GET['id']);
   echo '<script>alert("1 record added!");
   </script>';
-	$result = mysqli_query($con,"DELETE FROM product WHERE id=$id");
+	$result = mysqli_query($con,"DELETE FROM centre_pages WHERE id=$id");
 	mysqli_close($con); //close database connection
-	header('Location: admin_products.php'); //redirect the page to view.php page
+	header('Location: admin_centres.php'); //redirect the page to view.php page
 ?>
