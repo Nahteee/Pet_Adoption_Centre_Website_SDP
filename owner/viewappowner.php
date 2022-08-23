@@ -9,7 +9,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
 <html>
 <body>
 	<head>
-		<link rel = "stylesheet" href = "style.css">
+		<link rel = "stylesheet" href = "../style.css">
 	</head>
 	<title>View applications as Centre Owner</title>
 	<div class = "center">

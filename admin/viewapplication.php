@@ -6,22 +6,25 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 0");
 ?>
 
 <html>
+<head>
+	<link rel="stylesheet" href="../style.css">
 <body>
 	<title>View applications as Admin</title>
+	<div class = "center">
 	<h2>Adoption centre page applications</h2>
 	<br>
 
 	<table>
 		<tr>
-			<td>User ID</td>
-			<td>Adoption Centre Name</td>
-			<td>SSM</td>
-			<td>Address</td>
-			<td>Phone Number</td>
-			<td>Email</td>
-			<td>Description</td>
-			<td>Verify</td>
-			<td>Delete Application</td>
+			<th>User ID</th>
+			<th>Adoption Centre Name</th>
+			<th>SSM</th>
+			<th>Address</th>
+			<th>Phone Number</th>
+			<th>Email</th>
+			<th>Description</th>
+			<td> </td>
+			<td> </td>
 		</tr>
 		<?php
 		while($row = mysqli_fetch_array($result)) {
@@ -55,18 +58,19 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 0");
 			echo "</td>";
 			
 			echo "<td>";
-			echo "<a href=\"verifyapplication.php?id=";
+			echo "<button class = 'small'> <a class = 'buttonlink' href=\"verifyapplication.php?id=";
 			echo $row['ID'];
-			echo "\">Verify</a></td>";
+			echo "\">Verify</a> </button> </td>";
 			
-			echo "<td><a href=\"deleteapplication.php?id=";
+			echo "<td> <button class = 'small'><a href class = 'buttonlink' =\"deleteapplication.php?id=";
 			echo $row['ID'];
 			echo "\" onClick=\"return confirm('Delete ";
 			echo $row['centre_name'];
-			echo " details?');\">Delete</a></td></tr>";
+			echo " details?');\">Delete</a></td> </button></tr>";
 		}
 		mysqli_close($con);
 		?>
 	</table>
+</div>
 </body>
 </html>

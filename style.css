@@ -1,0 +1,85 @@
+.center {
+  margin: 0 auto;
+  text-align: center;
+  padding: 150px;
+  max-width: 1000px;
+  border-radius: 5px;
+}
+
+.buttonlink {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: #3eb33e;
+  magin: 4px 2px;
+  font-size: 20px;
+  text-align: center;
+  padding: 12px;
+  width:  500px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+
+}
+
+button.small {
+  background-color: #3eb33e;
+  magin: 4px 2px;
+  font-size: 20px;
+  text-align: center;
+  padding: 12px;
+  width:  100px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+
+}
+
+table {
+  width: 100%;
+  padding: 8px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #3eb33e;
+  border: 8px solid #3eb33e;
+}
+
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+input {
+  width: 50%;
+  padding:  12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit], input[type=button] {
+  background-color: #3eb33e;
+  color: white;
+  padding: 16px 20px;
+  margin: 4px 2px;
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}

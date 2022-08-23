@@ -8,7 +8,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 
 <html>
 <head>
-	<link rel = "stylesheet" href = "style.css">
+	<link rel = "stylesheet" href = "../style.css">
 </head>
 <body>
 	<title>Browse Adoption Centre Pages</title>

@@ -2,7 +2,7 @@
 <html>
 <!--Page to login as adoption centre owner-->
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <div class="header">
   <a href="#default" class="logo"> <img src = "../ForeverHome_Logo.png" style = "width:100px; height:100px;"></a>

@@ -8,7 +8,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND
 
 <html>
 <head>
-	<link rel = "stylesheet" href = "style.css">
+	<link rel = "stylesheet" href = "../style.css">
 </head>
 <title>View owned pages</title>
 <div class = "center">
@@ -20,7 +20,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND
 	<table>
 		<tr>
 			<th>Adoption Centre Name</th>
-			<th> </th>
+			<th></th>
 			<th> </th>
 		</tr>
 		<?php
