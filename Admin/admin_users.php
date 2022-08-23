@@ -27,7 +27,7 @@ include("../conn.php");
         <li> <a href="admin_users.php" id="selected">Users</a> </li>
         <li> <a href="admin_pets.php">Pets</a> </li>
         <li> <a href="admin_centres.php">Centres</a> </li>
-        <li> <a href="admin_view_customers.php">Forum</a> </li>
+        <li> <a href="admin_view_forum.php">Forum</a> </li>
         <li> <a href="admin_view_customers.php">Tickets</a> </li>
         <li> <a href="admin_view_customers.php">Feedback</a> </li>
         <li> <a href="admin_view_customers.php">Page Requests</a> </li>

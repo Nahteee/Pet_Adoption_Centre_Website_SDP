@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","","pet-adoption-system-new2");
+$con=mysqli_connect("localhost","root","","pet");
 
 // Check connection
 if (mysqli_connect_errno())
