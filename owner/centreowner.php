@@ -12,14 +12,23 @@
 </head>
 <body>
 	<div class = "center">
-	<h2>Adoption Centre Owner Homepage </h2>
-
+	<h1>Adoption Centre Owner Homepage </h1>
+	<br>
 	<p>
 		<button>
 		<?php
 			echo "<a class = \"buttonlink\" href=\"viewownedpages.php?id=";
 			echo $_SESSION['userID'];
 			echo "\">View owned pages</a>";
+		?>
+	</button>
+	</p>
+	<p>
+		<button>
+		<?php
+			echo "<a class = \"buttonlink\" href=\"viewpetapp.php?id=";
+			echo $_SESSION['userID'];
+			echo "\">View adoption applications</a>";
 		?>
 	</button>
 	</p>
