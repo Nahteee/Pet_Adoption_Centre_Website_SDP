@@ -84,14 +84,15 @@ include("../conn.php");
         		// echo $row['ID'];
         		// echo "\">View</a></td>";
             echo "<td id='fix'>
-            <button data-modal-target='#modal'>Open Modal</button>
+            <button data-modal-target='#modal' class='view' id=";
+            echo $row['ID'];
+            echo ">View Profile</button>
             <div class='modal' id='modal'>
               <div class='modal-header'>
-                <div class='title'>Example Modal</div>
+                <div class='title'>View Profie</div>
                 <button data-close-button class='close-button'>&times;</button>
               </div>
               <div class='modal-body'>";
-            echo $row['last_name'];
             echo "
               </div>
             </div>
@@ -151,25 +152,24 @@ include("../conn.php");
         		echo $row['phone'];
         		echo "</td>";
 
-            // echo "<td id='fix'>
-            // <button data-modal-target='#modal'>Open Modal</button>
-            // <div class='modal' id='modal'>
-            //   <div class='modal-header'>
-            //     <div class='title'>Example Modal</div>
-            //     <button data-close-button class='close-button'>&times;</button>
-            //   </div>
-            //   <div class='modal-body'>";
-            //
-            //   echo $row['last_name'];
-            //     // Lorem ipsum
-            // echo "
-            //   </div>
-            // </div>
-            // <div id='overlay'></div></td>";
+            echo "<td id='fix'>
+            <button data-modal-target='#modal' class='view' id=";
+            echo $row['ID'];
+            echo ">View Profile</button>
+            <div class='modal' id='modal'>
+              <div class='modal-header'>
+                <div class='title'>View Owner Profie</div>
+                <button data-close-button class='close-button'>&times;</button>
+              </div>
+              <div class='modal-body'>";
+            echo "
+              </div>
+            </div>
+            <div id='overlay'></div></td>";
 
-        		echo "<td><a href=\"admin_view_info_user.php?id="; //edit.php will be created in Lab 8
-        		echo $row['ID'];
-        		echo "\">View</a></td>";
+        		// echo "<td><a href=\"admin_view_info_user.php?id="; //edit.php will be created in Lab 8
+        		// echo $row['ID'];
+        		// echo "\">View</a></td>";
         		echo "<td><a href=\"admin_delete_users.php?id="; //hyperlink to delete.php page with ‘id’ parameter
         		echo $row['ID'];
         		echo "\" onClick=\"return confirm('Delete "; //JavaScript to confirm the deletion of the record
@@ -199,3 +199,25 @@ include("../conn.php");
 </body>
 
 </html>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('button').click(function (e) { 
+      e.preventDefault();
+      user_id = $(this).attr('id')
+      $.ajax({
+        type: "POST",
+        url: "admin_get_user.php",
+        data: {id_user : user_id},
+        success: function (response) {
+          $(".modal-body").html(response);
+        }
+      });
+      $('#modal').modal("show");
+      
+    });
+  });
+ 
+</script>
