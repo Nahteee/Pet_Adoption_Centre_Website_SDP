@@ -12,10 +12,14 @@ include("../conn.php");
   <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/style.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
   <!-- <link rel="stylesheet" href="../CSS/bootstrap.css" /> -->
   <!-- <script src="../JS/jquery-3.3.1.min.js"></script> -->
-  <!-- <script src="../JS/bootstrap.js"></script> -->
+  <script src="../JS/bootstrap.js"></script>
   <script defer src="../JS/script.js"></script>
+
   <title></title>
 </head>
 
@@ -200,8 +204,8 @@ include("../conn.php");
 
 </html>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
 <script>
   $(document).ready(function () {
     $('button').click(function (e) { 
