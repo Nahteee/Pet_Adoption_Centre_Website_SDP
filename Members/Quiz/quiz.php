@@ -6,7 +6,7 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--So that the browser will render the width of the page at the width of its own screen-->
      <link rel="stylesheet" href="../../CSS/reset.css?v=<?php echo time(); ?>">
-     <link rel="stylesheet" href="../../CSS/style.css?v=<?php echo time(); ?>">
+     <link rel="stylesheet" href="../../CSS/quizstyle.css?v=<?php echo time(); ?>">
      <title></title>
    </head>
    <body>
