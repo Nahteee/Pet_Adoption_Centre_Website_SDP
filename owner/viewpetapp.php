@@ -1,9 +1,9 @@
 <?php 
-//Page for admin to view page applications
+//Page for center owners to view pet applications
 
 include("../conn.php");
 
-$id = intval($_GET['id']); 
+$id = intval($_GET['id']);
 $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 ?>
 

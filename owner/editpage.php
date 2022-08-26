@@ -15,8 +15,10 @@ while($row = mysqli_fetch_array($result)) {
         <link rel = "stylesheet" href = "../style.css">
 </head>
 <title> Edit centre details </title>
+
 <body>
         <div class = "center">
+                <h1>Edit Centre Page Details</h1>
 <form action="updatepage.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $row['ID'] ?>">
         <p>
@@ -45,12 +47,13 @@ while($row = mysqli_fetch_array($result)) {
         </p>
         <p>
         Centre photo: <br>
-        <input type="file" name="centrePic" id="centrePic">
+        <img src = "<?php echo "../uploads/" . $row['centre_pic']?>" style = 'width: 300px; height: auto;'> <br>
+        <input type="file" name="centrePic" value = "<?php echo $row['centre_pic'] ?>">
         </p>
-        <input type="submit" value="Submit Application">
+        <input type="submit" value="Save changes">
     </form>
 <br> <br> <br>
-
+<h3>Center pets</h3>
     <table>
         <tr>
                 <th>Pet's Name</th>

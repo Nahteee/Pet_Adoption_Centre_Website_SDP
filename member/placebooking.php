@@ -37,6 +37,7 @@ Adoption remarks: <br>
 	<input type = "hidden" name = "petID" value = "<?php echo $row['ID']; ?>">
 	<input type = "hidden" name = "userID" value = "<?php echo $_SESSION['userID']; ?>">
 	<input type = "hidden" name = "species" value = "<?php echo $row['species']; ?>">
+	<input type = "hidden" name = "centreID" value = "<?php echo $row['centre_ID']; ?>">
 	<textarea type="text" name="remarks"></textarea>
 	<input type = "submit" value="Adopt <?php echo $row['name']; ?>">
 </form>
