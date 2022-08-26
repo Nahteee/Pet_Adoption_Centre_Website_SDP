@@ -34,7 +34,7 @@ email='$_POST[centreEmail]',
 description='$_POST[centreDesc]',
 centre_pic= '$file_name' 
 
-WHERE ID=$_POST[id];";  
+WHERE ID=$_POST[id];"; 
 }
 
 if (!mysqli_query($con, $sql)) {
