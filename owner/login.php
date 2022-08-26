@@ -16,6 +16,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$row = mysqli_fetch_array($result);
 			session_start();
 			$_SESSION['userID'] = $row['ID'];
+			$_SESSION["auth_user_id"] = $row["ID"];
+            $_SESSION["firstname"] = $row["first_name"];
+            $_SESSION["lastname"] = $row["last_name"];
+            $_SESSION["phone"] = $row["phone"];
+            $_SESSION["IC"] = $row["IC"];
+            $_SESSION["email"] = $row["email"];
+            $_SESSION["address"] = $row["address"];
+            $_SESSION["income"] = $row["income"];
+            $_SESSION["username"] = $row["username"];
+            $_SESSION["userRole"] = $row["role"];
 			header("location: centreowner.php");
 		}
 		else {

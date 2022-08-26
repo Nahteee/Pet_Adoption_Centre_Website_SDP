@@ -15,7 +15,7 @@ echo "role is " . $_SESSION["userRole"] . ".<br>"
 ?>
 
 <a href="./profile.php">Profile</a>
-<a href="index.php">Forum</a>
+<a href="indexforum.php">Forum</a>
 <a href="sendbug.php">Send a Bug Report</a>
 <a href="feedback.php">give us FeedBack</a>
 

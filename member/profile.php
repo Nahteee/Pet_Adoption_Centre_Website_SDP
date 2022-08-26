@@ -8,7 +8,7 @@ if (!isset($_SESSION['username']))  //do not allow non members to access this pa
     <link rel = "stylesheet" href = "../style.css">
     <title>Your Profile</title>
     <div class="center">
-<form action="editprofile.php" method="post">
+<form action= "editprofile.php" method="post">
       <h1>Profile</h1>
 
       <hr>
@@ -38,7 +38,7 @@ if (!isset($_SESSION['username']))  //do not allow non members to access this pa
       <label for="income">Annual Income</label> <br>
       <input type="number" id="income" name="income" maxlength="12" value="<?php echo $_SESSION["income"] ?>" required> <br> <br> <br>
 
-      <button type="submit">Save</button>
+      <input type="submit" value = "Save">
     </div>
   
   </form>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("dbcon.php");
+include("../conn.php");
 $userid = $_SESSION['auth_user_id'];
 
 if(isset($_POST['submit'])){

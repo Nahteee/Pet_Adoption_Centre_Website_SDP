@@ -1,10 +1,10 @@
 <?php
 session_start();
-include('dbcon.php');
+include('../conn.php');
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $content = $_POST['content'];
-    $status = $_POST['status'];
+    $status = 0;
     $user_id = $_SESSION["auth_user_id"];
     $sql = "INSERT INTO tickets (user_ID,title,description,status) VALUES ('$user_id','$title','$content','$status')";
 

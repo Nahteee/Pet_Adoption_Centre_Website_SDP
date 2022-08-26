@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require('dbcon.php');
+    require('../conn.php');
     include('header.php');
     include('navbar.php'); 
 ?>
@@ -39,7 +39,7 @@
                             echo "<div class='card-header'><h4>". $row['title']."</h4>";
                             echo "<h6>By : ". $row['username']."<br> Posted on : ".$row['time']."</h6></div>";
                             echo "<div class='card-body' style='text-align: left'>". $row['description']."
-                            <br><img src='uploads/".$row['image']."'  style='width: 350px;height:auto;'>
+                            <br><img src='../uploads/".$row['image']."'  style='width: 350px;height:auto;'>
                             <hr>";
                             echo "<div class='main-comment'></div>
                             <div id='error_status'></div>
@@ -55,7 +55,7 @@
                     echo "topic not found";
                 }
             }else{
-                header("Location:index.php");
+                header("Location:indexforum.php");
             }
         ?>
                 </div>

@@ -1,6 +1,5 @@
 <?php
 include("../conn.php");
-include("../session.php");
 
 session_start();
 $sql = "SELECT * FROM users";
@@ -24,15 +23,16 @@ if ($valid == 0){
 } 
 
 else {
-    $id = $_SESSION['ID'];
+    $id = $_SESSION['auth_user_id'];
+
     $sql = "UPDATE users SET 
-    username = '$_POST[user_name]',
-    IC = '$_POST[IC]',
-    email = '$_POST[email]',
-    first_name = '$_POST[firstname]',
-    last_name = '$_POST[lastname]',
-    phone = '$_POST[new_phone]',
-    income = '$_POST[income]',
+    username = '$_POST[user_name]', 
+    IC = '$_POST[IC]', 
+    email = '$_POST[email]', 
+    first_name = '$_POST[firstname]', 
+    last_name = '$_POST[lastname]', 
+    phone = '$_POST[new_phone]', 
+    income = '$_POST[income]', 
     address = '$_POST[address]' 
 
     WHERE ID = $id;";
