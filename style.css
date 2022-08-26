@@ -38,7 +38,12 @@
   padding: 20px;
 }
 
+b {
+  font-size: 12px;
+}
+
 button {
+  color: white;
   background-color: #3eb33e;
   magin: 4px 2px;
   font-size: 20px;
@@ -48,7 +53,6 @@ button {
   text-decoration: none;
   cursor: pointer;
   border: none;
-
 }
 
 button.small {
@@ -76,7 +80,7 @@ th {
 }
 
 td {
-  padding: 8px;
+  padding: 10px;
   text-align: center;
 }
 

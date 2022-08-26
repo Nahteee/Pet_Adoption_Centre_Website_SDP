@@ -5,26 +5,26 @@ include('header.php');
 include('navbar.php'); 
 ?>
 
-<center>
-    <br>
-    <br>
-    <br>
-    <br>
-    <?php echo '<table border="1px;">';?>
+<html>
+<head>
+    <link rel = "stylesheet" href = "../style.css">
+    <title>Forum</title>
+</head>
+<div class = "center">
+    <h1>ForeverHome Forums</h1> <br><br><br>
+    <table>
         <tr>
-            
-            <td width="400px;" style="text-align: center;">
-                Name
+            <td>
+                <b>Name</b>
             </td>
-            <td width="80px;" style="text-align: center;">
-                Creator
+            <td>
+                <b>Creator</b>
             </td>
-            <td width="190px;" style="text-align: center;">
-                Date
+            <td>
+                <b>Date</b>
             </td>
         </tr>
 
-</center>
 <?php
     $check = mysqli_query($con,"SELECT * FROM forum_post INNER JOIN users ON forum_post.user_ID = users.ID");
 
@@ -33,9 +33,9 @@ include('navbar.php');
             $id = $row['topic_id'];
             echo "<tr>";
             
-            echo "<td style='text-align: center;'><a href='topic.php?id=$id'>".$row['title']."</a></td>";
-            echo "<td style='text-align: center;'>".$row['username']."</td>";
-            echo "<td style='text-align: center;'>".$row['time']."</td>";
+            echo "<td><b><a href='topic.php?id=$id'>".$row['title']."</a></b></td>";
+            echo "<td>".$row['username']."</td>";
+            echo "<td>".$row['time']."</td>";
             echo "</tr>";
         }
     }else{
@@ -46,6 +46,8 @@ include('navbar.php');
     <br>
     <br>
     <a href="post.php"><button>Post topic</button></a>
+</div>
+</html>
 
 
 
