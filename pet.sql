@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pet`
+-- Database: `sdp`
 --
 
 -- --------------------------------------------------------
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `centre_pages` (
   `email` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `verified` tinyint(1) NOT NULL,
-  `centre_pic` longblob NOT NULL,
+  `centre_pic` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `Foreign Key2` (`user_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
