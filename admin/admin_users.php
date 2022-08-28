@@ -36,6 +36,7 @@ include("../conn.php");
         <li> <a href="admin_view_customers.php">Tickets</a> </li>
         <li> <a href="admin_view_customers.php">Feedback</a> </li>
         <li> <a href="viewapplication.php">Page Requests</a> </li>
+        <li> <a href="admin_view_report.php">View Reports</a> </li>
       </ul>
       <a href="admin_logout.php" class="header-cases">Logout</a>
     </nav>
