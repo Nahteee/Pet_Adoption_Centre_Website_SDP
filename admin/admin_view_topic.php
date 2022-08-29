@@ -23,13 +23,15 @@ include("../conn.php");
         <a href="admin_users.php" class="header-brand"><img src="../Imgs/ForeverHome Logo.png" alt=""></a>
         <nav>
             <ul>
-                <li> <a href="admin_users.php">Users</a> </li>
-                <li> <a href="admin_pets.php">Pets</a> </li>
-                <li> <a href="admin_centres.php">Centres</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_users.php">Users</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_owners.php"> Owners</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_pets.php">Pets</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_centres.php">Centres</a> </li>
                 <li> <a href="admin_view_forum.php" id="selected">Forum</a> </li>
-                <li> <a href="admin_view_customers.php">Tickets</a> </li>
-                <li> <a href="admin_view_customers.php">Feedback</a> </li>
-                <li> <a href="admin_view_customers.php">Page Requests</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_ticket.php">Tickets</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_view_customers.php">Feedback</a> </li>
+                <li> <a style="text-decoration: none;" href="viewapplication.php">Page Requests</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_view_report.php"> view Reports</a> </li>
             </ul>
             <a href="admin_logout.php" class="header-cases">Logout</a>
         </nav>
