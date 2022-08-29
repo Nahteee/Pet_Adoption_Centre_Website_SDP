@@ -56,5 +56,5 @@
 
     </main>
   </body>
-  <script src="main.js?v=<?php echo time(); ?>"></script>
+  <script src="JS/main.js?v=<?php echo time(); ?>"></script>
 </html>

@@ -7,13 +7,61 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--So that the browser will render the width of the page at the width of its own screen-->
      <link rel="stylesheet" href="../../CSS/reset.css?v=<?php echo time(); ?>">
      <link rel="stylesheet" href="../../CSS/quizstyle.css?v=<?php echo time(); ?>">
+     <link rel="stylesheet" href="../../CSS/headerstyle.css?v=<?php echo time(); ?>">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
      <title></title>
    </head>
    <body>
-       <div id="page-wrap">
-          <h1 class="index-headline">What Pet Should I Get?<br> Take Our Quiz and Find Out!</h1>
+
+     <header>
+       <!-- <a href="#" class="header-brand"><img src="Imgs/ForeverHome Logo.png" alt=""></a> -->
+       <nav>
+         <div class="header-brand" onclick="toggleNav()">
+         <a><img src="../../Imgs/ForeverHome Logo.png"  alt=""></a>
+         <i class="bi bi-chevron-double-right"></i>
+         </div>
+         <!-- <a href="#" class="brand-name">ForeverHome</a> -->
+         <ul class="list-wrap">
+           <li> <a href="index.php" id="selected">Home</a> </li>
+           <li> <a href="member/browsepets.php">Pets</a> </li>
+           <li> <a href="member/browsepages.php">Centres</a> </li>
+           <li> <a href="admin_view_customers.php">Forum</a> </li>
+         </ul>
+         <div class="header-case">
+           <div class="uhh-p-class"><i class="bi bi-chevron-down"></i>&nbspUsername
+             <ul class="uhh-class">
+               <li><a href="#">Edit profile</a></li>
+               <li><a href="#">Logout</a></li>
+             </ul>
+           </div>
+           <div class="profile-image">
+             <i class="bi bi-person-fill"></i>
+           </div>
+           <!-- <div class="menu-btn">
+             <i class="bi bi-columns-gap"></i>
+           </div> -->
+         </div>
+         <!-- <a class="header-login" href="login.php">Login</a> -->
+       </nav>
+       <aside class="nav-sidebar">
+           <ul>
+             <li> <span>Hello!</span> </li>
+             <li> <a href="#">Take our Pet Quiz!</a> </li>
+             <li> <a href="#">View pending requests</a> </li>
+             <li> <a href="#">View forum posts</a> </li>
+             <li> <a href="#">View bug report status</a> </li>
+             <!-- <li> <a href="#">Just another day</a> </li> -->
+           </ul>
+       </aside>
+     </header>
+       <!-- <div class="page-wrap"> -->
+       <div class="h1-wrap">
+         <h1 class="index-headline">What Pet Should I Get?<br> Take Our Quiz and Find Out!</h1>
+       </div>
+
   	<form action="grade.php" method="post" id="quiz">
               <ul id="test-questions">
+                <img src="../../Imgs/quizimg1.jpg" alt="">
                   <li>
                       <div class="quiz-overlay"></div>
                       <h3>Why do you want a pet?</h3>
@@ -120,6 +168,7 @@
                       <div class="mtm">
                           <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
                           <label for="question-5-answers-A">a.  Pretty good, but I’d like to avoid any major expenses.</label>
+                      </div>
                       <div>
                           <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
                           <label for="question-5-answers-B">b.  Generous. In addition to budgeting for the basics, I plan to have an emergency fund set aside.</label>
@@ -144,6 +193,7 @@
                       <div class="mtm">
                           <input type="radio" name="question-6-answers" id="question-6-answers-A" value="A" />
                           <label for="question-6-answers-A">a.  Habitat maintenance is fine, but anything beyond that is a deal breaker.</label>
+                      </div>
                       <div>
                           <input type="radio" name="question-6-answers" id="question-6-answers-B" value="B" />
                           <label for="question-6-answers-B">b.  I’m OK with muddy paws and the occasional chewed up cushion.</label>
@@ -168,6 +218,7 @@
                       <div class="mtm">
                           <input type="radio" name="question-7-answers" id="question-7-answers-A" value="A" />
                           <label for="question-7-answers-A">a.  “Finding Nemo” swam its way into my heart.</label>
+                      </div>
                       <div>
                           <input type="radio" name="question-7-answers" id="question-7-answers-B" value="B" />
                           <label for="question-7-answers-B">b.  “Bolt” for the win!</label>
@@ -194,7 +245,7 @@
               </ul>
   	</form>
           <div class="nomargin"></div>
-      </div>
+      <!-- </div> -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
     <script>
            (function($) {
@@ -211,4 +262,5 @@
     </script>
 
    </body>
+   <script src="../../JS/main.js?v=<?php echo time(); ?>"></script>
  </html>

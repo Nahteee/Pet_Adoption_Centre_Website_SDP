@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <?php include("header.php"); ?>
+      <?php include("memberheader.php"); ?>
     </header>
     <main>
       <section class="index-banner"> <!-- Similar Content -->

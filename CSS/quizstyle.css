@@ -1,7 +1,7 @@
 #quiz {
   margin: 0 18px;
   padding: 0 0 0 1px;
-  position: relative;
+  /* position: relative; */
   -webkit-transition: all linear .35s;
   -moz-transition: all linear .35s;
   -o-transition: all linear .35s;
@@ -33,6 +33,7 @@
   margin: 0 0 1px 0;
   min-height: 64px;
   padding: 9px 50px 0;
+  font-family: 'Tangerine', cursive;
   /* text-align: left; */
 }
 #quiz ul li {
@@ -42,7 +43,7 @@
   min-height: 335px;
 }
 #quiz ul li div {
-  color: #ebe9e6;
+  color: black;
   margin: 10px 0;
   padding: 1px 0;
 }
@@ -50,35 +51,38 @@
   margin-top: 20px;
 }
 #quiz input {
-  opacity: 1;
+  opacity: 0;
   vertical-align: middle;
   width: 20px;
+
 }
 #quiz label, #quiz input#submit-quiz {
-  background-color: #1f4c5b;
+  background-color: #f0c040;
   cursor: pointer;
   display: inline-block;
-  z-index: 99;
+  /* z-index: 99; */
 }
 #quiz label {
   height: 31px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 2.55em;
   margin: 0 30px 0 0;
   max-width: 1000px;
   padding: 2px 0 4px 16px;
-  width: 575px;
+  width: 750px;
+  font-family: 'Tangerine', cursive;
+  border-radius: 10px;
 }
 #quiz input#submit-quiz {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #1f4c5b;
+  background: #f0c040;
   border: none;
-  color: #ebe9e6;
+  color: black;
   display: block;
-  font-family: 'Droid Serif', Times, serif;
-  font-size: 21px;
+  font-family: 'Tangerine', cursive;
+  font-size: 26px;
   height: 74px;
   margin: 43px auto 0;
   opacity: 1;
@@ -113,16 +117,21 @@
 
 .index-sell, .index-headline {
   color: #1c2d37;
-  margin-top: 50px;
+  padding: 50px 0;
+  padding-top: 135px;
+  margin-bottom: 50px;
+  font-family: 'Tangerine', cursive;
   /* position: absolute; */
   text-align: center;
   /* width: 600px; */
+  /* background-color: red; */
 }
 .index-headline {
   font-size: 36px;
-  height: 100px;
+  height: auto;
   letter-spacing: 0px;
   text-shadow: 1px 1px 2px #fff;
+  background-color: #f0c040;
 }
 
 #replay {
@@ -362,4 +371,12 @@ a:hover.delete, a:active.delete {
 a.delete {
     background-color:#ffaeae;
 
+}
+
+.h1-wrap {
+  /* background-color: green; */
+}
+
+#quiz img {
+  height: 500px;
 }
