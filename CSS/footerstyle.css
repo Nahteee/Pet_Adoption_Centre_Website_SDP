@@ -1,0 +1,156 @@
+footer {
+  height: 250px;
+  width: 100%;
+  /* background-color: yellow; */
+}
+
+.footer-wrap {
+  /* background-color: red; */
+  height: 225px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0c040;
+}
+
+.element1 {
+  height: 100%;
+  width: 300px;
+  /* background-color: blue; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.element1 img {
+  height: 125px;
+  margin-top: 25px;
+}
+
+.socials {
+  /* background-color: purple; */
+  width: 250px;
+  /* height: 800px; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.socials a {
+  color: #f0c040;
+  font-size: 30px;
+
+}
+
+.element2 {
+  height: 100%;
+  width: 300px;
+  /* background-color: green; */
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.element2 h1 {
+  font-size: 20px;
+  font-family: 'Tangerine', cursive;
+  font-weight: 300;
+  margin: 15px 0;
+  color: #f0c040;
+}
+
+.element2 ul {
+
+}
+
+.element2 ul li {
+  list-style: none;
+  line-height: 25px;
+}
+
+.element2 ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.element3 {
+  height: 100%;
+  width: 300px;
+  /* background-color: pink; */
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.element3 h1 {
+  font-size: 20px;
+  font-family: 'Tangerine', cursive;
+  font-weight: 300;
+  margin: 15px 0;
+  color: #f0c040;
+}
+
+.elements3 ul {
+  text-align: center;
+}
+
+.element3 ul li {
+  list-style: none;
+  line-height: 25px;
+  text-align: center;
+}
+
+.element4 {
+  /* background-color: cyan; */
+  height: 100%;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer h2 {
+  text-align: center;
+  position: relative;
+  /* right: 0; */
+  /* left: 10px; */
+  /* bottom: 0px; */
+  /* display: none; */
+  margin-right: 935px;
+  /* margin-bottom: 200px; */
+  padding-bottom: 20px;
+}
+
+.element4 h1 {
+  margin-top: 15px;
+}
+
+
+.element4 a {
+  text-decoration: none;
+  color: #444;
+  font-family: 'Tangerine', cursive;
+  weight: 300;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 15px;
+  /* display: block; */
+  /* height: auto; */
+  /* width: 250px; */
+  background-color: #f0c040;
+  transition: 0.2s ease-in-out;
+  line-height: 25px;
+  margin-top: 10px;
+  /* margin-left: 150px; */
+}
+
+.element4 a:hover {
+  background-color: #c0a020;
+}
