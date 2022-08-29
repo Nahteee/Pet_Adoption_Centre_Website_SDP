@@ -1,14 +1,14 @@
 <?php
-session_start();
+// session_start();
 include("../conn.php");
-$userid = $_SESSION['auth_user_id'];
+include("../session.php");
 
 if(isset($_POST['submit'])){
     $title = $_POST['title'];
       $content = $_POST['content'];
-    $sql="INSERT INTO feedback (user_ID, title, description) 
+    $sql="INSERT INTO feedback (user_ID, title, description)
     VALUES ('$userid','$title','$content')";
-    
+
     if (!mysqli_query($con,$sql)){
         die('Error: ' . mysqli_error($con));
     }
@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
         </script>';
     }
       mysqli_close($con);
-  
+
   }
 ?>
 
@@ -32,10 +32,10 @@ if(isset($_POST['submit'])){
     <title>FeedBack to Us!</title>
     <style>
     input {
-      width: 250px; 
+      width: 250px;
       padding: 8px;
       margin: 3px 0 11px 0;
-      display: inline-block; 
+      display: inline-block;
       font-size:12pt;
       text-decoration: none;
     }

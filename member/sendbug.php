@@ -1,6 +1,6 @@
 <?php
-session_start();
-include('../conn.php');
+include("../conn.php");
+include("../session.php");
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $content = $_POST['content'];

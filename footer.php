@@ -42,9 +42,9 @@
         </div>
         <div class="element4">
           <h1> <i style="font-size: 18px;">Something wrong with our site? </i> <br> <i style="font-style: normal; weight: 50;">Send us your bug report.</i> </h1>
-          <a href="#">Bug Report</a>
+          <a href="/SDP-Source-Code/member/sendbug.php">Bug Report</a>
           <h1> <i style="font-size: 18px;">What do you think of our website? </i> <br> <i style="font-style: normal;">Send us your feedback</i> </h1>
-          <a href="#">Feedback</a>
+          <a href="/SDP-Source-Code/member/feedback.php">Feedback</a>
         </div>
       </div>
       <h2>Adoption 2022 ©. All Rights Reserved</h2>
