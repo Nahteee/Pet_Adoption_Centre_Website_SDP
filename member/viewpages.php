@@ -28,9 +28,13 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 			echo "<h1>" . $row['centre_name'] . "</h1>";
 
 			echo "Located at: " . $row['location'];
-			echo "<br>";
+			echo "<br><br>";
 			echo $row['description'];
+			echo "<br><br>";
+			echo "Contact Number: " . $row['phone'];
 			echo "<br>";
+			echo "Email: " . $row['email'];
+			echo "<br><br><br>";
 		}
 	?>
 
@@ -60,6 +64,8 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 	?>
 </p>
 </div>
+<br>
+<br>
 <br>
 <br>
 <br>

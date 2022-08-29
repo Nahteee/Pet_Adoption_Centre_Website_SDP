@@ -487,6 +487,7 @@ table {
   width: 100%;
   padding: 8px;
   border-collapse: collapse;
+  text-align: center;
 }
 
 th {
