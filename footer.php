@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <!-- <link rel="stylesheet" href="CSS/reset.css?v=<//?php echo time(); ?>"> -->
-    <link rel="stylesheet" href="CSS/footerstyle.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/SDP-Source-Code/CSS/footerstyle.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   </head>
   <body>
     <footer>
       <div class="footer-wrap">
         <div class="element1">
-          <img src="Imgs/ForeverHome Logo.png" alt="">
+          <img src="/SDP-Source-Code/Imgs/ForeverHome Logo.png" alt="">
           <div class="socials">
             <a href="https://www.instagram.com/" target=”_blank”><i class="bi-instagram"></i></a>
             <a href="https://www.facebook.com/" target=”_blank”><i class="bi-facebook"></i></a>
