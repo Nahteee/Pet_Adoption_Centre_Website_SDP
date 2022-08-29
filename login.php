@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	if($rowcount==1 && $role=='member')  {
 		$_SESSION['mySession']=$username;
 		$_SESSION['admin_id']=$id;
-		header("location: member.php");
+		header("location: member/index_mem.php");
 	}
   else if($rowcount==1  && $role=='owner')  {
 		$_SESSION['mySession']=$username;

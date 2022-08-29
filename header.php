@@ -17,15 +17,11 @@
         <a href="#" class="header-brand"><img src="Imgs/ForeverHome Logo.png" alt=""></a>
         <!-- <a href="#" class="brand-name">ForeverHome</a> -->
         <ul class="list-wrap">
-          <li> <a href="admin_users.php" id="selected">Home</a> </li>
-          <li> <a href="admin_pets.php">Pets</a> </li>
-          <li> <a href="admin_centres.php">Centres</a> </li>
+          <li> <a href="index.php" id="selected">Home</a> </li>
+          <li> <a href="member/browsepets.php">Pets</a> </li>
+          <li> <a href="member/browsepages.php">Centres</a> </li>
           <li> <a href="admin_view_customers.php">Forum</a> </li>
         </ul>
-        <!-- <form class="search-form" action="index.html" method="post">
-          <input type="text" name="" value="">
-          <button type="submit" name="button"><i class="bi-search"></i></button>
-        </form> -->
         <?php
         echo '<a class="header-login" href="login.php">
           Login

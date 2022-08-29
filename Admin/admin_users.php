@@ -44,7 +44,7 @@ include("../conn.php");
     <section class="main-wrapper">
       <div class="box-header">
         <h1>Members</h1>
-        <!-- <a href="admin_add_products.php" class="add">Add New Product ➕</a> -->
+        <a href="admin_add_products.php" class="add">Add New Product ➕</a>
       </div>
       <table>
         <tr>

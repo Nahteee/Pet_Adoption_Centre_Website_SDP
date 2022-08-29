@@ -15,9 +15,9 @@
         <div class="element1">
           <img src="Imgs/ForeverHome Logo.png" alt="">
           <div class="socials">
-            <a href="www.instagram.com"><i class="bi-instagram"></i></a>
-            <a href="www.facebook.com"><i class="bi-facebook"></i></a>
-            <a href="www.twitter.com"><i class="bi-twitter"></i></a>
+            <a href="https://www.instagram.com/" target=”_blank”><i class="bi-instagram"></i></a>
+            <a href="https://www.facebook.com/" target=”_blank”><i class="bi-facebook"></i></a>
+            <a href="https://www.twitter.com/" target=”_blank”><i class="bi-twitter"></i></a>
           </div>
         </div>
         <div class="element2">

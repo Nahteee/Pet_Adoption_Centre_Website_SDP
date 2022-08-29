@@ -1,5 +1,7 @@
 body {
   background: white;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -37,13 +39,15 @@ nav > * {
 }
 
 header .header-brand {
+  border-right: 3px solid #f0c040;
+  padding: 7px 10px 0 40px;
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
 }
 
 header .header-brand img {
   height: 60px;
-  border-right: 3px solid #f0c040;
-  padding: 7px 20px 0 40px;
-  margin: 10px 0px;
 }
 
 .brand-name {
@@ -106,4 +110,119 @@ header .header-login {
 header .header-login:hover {
   background-color: #eee;
   transition: all 0.3s ease-in-out;
+}
+
+
+header .header-case {
+  display: flex;
+  align-items: center;
+}
+
+header .header-case .uhh-p-class {
+  display: block;
+  font-family: 'Tangerine', cursive;
+  font-size: 18px;
+  color: #f0c040;
+  margin-right: 15px;
+}
+
+header .profile-image {
+  margin-right: 20px;
+}
+
+header .profile-image {
+  font-size: 30px;
+  color: #fff;
+  /* border: solid 1px black; */
+  background-color: #f0c040;
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 30px;
+  /* display: block; */
+}
+
+header .menu-btn {
+  font-size: 30px;
+  color: #f0c040;
+  margin-right: 10px;
+}
+
+
+.nav-sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: calc(100vh - 85px);
+  padding: 0px;
+  background-color: #1b1b1b;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-sidebar ul {
+  padding-top: 15px;
+  overflow: hidden; /*Hides the text that white-space allows. text is cut off in the container*/
+  visibility: hidden; /*Hides text to be shown later in JavaScript*/
+}
+
+.nav-sidebar ul li {
+  line-height: 60px;
+  list-style: none;
+}
+
+
+.nav-sidebar ul li span, .nav-sidebar ul li a {
+  display: block;
+  height: 60px;
+  padding: 0 10px;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: #fff;
+  font-family: arial;
+  font-size: 16px;
+  white-space: nowrap; /*Makes text not overlap. Allows text to go outside its wrap*/
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-sidebar ul li span{
+  color: #f0c040;
+}
+
+.nav-sidebar ul li a:hover {
+  background-color: #222;
+}
+
+
+
+header nav .header-case .uhh-class {
+  display: none;
+  position: absolute;
+  background-color: white;
+  margin-top: 10px;
+  /* padding: 10px; */
+  border-radius: 0px 0px 0px 4px ;
+  z-index: 2000;
+  transition: all 1s ease-in-out;
+}
+
+header nav .header-case:hover .uhh-class {  /*cause youre hovering above the list item, not the ul*/
+  display: block;
+}
+
+.uhh-class li {
+  /* width: 150px; */
+  border-radius: 10px;
+}
+
+.uhh-class li a {
+  /* padding: 8px 14px; */
+  line-height: 50px;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.uhh-class li:hover {
+  background-color: #ddd;
 }

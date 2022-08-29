@@ -118,11 +118,14 @@ footer {
 
 footer h2 {
   text-align: center;
-  position: absolute;
+  position: relative;
   /* right: 0; */
-  left: 165px;
-  bottom: -2195px;
+  /* left: 10px; */
+  /* bottom: 0px; */
   /* display: none; */
+  margin-right: 935px;
+  /* margin-bottom: 200px; */
+  padding-bottom: 20px;
 }
 
 .element4 h1 {
