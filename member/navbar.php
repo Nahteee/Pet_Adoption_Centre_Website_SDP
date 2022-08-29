@@ -38,7 +38,7 @@
         </li>
         <li class="nav-item">
             <?php
-                if(!isset($_SESSION['auth_user_id']))
+                if(!isset($_SESSION['userID']))
                 { ?>
                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</a>
                 <?php }

@@ -2,13 +2,14 @@
 //Page for members to browse through adoption centres
 
 include("../conn.php");
+include("../header.php");
 
 $result = mysqli_query($con, "SELECT * FROM pets");
 ?>
 
 <html>
 <head>
-	<link rel = "stylesheet" href = "../CSS/memberstyle.css">
+	<link rel = "stylesheet" href = "../CSS/style.css">
 	<link rel="stylesheet" href="../CSS/headerstyle.css?v=<?php echo time(); ?>">
 </head>
 <body>
@@ -31,7 +32,7 @@ $result = mysqli_query($con, "SELECT * FROM pets");
 			echo "<tr>";
 
 			echo "<td>";
-			echo "<img src = '../uploads/" . $row['image_name'] . "' style = 'width:100px; height:auto;'>";
+			echo "<img src = '../Uploads/" . $row['image_name'] . "' style = 'width:100px; height:auto;'>";
 			echo "</td>";
 
 			echo "<td>";

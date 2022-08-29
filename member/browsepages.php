@@ -8,7 +8,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 
 <html>
 <head>
-	<link rel = "stylesheet" href = "../CSS/memberstyle.css">
+	<link rel = "stylesheet" href = "../CSS/style.css">
 </head>
 <body>
 	<header>
@@ -26,7 +26,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 			echo "<tr>";
 
 			echo "<td>";
-			echo "<img src = '../uploads/" . $row['centre_pic'] . "' style = 'width:100px; height:auto;'>";
+			echo "<img src = '../Uploads/" . $row['centre_pic'] . "' style = 'width:100px; height:auto;'>";
 			echo "</td>";
 
 			echo "<td>";

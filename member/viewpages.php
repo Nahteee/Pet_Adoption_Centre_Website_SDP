@@ -3,6 +3,7 @@
 
 include("../conn.php");
 include("../session.php");
+include("../header.php");
 
 $id = intval($_GET['id']); 
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE ID=$id");
@@ -13,7 +14,7 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 <html>
 <body>
 	<head>
-		<link rel = "stylesheet" href = "../style.css">
+		<link rel = "stylesheet" href = "../CSS/style.css">
 	</head>
 	<title>Centre Page</title>
 <body>
@@ -23,7 +24,7 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 	<?php
 		while($row = mysqli_fetch_array($result)) {
 
-			echo "<img src = '../uploads/" . $row['centre_pic'] . "' style = 'width: 300px; height: auto;'>";
+			echo "<img src = '../Uploads/" . $row['centre_pic'] . "' style = 'width: 300px; height: auto;'>";
 			echo "<h1>" . $row['centre_name'] . "</h1>";
 
 			echo "Located at: " . $row['location'];
@@ -40,7 +41,7 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 	<?php
 		while($row = mysqli_fetch_array($pets)) {
 			echo "<div class = 'child'>";
-				echo "<img src = '../uploads/" . $row['image_name'] . "' style = 'width: 250px; height: auto;'>";
+				echo "<img src = '../Uploads/" . $row['image_name'] . "' style = 'width: 250px; height: auto;'>";
 				echo "<br>";
 				echo "<br>";
 				echo "Name: " . $row['name'] . "<br>";
@@ -87,9 +88,8 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 
 <form action = "centrecomment.php" method = "post">
 		<input type="hidden" name="centreId" value="<?php echo $id ?>">
-		<input type="hidden" name="userID" value="<?php echo $_SESSION['userID'] ?>">
-		<textarea type = "text"  name = "centreComment"> </textarea>
-	<input type = "submit" value = "Submit comment">
+		<textarea type = "text"  name = "centreComment"> </textarea> <br> <br>
+	<input type = "submit" value = "Submit comment"> <br> <br>
 </form>
 
 

@@ -15,19 +15,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 
 	while($row=mysqli_fetch_array($result)){
-		$id = $row['id'];
+		$id = $row['ID'];
     $role = $row['role'];
 	}
 
 	if($rowcount==1 && $role=='member')  {
-		$_SESSION['mySession']=$username;
-		$_SESSION['admin_id']=$id;
-		header("location: member/index_mem.php");
+		$_SESSION['username']=$username;
+		$_SESSION['userID']=$id;
+		header("location: index.php");
 	}
   else if($rowcount==1  && $role=='owner')  {
-		$_SESSION['mySession']=$username;
-		$_SESSION['admin_id']=$id;
-		header("location: owner.php");
+		$_SESSION['username']=$username;
+		$_SESSION['userID']=$id;
+		header("location: owner/centreowner.php");
 	}
 	else  {
 		echo "<script>alert('Your Login Name or Password is invalid. Please re login');</script>";

@@ -73,7 +73,7 @@
         <div class="box3">
           <h1>What pet is best suited for you?</h1>
           <p><br>Take our pet quiz and find out!. Our pet quiz uses a grading algorithm to match you to your perfect friend based on the answers you have given to particularly crafted questions.</p>
-          <a onclick="error()" >Take the pet quiz!</a>
+          <a onclick="location.href = '/sdp/Members/Quiz/quiz.php';" >Take the pet quiz!</a>
         </div>
         <div class="box4">
           <div class="img-wrap">

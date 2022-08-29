@@ -7,7 +7,7 @@ include('navbar.php');
 
 <html>
 <head>
-    <link rel = "stylesheet" href = "../style.css">
+    <link rel = "stylesheet" href = "../CSS/style.css">
     <title>Forum</title>
 </head>
 <div class = "center">
