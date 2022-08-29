@@ -36,11 +36,4 @@ if(isset($_POST['id_user'])){
     $output .= "</table></div>";  
     echo $output;  
 }
-// $id = $_POST['id'];
-// $result = mysqli_query($con, "SELECT * FROM users WHERE ID=$id");
-// $array_result = [];
-// array_push($array_result, ['user' => $result]);
-// header('Content-type: application/json');
-// echo json_encode($array_result);
-
 ?>

@@ -47,7 +47,19 @@ include("../conn.php");
           <th>Feedback</th>
         </tr>
         <?php
-        $result = mysqli_query($con,"SELECT * FROM feedback");
+        $results_per_page = 04;
+        $sql = 'SELECT * FROM feedback';
+        $result = mysqli_query($con, $sql);
+        $number_of_results = mysqli_num_rows($result);
+        $number_of_pages = ceil($number_of_results / $results_per_page);
+        if (isset($_GET["page"])) {
+            $page = $_GET["page"];
+        } else {
+            $page = 1;
+        }
+        $this_page_first_result = ($page - 1) * 04;
+        $sql = 'SELECT * FROM feedback LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
+        $result = mysqli_query($con, $sql);
         while($row=mysqli_fetch_array($result)){
             echo "<tr>"; // alternative way is : echo ‘<trbgcolor="#99FF66">’;
             echo "<td>";
@@ -67,7 +79,19 @@ include("../conn.php");
             mysqli_close($con);//to close the database connection
         ?>
       </table>
-      
+      <?php
+            if ($page > 1) {
+                echo "<a style='margin-right :5px' href='admin_feedback.php?page=" . ($page - 1) . "' class='btn btn-danger'>Previous</a>";
+            }
+
+            for ($i = 1; $i < $number_of_pages; $i++) {
+                echo '<a href="admin_feedback.php?page=' . $i . '" class="btn btn-primary">' . $i . '</a> ';
+            }
+
+            if ($i > $page) {
+                echo "<a href='admin_feedback.php?page=" . ($page + 1) . "' class='btn btn-danger'>Next</a>";
+            }
+            ?>
 
       <div class="box-header">
       </div>
