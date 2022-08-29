@@ -51,7 +51,7 @@ include("../conn.php");
         <?php
           $result=mysqli_query($con,"SELECT * FROM pets");
           while($row=mysqli_fetch_array($result)){
-            $product_image = "default1.jpg";
+            $product_image = "default.jpg";
         		if ($row['image_name']!=""){
         			$product_image = $row['image_name'];
         		}
@@ -60,7 +60,7 @@ include("../conn.php");
         		echo $row['ID'];
         		echo "</td>";
         		echo "<td>";
-        		echo '<img style="vertical-align: middle; margin-left: 10px; padding-right: 0px" src="'.$product_image.'" width="60px">';
+        		echo '<img style="vertical-align: middle; margin-left: 10px; padding-right: 0px" src="../Uploads/'.$product_image.'" width="60px">';
         		echo "</td>";
         		echo "<td>";
         		echo $row['name'];

@@ -43,7 +43,7 @@ $result = mysqli_query($con, "SELECT * FROM pets");
 
 			echo "<td>";
 			echo "<button class='small'><a class='buttonlink' href=\"viewpages.php?id=";
-			echo $row['ID'];
+			echo $row['centre_ID'];
 			echo "\">View page</a></button></td>";
 			echo "</tr>";
 		}
