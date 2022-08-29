@@ -15,19 +15,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	}
 
 	while($row=mysqli_fetch_array($result)){
-		$id = $row['id'];
+		$id = $row['ID'];
     $role = $row['role'];
 	}
 
 	if($rowcount==1 && $role=='member')  {
-		$_SESSION['mySession']=$username;
-		$_SESSION['admin_id']=$id;
-		header("location: member/index_mem.php");
+		$_SESSION['username']=$username;
+		$_SESSION['userID']=$id;
+		header("location: index.php");
 	}
   else if($rowcount==1  && $role=='owner')  {
-		$_SESSION['mySession']=$username;
-		$_SESSION['admin_id']=$id;
-		header("location: owner.php");
+		$_SESSION['username']=$username;
+		$_SESSION['userID']=$id;
+		$_SESSION['owner'] = 1;
+		header("location: index.php");
 	}
 	else  {
 		echo "<script>alert('Your Login Name or Password is invalid. Please re login');</script>";
@@ -54,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
       <input type="text" name="username" required="required" placeholder="Username">
       <input type="password" name="password" required="required" placeholder="Password">
       <button type="submit" name="submitBtn">Login</button>
-      <div class="register-btn" onclick="location.href='register.php';">Register</div>
+      <div class="register-btn" onclick="location.href='member/createaccount.php';">Register</div>
     </form>
 
   </body>

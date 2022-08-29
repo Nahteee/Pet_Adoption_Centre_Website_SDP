@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("../conn.php");
-$userid = $_SESSION['auth_user_id'];
+$userid = $_SESSION['userID'];
 
 if(isset($_POST['submit'])){
     $title = $_POST['title'];
@@ -14,12 +14,13 @@ if(isset($_POST['submit'])){
     }
     else {
         echo '<script>alert("Submitted Successful!");
-        window.location.href= "index_mem.php";
+        window.location.href= "../index.php";
         </script>';
     }
       mysqli_close($con);
   
   }
+include("../header.php");
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +31,7 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FeedBack to Us!</title>
+    <link rel = "stylesheet" href = "../CSS/style.css">
     <style>
     input {
       width: 250px; 
@@ -44,11 +46,11 @@ if(isset($_POST['submit'])){
     }
   </style>
 </head>
-
+<div class = "center">
 <body>
     <form method="post">
         <center>
-            <h1>Send a Feedback to Us!</h1>
+            <h1>Send a Feedback to Us!</h1><br> <br><br>
             <label for="title">Title:</label><br>
             <input type="text" value="" name="title" placeholder="Type a title" required><br>
             <label for="des">Description:</label><br>
@@ -57,5 +59,6 @@ if(isset($_POST['submit'])){
         </center>
     </form>
 </body>
+</div>
 
 </html>

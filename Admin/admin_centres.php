@@ -17,18 +17,18 @@ include("../conn.php");
 
 <body>
   <header>
-    <a href="admin_users.php" class="header-brand"><img src="../Imgs/ForeverHome Logo.png" alt=""></a>
+    <a href="admin_users.php" class="header-brand"><img src="/sdp/Imgs/ForeverHome Logo.png" alt=""></a>
     <nav>
       <ul>
-        <li> <a href="admin_users.php">Users</a> </li>
-        <li> <a href="admin_pets.php">Pets</a> </li>
-        <li> <a href="admin_centres.php" id="selected">Centres</a> </li>
-        <li> <a href="admin_view_customers.php">Forum</a> </li>
-        <li> <a href="admin_view_customers.php">Tickets</a> </li>
-        <li> <a href="admin_view_customers.php">Feedback</a> </li>
-        <li> <a href="admin_view_customers.php">Page Requests</a> </li>
+        <li> <a href="/sdp/Admin/admin_users.php">Users</a> </li>
+        <li> <a href="/sdp/Admin/admin_pets.php">Pets</a> </li>
+        <li> <a href="/sdp/Admin/admin_centres.php" id="selected">Centres</a> </li>
+        <li> <a href="/sdp/Admin/admin_view_customers.php">Forum</a> </li>
+        <li> <a href="/sdp/Admin/admin_view_customers.php">Tickets</a> </li>
+        <li> <a href="/sdp/Admin/admin_view_customers.php">Feedback</a> </li>
+        <li> <a href="/sdp/Admin/admin_view_customers.php">Page Requests</a> </li>
       </ul>
-      <a href="admin_logout.php" class="header-cases">Logout</a>
+      <a href="/sdp/Admin/admin_logout.php" class="header-cases">Logout</a>
     </nav>
   </header>
   <main>

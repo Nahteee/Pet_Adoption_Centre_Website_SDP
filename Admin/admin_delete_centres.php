@@ -1,5 +1,5 @@
 <?php
-	include("session.php");
+	session_start();
 	include("../conn.php");
 	//$_GET[‘id’] — Get the integer value from id parameter in URL.
 	//intval() will returns the integer value of a variable

@@ -7,7 +7,7 @@
         <h5 class="modal-title" id="exampleModalLabel"> Login Form</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="logincode.php" method="POST">
+      <form action="../login.php" method="POST">
       <div class="modal-body">
        <div class="form-group mb-3">
             <input type="email" name="email" class="form control" placeholder="your email">
@@ -34,11 +34,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home Forum</a>
+          <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="indexforum.php">Forum Index</a>
         </li>
         <li class="nav-item">
             <?php
-                if(!isset($_SESSION['auth_user_id']))
+                if(!isset($_SESSION['userID']))
                 { ?>
                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</a>
                 <?php }

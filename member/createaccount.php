@@ -1,6 +1,10 @@
+<?php 
+include("../header.php");
+?>
+
 <html>
 <head>
-  <link rel = "stylesheet" href = "../style.css">
+  <link rel = "stylesheet" href = "../CSS/style.css">
   <title>Register for account</title>
 <form action="register.php" method="post">
     <div class="center">
@@ -37,6 +41,6 @@
       <input type="number" id="income" name="income" maxlength="12" required> <br> <br> <br>
 
       <button type="submit">Register</button> <br>
-      <p>Already have an account? <a href="login.html">Log in!</a>.</p>
+      <p>Already have an account? <a href="../login.php">Log in!</a></p>
     </div>
   </form>

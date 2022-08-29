@@ -2,12 +2,18 @@
 //PHP to send comments for centre pages
 
 include("../conn.php");
+session_start();
 
+if (!isset($_SESSION["username"])) {
+    echo "Pls login first";
+}
+
+$uID = $_SESSION['userID'];
 $sql="INSERT INTO centre_comments (user_ID, comment, centre_ID)
 
 VALUES
 
-('$_POST[userID]', '$_POST[centreComment]', '$_POST[centreId]')";
+('$uID', '$_POST[centreComment]', '$_POST[centreId]')";
 
 $centreID = $_POST['centreId'];
 
