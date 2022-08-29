@@ -78,6 +78,15 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
     <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
+    <style>
+        .wrapper{
+            margin: 0 auto;
+            width: 50%;
+        }
+        .user{
+            margin-left: 47%;
+        }
+    </style>
 </head>
 
 <body>
@@ -98,23 +107,40 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
             <a href="admin_logout.php" class="header-cases">Logout</a>
         </nav>
     </header>
-    <div class="pie" style="width: 20%;">
-        <center>
-            <h4>Bugs Report</h4>
-        </center>
-        <canvas id="pieChart"></canvas>
-    </div>
-    <div class="donut" style="width: 20%;float :right">
-        <center>
-            <h4>Adoption Report</h4>
-        </center>
-        <canvas id="donutChart"></canvas>
-    </div>
-    <div class="bar" style="width: 40%;">
-        <center>
-            <h4>Totals</h4>
-        </center>
-        <canvas id="barChart"></canvas>
+    <br><br>
+    <div class="wrapper">
+        <div class="pie" style="width: 50%;float :left">
+            <center>
+                <h4>Bugs Report</h4>
+            </center>
+            <canvas id="pieChart"></canvas>
+        </div>
+        <div class="donut" style="width: 50%;float :right">
+            <center>
+                <h4>Adoption Report</h4>
+            </center>
+            <canvas id="donutChart"></canvas>
+        </div>
+        <div class="bar" style="width: 100%; float :left">
+            <center>
+                <h4>Totals</h4>
+            </center>
+            <canvas id="barChart"></canvas>
+        </div>
+        <center><h4>Recent 5 members that registered</h4></center>
+        <div class="user">
+            
+            <?php
+            $result = mysqli_query($con, "SELECT * FROM users WHERE role = 'member' ORDER BY ID DESC LIMIT 5;");
+            echo "<ol>";
+            while ($row = mysqli_fetch_array($result)) {
+                echo "<li>";
+                echo $row['username'];
+                echo "</li>";
+            }
+            echo "</ol>";
+            ?>
+        </div>
     </div>
 </body>
 
@@ -131,7 +157,6 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(255, 159, 64, 0.2)',
                 'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(153, 102, 255, 0.2)',
                 'rgba(201, 203, 207, 0.2)'
@@ -142,10 +167,9 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
                 'rgb(255, 205, 86)',
                 'rgb(75, 192, 192)',
                 'rgb(54, 162, 235)',
-                'rgb(153, 102, 255)',
                 'rgb(201, 203, 207)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     };
     const config = {
@@ -172,22 +196,12 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
             label: 'Amount',
             data: <?= json_encode(array_values($bug_array)); ?>,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
                 'rgba(153, 102, 255, 0.2)',
                 'rgba(201, 203, 207, 0.2)'
             ],
             borderColor: [
-                'rgb(255, 99, 132)',
-                'rgb(255, 159, 64)',
                 'rgb(255, 205, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(54, 162, 235)',
-                'rgb(153, 102, 255)',
-                'rgb(201, 203, 207)'
+                'rgb(75, 192, 192)'
             ],
             borderWidth: 1
         }]
@@ -215,24 +229,14 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
         labels: labeldonut,
         datasets: [{
             label: 'Amount',
-            data: ['3','4'],
+            data: ['3', '4'],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
                 'rgba(201, 203, 207, 0.2)'
             ],
             borderColor: [
-                'rgb(255, 99, 132)',
-                'rgb(255, 159, 64)',
-                'rgb(255, 205, 86)',
                 'rgb(75, 192, 192)',
-                'rgb(54, 162, 235)',
-                'rgb(153, 102, 255)',
-                'rgb(201, 203, 207)'
+                'rgb(54, 162, 235)'
             ],
             borderWidth: 1
         }]
