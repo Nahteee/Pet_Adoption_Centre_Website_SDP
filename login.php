@@ -27,7 +27,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   else if($rowcount==1  && $role=='owner')  {
 		$_SESSION['username']=$username;
 		$_SESSION['userID']=$id;
-		header("location: owner/centreowner.php");
+		$_SESSION['owner'] = 1;
+		header("location: index.php");
 	}
 	else  {
 		echo "<script>alert('Your Login Name or Password is invalid. Please re login');</script>";

@@ -33,6 +33,14 @@
           echo '<a class="header-login" href="/sdp/member/logout.php">
           Logout
         </a>';
+        echo '<a class="header-login" href="/sdp/member/profile.php">
+          Profile
+        </a>';
+        if (isset($_SESSION['owner'])) {
+          echo '<a class="header-login" href="/sdp/owner/centreowner.php">
+          Owner
+        </a>';
+        }
       }
         ?>
       </nav>

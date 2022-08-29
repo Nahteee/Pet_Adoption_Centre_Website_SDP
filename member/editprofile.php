@@ -23,7 +23,7 @@ if ($valid == 0){
 } 
 
 else {
-    $id = $_SESSION['auth_user_id'];
+    $id = $_SESSION['userID'];
 
     $sql = "UPDATE users SET 
     username = '$_POST[user_name]', 
