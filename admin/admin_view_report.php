@@ -142,6 +142,20 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
             ?>
         </div>
     </div>
+    <br>
+    <footer>
+    <div class="footer-content">
+      <p class="company-name">© 2022 ForeverHome, Inc</p>
+      <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+      <nav>
+        <ul>
+          <li> <a href="admin_products.php">Products</a> </li>
+          <li> <a href="admin_orders.php">Orders</a> </li>
+          <li> <a href="admin_view_customers.php">Customers</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>
