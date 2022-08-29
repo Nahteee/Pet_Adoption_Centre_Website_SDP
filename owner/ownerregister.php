@@ -1,7 +1,11 @@
+<?php
+include("../header.php");
+?>
+
 <html>
 <!--Page to fill up form to register as a centre owner<-->
 <head>
-    <link rel="stylesheet" href= "../style.css">
+    <link rel="stylesheet" href= "../CSS/style.css">
 </head>
 <body>
     <title>Register as Centre Owner</title>
