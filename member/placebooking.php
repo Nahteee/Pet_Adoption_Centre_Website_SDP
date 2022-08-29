@@ -1,7 +1,7 @@
 <?php
 
 include("../conn.php");
-include("../session.php");
+session_start();
 
 $petId = intval($_GET['id']);
 
@@ -9,19 +9,21 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE ID=$petId");
 ?>
 <html>
 <head>
-	<link rel="stylesheet" href = "../style.css">
+	<link rel="stylesheet" href = "../CSS/style.css">
 	<title> Adopt Pet </title>
 </head>
 <div class = "center">
 
 <?php
 if (!isset($_SESSION['userID'])) {
-	echo "pls login first";
+	echo '<script>alert("Please login before placing an adoption request.");
+        window.location.href= "../login.php";
+        </script>';
 }
 else {
 while($row = mysqli_fetch_array($pets)) {
 
-		echo "<img src = '../uploads/" . $row['image_name'] . "' style = 'width: 300px; height: auto;'>";
+		echo "<img src = '../Uploads/" . $row['image_name'] . "' style = 'width: 300px; height: auto;'>";
 		echo "<h1>" . $row['name'] . "</h1>";
 
 		echo $row['name'] . " is " . $row['age'] . " years old<br>";

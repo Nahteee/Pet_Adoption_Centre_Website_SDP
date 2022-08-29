@@ -32,7 +32,7 @@
         </div>
         <div class="box2">
           <h1>We are FOREVERHOME</h1>
-          <p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus in hac habitasse platea dictumst. Odio euismod lacinia at quis. Dictum varius duis at consectetur lorem donec massa. Enim ut tellus elementum sagittis vitae et leo. Vitae congue mauris rhoncus aenean vel elit. Maecenas ultricies mi eget mauris pharetra. Id cursus metus aliquam eleifend mi. Est placerat in egestas erat. Vulputate dignissim suspendisse in est ante in. Proin sed libero enim sed faucibus turpis in eu. Vel eros donec ac odio tempor. Sagittis purus sit amet volutpat.</p>
+          <p><br>Since the beginning, we have always had one vision: Pet lots of animals. OK maybe we have two visions. That was the first one. The second one is: "Every pet deserves a loving home". That vision led to the founding of FOREVERHOME, a non profit organization dedicated to bettering the lives of pets and their owners.</p>
         </div>
       </section>
 
