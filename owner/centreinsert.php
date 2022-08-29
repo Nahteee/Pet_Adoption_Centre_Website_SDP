@@ -2,9 +2,15 @@
 //PHP to send new applications
 
 include("../conn.php");
+<<<<<<< HEAD
 include("../session.php");
 
 $target_dir = "../uploads/";
+=======
+session_start();
+
+$target_dir = "../Uploads/";
+>>>>>>> Ethan
 $target_file = $target_dir . basename($_FILES["centrePic"]["name"]);
 $id = $_SESSION['userID'];
 

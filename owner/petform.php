@@ -4,7 +4,11 @@ $id = intval($_GET['id']);
 <html>
 <!--Page to fill up form to add a new pet<-->
 <head>
+<<<<<<< HEAD
     <link rel = "stylesheet" href = "../style.css">
+=======
+    <link rel = "stylesheet" href = "../CSS/style.css">
+>>>>>>> Ethan
 </head>
 <body>
     <title>Add a pet</title>

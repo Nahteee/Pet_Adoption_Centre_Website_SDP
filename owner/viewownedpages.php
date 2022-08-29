@@ -2,13 +2,21 @@
 //Page where owners can view all their owned pages
 
 include("../conn.php");
+<<<<<<< HEAD
+=======
+include("../header.php");
+>>>>>>> Ethan
 $id = intval($_GET['id']); 
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND verified = 1");
 ?>
 
 <html>
 <head>
+<<<<<<< HEAD
 	<link rel = "stylesheet" href = "../style.css">
+=======
+	<link rel = "stylesheet" href = "../CSS/style.css">
+>>>>>>> Ethan
 </head>
 <title>View owned pages</title>
 <div class = "center">

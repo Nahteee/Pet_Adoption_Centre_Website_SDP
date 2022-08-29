@@ -11,7 +11,11 @@ while($row = mysqli_fetch_array($result)) {
 ?>
 <html>
 <head>
+<<<<<<< HEAD
         <link rel = "stylesheet" href = "../style.css">
+=======
+        <link rel = "stylesheet" href = "../CSS/style.css">
+>>>>>>> Ethan
 </head>
 <title>Edit pet details</title>
 
@@ -38,7 +42,11 @@ while($row = mysqli_fetch_array($result)) {
         </p>
         <p>
         Pet photo: <br>
+<<<<<<< HEAD
         <img src = "<?php echo "../uploads/" . $row['image_name']?>" style = 'width: 300px; height: auto;'> <br>
+=======
+        <img src = "<?php echo "../Uploads/" . $row['image_name']?>" style = 'width: 300px; height: auto;'> <br>
+>>>>>>> Ethan
         <input type="file" name="petPic" id="petPic" value = "<?php echo $row['image_name'] ?>">
         </p>
         <input type="submit" value="Save changes">

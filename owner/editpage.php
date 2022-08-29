@@ -2,6 +2,10 @@
 //PHP to edit centre details
 
 include("../conn.php");
+<<<<<<< HEAD
+=======
+include("../header.php");
+>>>>>>> Ethan
 
 $id = intval($_GET['id']); 
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE ID=$id");
@@ -12,7 +16,11 @@ while($row = mysqli_fetch_array($result)) {
 ?>
 <html>
 <head>
+<<<<<<< HEAD
         <link rel = "stylesheet" href = "../style.css">
+=======
+        <link rel = "stylesheet" href = "../CSS/style.css">
+>>>>>>> Ethan
 </head>
 <title> Edit centre details </title>
 
@@ -47,7 +55,11 @@ while($row = mysqli_fetch_array($result)) {
         </p>
         <p>
         Centre photo: <br>
+<<<<<<< HEAD
         <img src = "<?php echo "../uploads/" . $row['centre_pic']?>" style = 'width: 300px; height: auto;'> <br>
+=======
+        <img src = "<?php echo "../Uploads/" . $row['centre_pic']?>" style = 'width: 300px; height: auto;'> <br>
+>>>>>>> Ethan
         <input type="file" name="centrePic" value = "<?php echo $row['centre_pic'] ?>">
         </p>
         <input type="submit" value="Save changes">

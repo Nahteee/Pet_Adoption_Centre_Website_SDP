@@ -2,15 +2,27 @@
 //Page for members to browse through adoption centres
 
 include("../conn.php");
+<<<<<<< HEAD
+=======
+include("../header.php");
+>>>>>>> Ethan
 
 $result = mysqli_query($con, "SELECT * FROM pets");
 ?>
 
 <html>
 <head>
+<<<<<<< HEAD
 	<link rel = "stylesheet" href = "../style.css">
 </head>
 <body>
+=======
+	<link rel = "stylesheet" href = "../CSS/style.css">
+	<link rel="stylesheet" href="../CSS/headerstyle.css?v=<?php echo time(); ?>">
+</head>
+<body>
+		<?php //include("../header.php"); ?>
+>>>>>>> Ethan
 	<title>Browse Pets</title>
 	<div class = "center">
 	<h2>All pets</h2>
@@ -29,7 +41,11 @@ $result = mysqli_query($con, "SELECT * FROM pets");
 			echo "<tr>";
 
 			echo "<td>";
+<<<<<<< HEAD
 			echo "<img src = '../uploads/" . $row['image_name'] . "' style = 'width:100px; height:auto;'>";
+=======
+			echo "<img src = '../Uploads/" . $row['image_name'] . "' style = 'width:100px; height:auto;'>";
+>>>>>>> Ethan
 			echo "</td>";
 
 			echo "<td>";
@@ -39,7 +55,11 @@ $result = mysqli_query($con, "SELECT * FROM pets");
 			echo "<td>";
 			echo $row['breed'];
 			echo "</td>";
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> Ethan
 			echo "<td>";
 			echo "<button class='small'><a class='buttonlink' href=\"viewpages.php?id=";
 			echo $row['ID'];
@@ -52,4 +72,8 @@ $result = mysqli_query($con, "SELECT * FROM pets");
 	</table>
 </div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> Ethan
