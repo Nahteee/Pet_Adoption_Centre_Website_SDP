@@ -23,6 +23,7 @@
           <li> <a href="/sdp/member/indexforum.php">Forum</a> </li>
         </ul>
         <?php
+        session_start();
         if (!isset($_SESSION['username'])) {
           echo '<a class="header-login" href="/sdp/login.php">
           Login

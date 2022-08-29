@@ -32,7 +32,7 @@
         </div>
         <div class="box2">
           <h1>We are FOREVERHOME</h1>
-          <p><br>Since the beginning, we have always had one vision: Pet lots of animals. OK maybe we have two visions. That was the first one. The second one is: "Every pet deserves a loving home". That vision led to the founding of FOREVERHOME, a non profit organization dedicated to bettering the lives of pets and their owners.</p>
+          <p><br>Since the beginning, we have always had one vision: Pet lots of animals. OK maybe we have two visions. That was the first one. The second one is: "Every pet deserves a loving home". That vision led to the founding of FOREVERHOME, a non profit organization dedicated to bettering the lives of pets and their owners. You may know us from our volunteer work and appearances online. If you don't know us from that, then wow we should really replace our social media team. Anyway we're quite popular among adoption centres in particular because of the mentioned volunteer work. Or at least we think so. They still won't return our calls.</p>
         </div>
       </section>
 
@@ -43,21 +43,21 @@
             <img src="Imgs/centralizedicon.png" alt="">
           </div>
           <h1>Centralized</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+          <p>With the miracle of technology, everything you need is in one convenient location! Here you can adopt, post, discuss, and even become a centre owner yourself!</p>
         </div>
         <div class="feature2">
           <div class="img-wrap-features">
             <img src="Imgs/forumicon4.png" alt="">
           </div>
           <h1>Forum</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+          <p>Want to talk to other animal lovers? Well now you can do so outside of Facebook comment sections! Talk to your heart's content on our website's forum!</p>
         </div>
         <div class="feature3">
           <div class="img-wrap-features">
             <img src="Imgs/ForeverHome Logo.png" alt="">
           </div>
           <h1>Pet Quiz</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+          <p>Don't know what pet would be the best for you as a person? Well we'd recommend actually researching, but you could also try out our pet quiz!</p>
         </div>
       </section>
 
