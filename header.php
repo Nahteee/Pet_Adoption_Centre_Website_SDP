@@ -18,7 +18,7 @@
         <?php
         session_start();
         if (!isset($_SESSION['username'])) {
-          echo '<a href="#" class="header-brand"><img src="Imgs/ForeverHome Logo.png" alt=""></a>';
+          echo '<a href="#" class="header-brand"><img src="/SDP-Source-Code/Imgs/ForeverHome Logo.png" alt=""></a>';
         }
         else {
           echo'<div class="header-brand" onclick="toggleNav()">

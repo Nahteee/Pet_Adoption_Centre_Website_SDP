@@ -12,7 +12,7 @@ $result = mysqli_query($con, "SELECT * FROM pets");
 	<link rel="stylesheet" href="../CSS/headerstyle.css?v=<?php echo time(); ?>">
 </head>
 <body>
-		<?php //include("../header.php"); ?>
+		<?php include("../header.php"); ?>
 	<title>Browse Pets</title>
 	<div class = "center">
 	<h2>All pets</h2>
