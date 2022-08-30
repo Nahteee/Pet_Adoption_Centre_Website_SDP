@@ -23,12 +23,12 @@ if ($valid == 0){
     $sql="INSERT INTO users (username, password, role, IC, email, first_name, last_name, phone, income, address)
     VALUES
     ('$_POST[user_name]', '$_POST[psw]', 'member', '$_POST[IC]',
-    '$_POST[email]', '$_POST[firstname]', '$_POST[lastname]', '$_POST[new_phone]', '$_POST[income]', '$_POST[address]')"; 
+    '$_POST[email]', '$_POST[firstname]', '$_POST[lastname]', '$_POST[new_phone]', '$_POST[income]', '$_POST[address]')";
 
     echo '<script type="text/JavaScript"> alert("Account registration successful!"); window.location.href = "login.html"; </script>';
 
     if (!mysqli_query($con,$sql)) {
-        die('Error: ' . mysqli_error($con)); 
+        die('Error: ' . mysqli_error($con));
     }
 }
 

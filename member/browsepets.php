@@ -53,5 +53,8 @@ $result = mysqli_query($con, "SELECT * FROM pets");
 
 	</table>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>

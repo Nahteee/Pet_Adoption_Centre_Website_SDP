@@ -1,6 +1,10 @@
+<?php
+// include("../header.php");
+?>
+
 <html>
 <head>
-  <link rel = "stylesheet" href = "../style.css">
+  <link rel = "stylesheet" href = "../CSS/style.css">
   <title>Register for account</title>
 <form action="register.php" method="post">
     <div class="center">
@@ -10,7 +14,7 @@
 
       <label for="username"><b>Username</b></label> <br>
       <input name="user_name" id="user_name" required> <br>
-  
+
       <label for="psw"><b>Password</b></label> <br>
       <input type="password" name="psw" id="psw" required> <br>
 
@@ -22,7 +26,7 @@
       <hr>
 
       <label for="firstname">First name</label> <br>
-      <input name="firstname" id="firstname" required> <br> 
+      <input name="firstname" id="firstname" required> <br>
 
       <label for="new_Lname">Last name</label> <br>
       <input id="Lname" name="lastname" required> <br>
@@ -37,6 +41,6 @@
       <input type="number" id="income" name="income" maxlength="12" required> <br> <br> <br>
 
       <button type="submit">Register</button> <br>
-      <p>Already have an account? <a href="login.html">Log in!</a>.</p>
+      <p>Already have an account? <a href="../login.php">Log in!</a></p>
     </div>
   </form>

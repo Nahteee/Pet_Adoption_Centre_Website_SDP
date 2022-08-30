@@ -2,16 +2,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <?php
     // CHANGE THIS TO YOUR CURRENT USER ID
-    $current_user_id = $_SESSION['auth_user_id']; // maybe get_current_user_id() ??
-    $sql = "SELECT * FROM users WHERE ID = $current_user_id"; 
+    $current_user_id = $_SESSION['userID']; // maybe get_current_user_id() ??
+    $sql = "SELECT * FROM users WHERE ID = $current_user_id";
     $result = $con->query($sql);
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            if  ($row["role"] == "admin"){ 
+            if  ($row["role"] == "admin"){
                 $is_admin = true;}}}
     ?>
 <script>
-    
+
     $(document).ready(function() {
         load_comment();
 
@@ -40,9 +40,9 @@
                 }
             });
         }
-        
 
-        $(document).on('click', '.reply_btn', function() { //reply button function for main comment 
+
+        $(document).on('click', '.reply_btn', function() { //reply button function for main comment
 
             var thisClicked = $(this);
             var cmt_id = thisClicked;

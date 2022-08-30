@@ -22,21 +22,21 @@
         }
         else {
           echo'<div class="header-brand" onclick="toggleNav()">
-          <a><img src="Imgs/ForeverHome Logo.png"  alt=""></a>
+          <a><img src="/SDP-Source-Code/Imgs/ForeverHome Logo.png"  alt=""></a>
           <i class="bi bi-chevron-double-right"></i>
           </div>';
         }
          ?>
         <!-- <a href="#" class="brand-name">ForeverHome</a> -->
         <ul class="list-wrap">
-          <li> <a href="/SDP-Source-Code/index.php" id="selected">Home</a> </li>
+          <li> <a href="/SDP-Source-Code/index.php">Home</a> </li>
           <li> <a href="/SDP-Source-Code/member/browsepets.php">Pets</a> </li>
           <li> <a href="/SDP-Source-Code/member/browsepages.php">Centres</a> </li>
           <li> <a href="/SDP-Source-Code/member/indexforum.php">Forum</a> </li>
         </ul>
         <?php
         if (!isset($_SESSION['username'])) {
-          echo '<a class="header-login" href="login.php">
+          echo '<a class="header-login" href="/SDP-Source-Code/login.php">
             Login
           </a>';
         }
@@ -91,5 +91,5 @@
 
     </main>
   </body>
-  <script src="JS/main.js?v=<?php echo time(); ?>"></script>
+  <script src="/SDP-Source-Code/JS/main.js?v=<?php echo time(); ?>"></script>
 </html>

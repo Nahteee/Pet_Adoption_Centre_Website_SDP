@@ -1,13 +1,15 @@
-<?php 
-session_start();
+<?php
+// session_start();
+include('../header.php');
+include('../session.php');
 include('../conn.php');
-include('header.php');
-include('navbar.php'); 
+// include('navbar.php');
 ?>
 
 <html>
 <head>
-    <link rel = "stylesheet" href = "../style.css">
+    <link rel = "stylesheet" href = "../CSS/forumstyle.css?v=<?php echo time(); ?>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Forum</title>
 </head>
 <div class = "center">
@@ -32,7 +34,7 @@ include('navbar.php');
         while($row = mysqli_fetch_assoc($check)){
             $id = $row['topic_id'];
             echo "<tr>";
-            
+
             echo "<td><b><a href='topic.php?id=$id'>".$row['title']."</a></b></td>";
             echo "<td>".$row['username']."</td>";
             echo "<td>".$row['time']."</td>";
@@ -51,5 +53,5 @@ include('navbar.php');
 
 
 
-    
+
  <?php include('footer.php')   ?>

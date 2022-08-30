@@ -27,7 +27,7 @@ body {
   color: white;
   text-align: center;
   text-shadow: 2px 2px 8px #111; /* like box-shadow */
-  line-height: 70px;
+  line-height: 100px;
   padding-top: 10%; this works but he says it affects other devices so idk
 }
 

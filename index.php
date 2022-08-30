@@ -85,10 +85,5 @@
     <footer>
       <?php include("footer.php") ?>
     </footer>
-    <script type="text/javascript">
-      function error() {
-        alert('Please Login first!');
-      }
-    </script>
   </body>
 </html>
