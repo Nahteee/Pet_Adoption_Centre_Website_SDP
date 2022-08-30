@@ -6,14 +6,24 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--So that the browser will render the width of the page at the width of its own screen-->
      <link rel="stylesheet" href="../../CSS/reset.css?v=<?php echo time(); ?>">
-     <link rel="stylesheet" href="../../CSS/style.css?v=<?php echo time(); ?>">
+     <link rel="stylesheet" href="../../CSS/quizstyle.css?v=<?php echo time(); ?>">
+     <link rel="stylesheet" href="../../CSS/headerstyle.css?v=<?php echo time(); ?>">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
      <title></title>
    </head>
    <body>
-       <div id="page-wrap">
-          <h1 class="index-headline">What Pet Should I Get?<br> Take Our Quiz and Find Out!</h1>
+
+     <header>
+       <?php include("../../header.php"); ?>
+     </header>
+       <!-- <div class="page-wrap"> -->
+       <div class="h1-wrap">
+         <h1 class="index-headline">What Pet Should I Get?<br> Take Our Quiz and Find Out!</h1>
+       </div>
+
   	<form action="grade.php" method="post" id="quiz">
               <ul id="test-questions">
+                <img src="../../Imgs/quizimg1.jpg" alt="">
                   <li>
                       <div class="quiz-overlay"></div>
                       <h3>Why do you want a pet?</h3>
@@ -120,6 +130,7 @@
                       <div class="mtm">
                           <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
                           <label for="question-5-answers-A">a.  Pretty good, but I’d like to avoid any major expenses.</label>
+                      </div>
                       <div>
                           <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
                           <label for="question-5-answers-B">b.  Generous. In addition to budgeting for the basics, I plan to have an emergency fund set aside.</label>
@@ -144,6 +155,7 @@
                       <div class="mtm">
                           <input type="radio" name="question-6-answers" id="question-6-answers-A" value="A" />
                           <label for="question-6-answers-A">a.  Habitat maintenance is fine, but anything beyond that is a deal breaker.</label>
+                      </div>
                       <div>
                           <input type="radio" name="question-6-answers" id="question-6-answers-B" value="B" />
                           <label for="question-6-answers-B">b.  I’m OK with muddy paws and the occasional chewed up cushion.</label>
@@ -168,6 +180,7 @@
                       <div class="mtm">
                           <input type="radio" name="question-7-answers" id="question-7-answers-A" value="A" />
                           <label for="question-7-answers-A">a.  “Finding Nemo” swam its way into my heart.</label>
+                      </div>
                       <div>
                           <input type="radio" name="question-7-answers" id="question-7-answers-B" value="B" />
                           <label for="question-7-answers-B">b.  “Bolt” for the win!</label>
@@ -194,7 +207,7 @@
               </ul>
   	</form>
           <div class="nomargin"></div>
-      </div>
+      <!-- </div> -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
     <script>
            (function($) {
@@ -211,4 +224,5 @@
     </script>
 
    </body>
+   <script src="../../JS/main.js?v=<?php echo time(); ?>"></script>
  </html>

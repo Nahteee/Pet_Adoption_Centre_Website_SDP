@@ -7,7 +7,7 @@
 	<title>What pet should I get? Quiz Results</title>
 
 	<link rel="stylesheet" href="../../CSS/reset.css?v=<?php echo time(); ?>">
-	<link rel="stylesheet" href="../../CSS/style.css?v=<?php echo time(); ?>">
+	<link rel="stylesheet" href="../../CSS/quizstyle.css?v=<?php echo time(); ?>">
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 

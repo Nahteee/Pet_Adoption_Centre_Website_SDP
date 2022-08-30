@@ -42,8 +42,8 @@
         }
         else {
           echo '<div class="header-case">
-            <div class="uhh-p-class"><i class="bi bi-chevron-down"></i>&nbspUsername
-              <ul class="uhh-class">
+            <div class="uhh-p-class"><i class="bi bi-chevron-down"></i>&nbsp';echo $_SESSION['username'];
+              echo '<ul class="uhh-class">
                 <li><a href="#">Edit profile</a></li>';
                 if (isset($_SESSION['owner'])) {
                  echo '<li><a href="#">Edit page details</a></li>';
