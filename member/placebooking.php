@@ -28,13 +28,13 @@ while($row = mysqli_fetch_array($pets)) {
 		echo $row['name'] . " is a " . $row['species'] . "<br>";
 		echo $row['name'] . "'s breed is " . $row['breed'] . "<br>";
 		echo "<h3><br>Will you adopt " . $row['name'] . "?</h3><br>";
-	
+
 
 ?>
 
 Adoption remarks: <br>
 <form action = "sendbooking.php" method = "post">
-	<input type = "hidden" name = "petID" value = "<?php echo $row['ID']; ?>">
+	<input type = "hidden" name = "bookingID" value = "<?php echo $row['ID']; ?>">
 	<input type = "hidden" name = "userID" value = "<?php echo $_SESSION['userID']; ?>">
 	<input type = "hidden" name = "species" value = "<?php echo $row['species']; ?>">
 	<input type = "hidden" name = "centreID" value = "<?php echo $row['centre_ID']; ?>">
@@ -46,5 +46,5 @@ Adoption remarks: <br>
 <?php
 	}
 }
-mysql_close($con);
+mysqli_close($con);
 ?>
