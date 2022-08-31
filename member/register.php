@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
 
 
 if ($valid == 0){
-    echo '<script type="text/JavaScript"> alert("This username has been taken. Please pick another username"); window.location.href = "register.html"; </script>';
+    echo '<script type="text/JavaScript"> alert("This username has been taken. Please pick another username"); window.location.href = "createaccount.php"; </script>';
 
 } else {
     $sql="INSERT INTO users (username, password, role, IC, email, first_name, last_name, phone, income, address)
@@ -25,7 +25,7 @@ if ($valid == 0){
     ('$_POST[user_name]', '$_POST[psw]', 'member', '$_POST[IC]',
     '$_POST[email]', '$_POST[firstname]', '$_POST[lastname]', '$_POST[new_phone]', '$_POST[income]', '$_POST[address]')";
 
-    echo '<script type="text/JavaScript"> alert("Account registration successful!"); window.location.href = "login.html"; </script>';
+    echo '<script type="text/JavaScript"> alert("Account registration successful!"); window.location.href = "../login.php"; </script>';
 
     if (!mysqli_query($con,$sql)) {
         die('Error: ' . mysqli_error($con));

@@ -1,6 +1,7 @@
 <?php
 // session_start();
 include("../conn.php");
+include("../header.php");
 include("../session.php");
 
 if(isset($_POST['submit'])){
@@ -31,6 +32,11 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FeedBack to Us!</title>
     <style>
+
+    .feedback-form {
+      padding-top: 150px;
+    }
+
     input {
       width: 250px;
       padding: 8px;
@@ -46,7 +52,7 @@ if(isset($_POST['submit'])){
 </head>
 
 <body>
-    <form method="post">
+    <form method="post" class="feedback-form">
         <center>
             <h1>Send a Feedback to Us!</h1>
             <label for="title">Title:</label><br>
@@ -56,6 +62,7 @@ if(isset($_POST['submit'])){
             <br><input type="submit" name="submit" value="Send">
         </center>
     </form>
+    <center><a href="../index.php" class="Hbtn">Back</a></center>
 </body>
 
 </html>

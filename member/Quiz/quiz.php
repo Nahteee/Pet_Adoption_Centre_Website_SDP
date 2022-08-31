@@ -1,6 +1,3 @@
-<?php
-include("../../session.php");
- ?>
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <head>
@@ -15,7 +12,10 @@ include("../../session.php");
    <body>
 
      <header>
-       <?php include("../../header.php"); ?>
+       <?php
+       include("../../header.php");
+       include("../../session.php");
+       ?>
      </header>
        <!-- <div class="page-wrap"> -->
        <div class="h1-wrap">

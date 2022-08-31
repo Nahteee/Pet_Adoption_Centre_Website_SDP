@@ -22,7 +22,7 @@
       <input name="email" id="email" required> <br>
 
       <label for="IC"><b>IC Number</b></label> <br>
-      <input type=number name="IC" id="IC" maxlength="12" required> <br>
+      <input  name="IC" id="IC" maxlength="12" required> <br>
       <hr>
 
       <label for="firstname">First name</label> <br>
@@ -32,7 +32,7 @@
       <input id="Lname" name="lastname" required> <br>
 
       <label for="new_phone">Your Phone</label> <br>
-      <input type="number" id="phone" name="new_phone" maxlength="10" required> <br>
+      <input id="phone" name="new_phone" maxlength="10" required> <br>
 
       <label for="address">Address</label> <br>
       <input type = "textarea" id="address" name="address" required> <br>
@@ -41,6 +41,7 @@
       <input type="number" id="income" name="income" maxlength="12" required> <br> <br> <br>
 
       <button type="submit">Register</button> <br>
-      <p>Already have an account? <a href="../login.php">Log in!</a></p>
+      <p>Already have an account? <a href="../../login.php">Log in!</a></p>
+      <p>Want to register as centre owner? <a href="../../login.php">Sign up!</a></p>
     </div>
   </form>

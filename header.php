@@ -32,7 +32,7 @@
           <li> <a href="/SDP-Source-Code/index.php">Home</a> </li>
           <li> <a href="/SDP-Source-Code/member/browsepets.php">Pets</a> </li>
           <li> <a href="/SDP-Source-Code/member/browsepages.php">Centres</a> </li>
-          <li> <a href="/SDP-Source-Code/member/indexforum.php">Forum</a> </li>
+          <li> <a href="/SDP-Source-Code/member/Forum/indexforum.php">Forum</a> </li>
         </ul>
         <?php
         if (!isset($_SESSION['username'])) {
@@ -44,7 +44,7 @@
           echo '<div class="header-case">
             <div class="uhh-p-class"><i class="bi bi-chevron-down"></i>&nbsp';echo $_SESSION['username'];
               echo '<ul class="uhh-class">
-                <li><a href="#">Edit profile</a></li>';
+                <li><a href="/SDP-Source-Code/member/profile.php">Edit profile</a></li>';
                 if (isset($_SESSION['owner'])) {
                  echo '<li><a href="#">Edit page details</a></li>';
                }
@@ -70,7 +70,7 @@
         echo '<aside class="nav-sidebar">
             <ul>
               <li> <span>Hello!</span> </li>
-              <li> <a href="#">Take our Pet Quiz!</a> </li>';
+              <li> <a href="/SDP-Source-Code/member/Quiz/quiz.php">Take our Pet Quiz!</a> </li>';
               if (isset($_SESSION['owner'])) {
                 echo '<li> <a href="#">View page request</a> </li>';
               }
@@ -82,6 +82,8 @@
               }
               echo '<li> <a href="#">View forum posts</a> </li>
               <li> <a href="#">View bug report status</a> </li>
+              <li> <a href="/SDP-Source-Code/member/sendbug.php">Send Bug Report</a> </li>
+              <li> <a href="/SDP-Source-Code/member/feedback.php">Send Site Feedback</a> </li>
             </ul>
         </aside>';
       } ?>

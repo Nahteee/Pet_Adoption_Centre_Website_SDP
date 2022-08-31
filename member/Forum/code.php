@@ -1,12 +1,12 @@
 <?php
-session_start();
-include('../conn.php');
+include('../../session.php');
+include('../../conn.php');
 
 if(isset($_POST['add_sub_replies']))
 {
     $cmt_id = mysqli_real_escape_string($con,$_POST['cmt_id']);
     $reply_msg = mysqli_real_escape_string($con,$_POST['reply_msg']);
-    $user_id = $_SESSION['auth_user_id'];
+    $user_id = $_SESSION['userID'];
     $topic_id = $_SESSION['ID'];
 
     $query = "INSERT INTO comment_replies(comment_ID,reply_message,user_ID,topic_ID) VALUES ('$cmt_id','$reply_msg','$user_id',$topic_id)";
@@ -25,7 +25,7 @@ if(isset($_POST['add_sub_replies']))
 if(isset($_POST['view_comment_data']))
 {
     $cmt_id = mysqli_real_escape_string($con,$_POST['cmt_id']);
-    
+
     $query = "SELECT * FROM comment_replies WHERE comment_ID='$cmt_id'";
     $query_run = mysqli_query($con,$query);
 
@@ -121,7 +121,7 @@ if(isset($_POST['add_comment']))
         if($comment_add_query_run)
         {
             echo "Comment Added Successfully";
-            
+
         }
         else{
             echo "Add Comment not added! Something Went Wrong";

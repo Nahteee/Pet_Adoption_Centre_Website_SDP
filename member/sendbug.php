@@ -1,5 +1,6 @@
 <?php
 include("../conn.php");
+include("../header.php");
 include("../session.php");
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
@@ -31,6 +32,10 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send Bug Report</title>
     <style>
+        .bug-form {
+          padding-top: 150px;
+        }
+
         input {
             width: 250px;
             padding: 8px;
@@ -47,7 +52,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <form method="post">
+    <form method="post" class="bug-form">
         <center>
             <h1>Send a Bug Report</h1>
             <label for="title">Title:</label><br>
@@ -58,7 +63,7 @@ if (isset($_POST['submit'])) {
             <input type="hidden" name="status" value="Not Fixed">
         </center>
     </form>
-    <center><a href="index_mem.php" class="Hbtn">Back</a></center>
+    <center><a href="../index.php" class="Hbtn">Back</a></center>
 </body>
 
 </html>

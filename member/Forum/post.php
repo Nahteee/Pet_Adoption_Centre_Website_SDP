@@ -1,10 +1,11 @@
 <?php
-    session_start();
-    require('../conn.php');
+    include('../../header.php');
+    include('../../session.php');
+    require('../../conn.php');
     if(@$_SESSION['auth_user_id']){
 ?>
 <script type='text/javascript'>
-    function preview_image(event) 
+    function preview_image(event)
     {
     var reader = new FileReader();
     reader.onload = function()
@@ -15,28 +16,34 @@
     reader.readAsDataURL(event.target.files[0]);
     }
 </script>
+
+<style media="screen">
+  .margin-thing {
+    padding: 150px 0px;
+  }
+</style>
 <html>
-    <head><title>Post a Forum</title></head>
-    <?php include('header.php');?>
-    <?php include('navbar.php');?>
-    <form action ="post.php" method="POST" enctype="multipart/form-data"> 
-    <center>
-        <h2>Post a Forum</h2>
-        <br>
-        Topic name:<br><input type="text" name="topic_name" style="width:400px"><br>
-        <br>
-        Content:<br>
-        <textarea name="con" style="resize:none; width:400px;height:300px"></textarea>
-        <br><br>
-        <img style='width: 350px;height:auto;' id="output_image"/>
-        <br>
-        Upload Image:
-        <input type="file" name="image" onchange="preview_image(event)">
-        <br><br>
-        <input type="submit" name="submit" value="post">
-    </center>
-    </form>
     <body>
+      <div class="margin-thing">
+      <head><title>Post a Forum</title></head>
+      <form action ="post.php" method="POST" enctype="multipart/form-data">
+      <center>
+          <h2>Post a Forum</h2>
+          <br>
+          Topic name:<br><input type="text" name="topic_name" style="width:400px"><br>
+          <br>
+          Content:<br>
+          <textarea name="con" style="resize:none; width:400px;height:300px"></textarea>
+          <br><br>
+          <img style='width: 350px;height:auto;' id="output_image"/>
+          <br>
+          Upload Image:
+          <input type="file" name="image" onchange="preview_image(event)">
+          <br><br>
+          <input type="submit" name="submit" value="post">
+      </center>
+      </form>
+      </div>
     </body>
 </html>
 <?php
@@ -55,8 +62,8 @@
         }
         if ($t_name && $content) {
             if(strlen($t_name) >= 10 && strlen($t_name) <= 70) {
-                
-                $sql="INSERT INTO forum_post (title, description,user_ID,image) 
+
+                $sql="INSERT INTO forum_post (title, description,user_ID,image)
                     VALUES ('$t_name','$content','".$_SESSION['auth_user_id']."', '$file_name')";
                     if (!mysqli_query($con,$sql)){
                         die('Error: ' . mysqli_error($con));
@@ -80,4 +87,4 @@
     }
 
 ?>
-<?php include('footer.php');?>
+<?php include('forumfooter.php');?>
