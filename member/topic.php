@@ -48,8 +48,6 @@
                             <hr>
                             <div class='comment-container'></div>";
                         }
-                        
-                        
                     }
                 }else{
                     echo "topic not found";

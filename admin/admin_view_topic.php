@@ -94,6 +94,20 @@ include("../conn.php");
     <br>
 
 
+    <footer>
+        <div class="footer-content">
+            <p class="company-name">© 2022 ForeverHome, Inc</p>
+            <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li> <a style="text-decoration: none;" href="admin_pets.php">Pets</a> </li>
+                    <li> <a style="text-decoration: none;" href="admin_centres.php">Centres</a> </li>
+                    <li> <a style="text-decoration: none;" href="admin_users.php">Users</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    </body>
 
 </html>
 

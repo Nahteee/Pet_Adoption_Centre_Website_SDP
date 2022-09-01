@@ -88,18 +88,18 @@ include("../conn.php");
     </section>
   </main>
   <footer>
-    <div class="footer-content">
-      <p class="company-name">© 2022 Company, Inc</p>
-      <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
-      <nav>
-        <ul>
-          <li> <a href="admin_products.php">Products</a> </li>
-          <li> <a href="admin_orders.php">Orders</a> </li>
-          <li> <a href="admin_view_customers.php">Customers</a> </li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+			<div class="footer-content">
+			  <p class="company-name">© 2022 ForeverHome, Inc</p>
+			  <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+			  <nav>
+				<ul>
+				  <li> <a href="admin_pets.php">Pets</a> </li>
+				  <li> <a href="admin_centres.php">Centres</a> </li>
+				  <li> <a href="admin_users.php">Users</a> </li>
+				</ul>
+			  </nav>
+			</div>
+		</footer>
 </body>
 
 </html>

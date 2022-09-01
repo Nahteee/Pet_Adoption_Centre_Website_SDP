@@ -24,7 +24,7 @@ include("../conn.php");
             <ul>
                 <li> <a style="text-decoration: none;" href="admin_users.php">Users</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_owners.php"> Owners</a> </li>
-                <li> <a style="text-decoration: none;" href="admin_pets.php" >Pets</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_pets.php">Pets</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_centres.php">Centres</a> </li>
                 <li> <a href="admin_view_forum.php" id="selected">Forum</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_ticket.php">Tickets</a> </li>
@@ -76,8 +76,21 @@ include("../conn.php");
     ?>
     <br>
     <br>
+    <footer>
+        <div class="footer-content">
+            <p class="company-name">© 2022 ForeverHome, Inc</p>
+            <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li> <a style="text-decoration: none;" href="admin_pets.php">Pets</a> </li>
+                    <li> <a style="text-decoration: none;" href="admin_centres.php">Centres</a> </li>
+                    <li> <a style="text-decoration: none;" href="admin_users.php">Users</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
 
 
 
-
-    <?php include('fakejs.php')   ?>
+<?php include('fakejs.php')   ?>
