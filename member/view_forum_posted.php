@@ -7,13 +7,10 @@
 <html>
 <head>
 	<title>View Forum Posted</title>
-<style>
-    table, th, td {
-    border: 1px solid;
-    }
-</style>
+	<link rel="stylesheet" href="POOP.css">
 </head>
 <body>
+	<div class="center">
 
 <?php
 $result = mysqli_query($con,"SELECT * FROM forum_post WHERE user_ID = $userid");
@@ -42,5 +39,6 @@ $result = mysqli_query($con,"SELECT * FROM forum_post WHERE user_ID = $userid");
 		mysqli_close($con);//to close the database connection
 ?>
 </table>
+</div>
 </body>
 </html>

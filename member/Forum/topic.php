@@ -4,7 +4,10 @@
     include('../../session.php');
 ?>
 <html>
-    <head><title>Home Page</title></head>
+    <head>
+      <title>Home Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
 
     <style media="screen">
       .py-5 {
@@ -17,6 +20,12 @@
               <div class="container">
                   <div class="row justify-content-center">
                       <div class="col-md-8">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
                           <h1>ForeverHome Forum</h1>
                           <br>
@@ -44,7 +53,7 @@
                               echo "<div class='card-header'><h4>". $row['title']."</h4>";
                               echo "<h6>By : ". $row['username']."<br> Posted on : ".$row['time']."</h6></div>";
                               echo "<div class='card-body' style='text-align: left'>". $row['description']."
-                              <br><img src='../uploads/".$row['image']."'  style='width: 350px;height:auto;'>
+                              <br><img src='../../Uploads/".$row['image']."'  style='width: 350px;height:auto;'>
                               <hr>";
                               echo "<div class='main-comment'></div>
                               <div id='error_status'></div>

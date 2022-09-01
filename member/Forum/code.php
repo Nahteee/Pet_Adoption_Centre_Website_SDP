@@ -6,10 +6,9 @@ if(isset($_POST['add_sub_replies']))
 {
     $cmt_id = mysqli_real_escape_string($con,$_POST['cmt_id']);
     $reply_msg = mysqli_real_escape_string($con,$_POST['reply_msg']);
-    $user_id = $_SESSION['userID'];
-    $topic_id = $_SESSION['ID'];
+    $topic_id = $_SESSION['topic_id'];
 
-    $query = "INSERT INTO comment_replies(comment_ID,reply_message,user_ID,topic_ID) VALUES ('$cmt_id','$reply_msg','$user_id',$topic_id)";
+    $query = "INSERT INTO comment_replies(comment_ID,reply_message,user_ID,topic_ID) VALUES ('$cmt_id','$reply_msg','$userid',$topic_id)";
     $query_run = mysqli_query($con,$query);
 
     if($query_run)
@@ -56,10 +55,9 @@ if(isset($_POST['add_reply']))
     $cmt_id = mysqli_real_escape_string($con,$_POST['comment_id']);
     $reply = mysqli_real_escape_string($con,$_POST['reply_msg']);
 
-    $user_id = $_SESSION['auth_user_id'];
-    $topic_id = $_SESSION['ID'];
+    $topic_id = $_SESSION['topic_id'];
 
-    $queryy = "INSERT INTO comment_replies(comment_ID,reply_message,user_ID,topic_ID) VALUES('$cmt_id','$reply','$user_id','$topic_id')";
+    $queryy = "INSERT INTO comment_replies(comment_ID,reply_message,user_ID,topic_ID) VALUES('$cmt_id','$reply','$userid','$topic_id')";
     $queryy_run = mysqli_query($con,$queryy);
 
     if($queryy_run)
@@ -105,17 +103,16 @@ if(isset($_POST['comment_load_data']))
     }
 
 if(isset($_POST['add_comment']))
-    if(!isset($_SESSION['auth_user_id']))
+    if(!isset($userid))
     {
         echo "You have to login to comment!";
     }
     else
     {
         $msg = mysqli_real_escape_string($con,$_POST['msg']);
-        $user_id = $_SESSION['auth_user_id'];
         $topic_id = $_SESSION['topic_id'];
 
-        $comment_add_query = "INSERT INTO forum_comments (user_ID,post_ID,comment) VALUES ('$user_id','$topic_id','$msg')";
+        $comment_add_query = "INSERT INTO forum_comments (user_ID,post_ID,comment) VALUES ('$userid','$topic_id','$msg')";
         $comment_add_query_run = mysqli_query($con,$comment_add_query);
 
         if($comment_add_query_run)

@@ -2,7 +2,7 @@
     include('../../header.php');
     include('../../session.php');
     require('../../conn.php');
-    if(@$_SESSION['auth_user_id']){
+    if(@$_SESSION['userID']){
 ?>
 <script type='text/javascript'>
     function preview_image(event)
@@ -52,7 +52,7 @@
     $post_user = $_SESSION['username'];
     if (isset($_POST['submit'])){
         // To set the folder, file name and file type
-        $target_dir = "../uploads/";
+        $target_dir = "/SDP-Source-Code/Uploads/";
         $target_file = $target_dir.basename($_FILES['image']['name']);
 
         if (move_uploaded_file($_FILES['image']['tmp_name'], $target_file))
@@ -64,7 +64,7 @@
             if(strlen($t_name) >= 10 && strlen($t_name) <= 70) {
 
                 $sql="INSERT INTO forum_post (title, description,user_ID,image)
-                    VALUES ('$t_name','$content','".$_SESSION['auth_user_id']."', '$file_name')";
+                    VALUES ('$t_name','$content','".$_SESSION['userID']."', '$file_name')";
                     if (!mysqli_query($con,$sql)){
                         die('Error: ' . mysqli_error($con));
                     }

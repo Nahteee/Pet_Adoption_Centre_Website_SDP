@@ -102,6 +102,7 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 <center>
 
 <form action = "centrecomment.php" method = "post">
+	<input type="hidden" name="userID" value="<?php echo $userid ?>">
 		<input type="hidden" name="centreId" value="<?php echo $id ?>">
 		<textarea type = "text"  name = "centreComment"></textarea> <br> <br>
 	<input type = "submit" value = "Submit comment"> <br> <br>

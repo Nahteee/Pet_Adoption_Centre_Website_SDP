@@ -7,13 +7,10 @@
 <html>
 <head>
 	<title>View Appointment</title>
-<style>
-    table, th, td {
-    border: 1px solid;
-    }
-</style>
+	<link rel="stylesheet" href="POOP.css">
 </head>
 <body>
+	<div class="center">
 
 <?php
 $result = mysqli_query($con,"SELECT * FROM adoption_request AS ar INNER JOIN centre_pages as cp ON ar.centre_ID=cp.ID WHERE ar.user_ID = $userid");
@@ -51,6 +48,7 @@ $result = mysqli_query($con,"SELECT * FROM adoption_request AS ar INNER JOIN cen
 		} 
 		mysqli_close($con);//to close the database connection
 ?>
+</div>
 </table>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 include("../conn.php");
 
-$sql="INSERT INTO adoption_request (ID, user_ID, species, remarks, centre_ID, status)
+$sql="INSERT INTO adoption_request ( user_ID, species, remarks, centre_ID, status)
 
 VALUES
 
@@ -12,7 +12,8 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-    echo "adoption application submmited!";
+    echo '<script type="text/JavaScript"> alert("Adoption Application Submitted!"); window.location.href = "/SDP-Source-Code/member/browsepets.php"; </script>';
+
 }
 
 mysqli_close($con);
