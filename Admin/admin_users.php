@@ -35,7 +35,7 @@ include("../conn.php");
         <li> <a href="admin_view_forum.php">Forum</a> </li>
         <li> <a href="admin_view_customers.php">Tickets</a> </li>
         <li> <a href="admin_view_customers.php">Feedback</a> </li>
-        <li> <a href="admin_view_customers.php">Page Requests</a> </li>
+        <li> <a href="admin_view_application.php">Page Requests</a> </li>
       </ul>
       <a href="admin_logout.php" class="header-cases">Logout</a>
     </nav>
@@ -82,9 +82,6 @@ include("../conn.php");
           echo "<td>";
           echo $row['username'];
           echo "</td>";
-          // echo "<td>";
-          // echo '<img style="vertical-align: middle; margin-left: 10px; padding-right: 0px" src="'.$product_image.'" width="60px">';
-          // echo "</td>";
           echo "<td>";
           echo $row['first_name'];
           echo "</td>";

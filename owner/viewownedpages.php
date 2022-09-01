@@ -12,8 +12,8 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND
 	<link rel = "stylesheet" href = "../CSS/style.css">
 </head>
 <title>View owned pages</title>
-<div class = "center">
-<body>
+<div class = "center" style='background-color: white;'>
+<body style='background-image: url("/sdp/Imgs/bg.png");'>
 	<title>View Adoption Centre Pages</title>
 	<h2>Owned Adoption Centres</h2>
 	<br>

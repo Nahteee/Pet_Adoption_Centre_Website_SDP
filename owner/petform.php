@@ -6,9 +6,9 @@ $id = intval($_GET['id']);
 <head>
     <link rel = "stylesheet" href = "../CSS/style.css">
 </head>
-<body>
+<body style='background-image: url("/sdp/Imgs/bg.png");'>
     <title>Add a pet</title>
-    <div class = "center">
+    <div class = "center" style='background-color: white;'>
     <h2>Add a pet to your Centre Page</h2>
     <h4>Please enter your pet's details below: </h4>
     <br>

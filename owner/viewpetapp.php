@@ -9,10 +9,10 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 
 <html>
 <head>
-	<link rel="stylesheet" href="../style.css">
-<body>
+	<link rel="stylesheet" href="../CSS/style.css">
+<body style='background-image: url("/sdp/Imgs/bg.png");'>
 	<title>View adoption applications</title>
-	<div class = "beeg">
+	<div class = "beeg" style='background-color: white;'>
 	<h2>Pet adoption applications</h2>
 	<br>
 

@@ -17,8 +17,8 @@ while($row = mysqli_fetch_array($result)) {
 </head>
 <title> Edit centre details </title>
 
-<body>
-        <div class = "center">
+<body style='background-image: url("/sdp/Imgs/bg.png");'>
+        <div class = "center" style='background-color: white;'>
                 <h1>Edit Centre Page Details</h1>
 <form action="updatepage.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $row['ID'] ?>">

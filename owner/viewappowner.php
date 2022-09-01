@@ -7,12 +7,12 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
 ?>
 
 <html>
-<body>
+<body style='background-image: url("/sdp/Imgs/bg.png");'>
 	<head>
 		<link rel = "stylesheet" href = "../CSS/style.css">
 	</head>
 	<title>View applications as Centre Owner</title>
-	<div class = "center">
+	<div class = "center" style='background-color: white;'>
 	<h2>Adoption centre page applications</h2>
 	<br>
 	<body>
