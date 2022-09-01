@@ -25,22 +25,26 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 		while($row = mysqli_fetch_array($result)) {
 
 			echo "<img src = '../Uploads/" . $row['centre_pic'] . "' style = 'width: 300px; height: auto;'>";
-			echo "<h1>" . $row['centre_name'] . "</h1>";
+			echo "<h1 style='font-size:50px;'>" . $row['centre_name'] . "</h1><br>";
 
-			echo "Located at: " . $row['location'];
+			echo "<p style='font-size:20px;'>";
+
+			echo "<b>Located at:</b><br>" . $row['location'];
 			echo "<br><br>";
 			echo $row['description'];
 			echo "<br><br>";
-			echo "Contact Number: " . $row['phone'];
+			echo "<b>Contact Number: </b>" . $row['phone'];
 			echo "<br>";
-			echo "Email: " . $row['email'];
-			echo "<br><br><br>";
+			echo "<b>Email: </b>" . $row['email'];
+			echo "</p><br><br><br>";
 		}
 	?>
 
 </p>
 <p> <br>
-	<h3>Pets up for adoption</h3>
+	<h3 style="font-size:25px;">Pets up for adoption</h3>
+	<br>
+	<br>
 	<div class = "container">
 	<?php
 		while($row = mysqli_fetch_array($pets)) {
@@ -90,11 +94,16 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <center>
 
 <form action = "centrecomment.php" method = "post">
 		<input type="hidden" name="centreId" value="<?php echo $id ?>">
-		<textarea type = "text"  name = "centreComment"> </textarea> <br> <br>
+		<textarea type = "text"  name = "centreComment"></textarea> <br> <br>
 	<input type = "submit" value = "Submit comment"> <br> <br>
 </form>
 

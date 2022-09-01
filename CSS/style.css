@@ -460,11 +460,15 @@ body {
 
 .container {
   padding: 10px;
+  float: left;
 }
 
 .child {
   width: 33.3%;
   float: left;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid black;
 }
 
 .comment {
@@ -544,6 +548,20 @@ button.small {
   text-decoration: none;
   cursor: pointer;
   border: none;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 * {
