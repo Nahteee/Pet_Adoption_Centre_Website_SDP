@@ -2,7 +2,6 @@
 //View a selected centre page in more detail
 
 include("../conn.php");
-include("../header.php");
 include("../session.php");
 
 $id = intval($_GET['id']);
@@ -14,7 +13,7 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 <html>
 <body>
 	<head>
-		<link rel = "stylesheet" href = "../CSS/NEWstyle.css">
+		<link rel = "stylesheet" href = "../style.css">
 	</head>
 	<title>Centre Page</title>
 <body>
@@ -24,32 +23,24 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 	<?php
 		while($row = mysqli_fetch_array($result)) {
 
-			echo "<img src = '../Uploads/" . $row['centre_pic'] . "' style = 'width: 300px; height: auto;'>";
-			echo "<h1 style='font-size:50px;'>" . $row['centre_name'] . "</h1><br>";
+			echo "<img src = '../uploads/" . $row['centre_pic'] . "' style = 'width: 300px; height: auto;'>";
+			echo "<h1>" . $row['centre_name'] . "</h1>";
 
-			echo "<p style='font-size:20px;'>";
-
-			echo "<b>Located at:</b><br>" . $row['location'];
-			echo "<br><br>";
-			echo $row['description'];
-			echo "<br><br>";
-			echo "<b>Contact Number: </b>" . $row['phone'];
+			echo "Located at: " . $row['location'];
 			echo "<br>";
-			echo "<b>Email: </b>" . $row['email'];
-			echo "</p><br><br><br>";
+			echo $row['description'];
+			echo "<br>";
 		}
 	?>
 
 </p>
 <p> <br>
-	<h3 style="font-size:25px;">Pets up for adoption</h3>
-	<br>
-	<br>
+	<h3>Pets up for adoption</h3>
 	<div class = "container">
 	<?php
 		while($row = mysqli_fetch_array($pets)) {
 			echo "<div class = 'child'>";
-				echo "<img src = '../Uploads/" . $row['image_name'] . "' style = 'width: 250px; height: auto;'>";
+				echo "<img src = '../uploads/" . $row['image_name'] . "' style = 'width: 250px; height: auto;'>";
 				echo "<br>";
 				echo "<br>";
 				echo "Name: " . $row['name'] . "<br>";
@@ -92,19 +83,13 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <center>
 
 <form action = "centrecomment.php" method = "post">
 		<input type="hidden" name="centreId" value="<?php echo $id ?>">
-		<textarea type = "text"  name = "centreComment"></textarea> <br> <br>
-	<input type = "submit" value = "Submit comment"> <br> <br>
+		<input type="hidden" name="userID" value="<?php echo $_SESSION['userID'] ?>">
+		<textarea type = "text"  name = "centreComment"> </textarea>
+	<input type = "submit" value = "Submit comment">
 </form>
 
 
