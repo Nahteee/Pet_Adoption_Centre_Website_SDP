@@ -57,7 +57,7 @@
 
 }
 #quiz label, #quiz input#submit-quiz {
-  background-color: #f0c040;
+  background-color: #F4ECD0;
   cursor: pointer;
   display: inline-block;
   /* z-index: 99; */
@@ -77,7 +77,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #f0c040;
+  background: #F4ECD0;
   border: none;
   color: black;
   display: block;
@@ -96,7 +96,7 @@
   transition: all ease .11s;
 }
 #quiz label:hover, #quiz input[type=radio]:checked + label, #quiz input#submit-quiz:hover, #replay:hover, .take-quiz-btn:hover {
-  background: #098636;
+  background: #f0c040;
   color: #fbfbfb;
 }
 #quiz .quiz-progress {

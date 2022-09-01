@@ -30,6 +30,7 @@ else {
 
     $sql = "UPDATE users SET
     username = '$_POST[user_name]',
+    password = '$_POST[psw]',
     IC = '$_POST[IC]',
     email = '$_POST[email]',
     first_name = '$_POST[firstname]',
@@ -57,61 +58,134 @@ session_start();
 if (!isset($_SESSION['username']))  //do not allow non members to access this page
     header("Location: login.php"); //redirects to login.html is session is not set
 ?>
+
 <!DOCTYPE html>
+<html>
 <head>
-    <link rel = "stylesheet" href = "../style.css">
-    <title>Your Profile</title>
-    <div class="center">
+<title>User Registration</title>
+<link href="../CSS/register.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color: #F4ECD0;">
+
 <form method="post">
-      <h1>Profile</h1>
+  <?php
+    include("../conn.php");
+    $id = $_SESSION['userID'];
+    $result = mysqli_query($con,"SELECT * FROM users WHERE ID = $id");
+    $row = mysqli_fetch_array($result);
+    $_SESSION["auth_user_id"] = $row["ID"];
+    $_SESSION["psw"] = $row["password"];
+    $_SESSION["firstname"] = $row["first_name"];
+    $_SESSION["lastname"] = $row["last_name"];
+    $_SESSION["phone"] = $row["phone"];
+    $_SESSION["IC"] = $row["IC"];
+    $_SESSION["email"] = $row["email"];
+    $_SESSION["address"] = $row["address"];
+    $_SESSION["income"] = $row["income"];
+    $_SESSION["username"] = $row["username"];
+    $_SESSION["userRole"] = $row["role"];
+    //while($row = mysqli_fetch_array($result))
+    //{
+  ?>
+<div id="container" style="background-color: #F4ECD0;">
+<h2>ForeverHome</h2>
+<h3>Your Profile</h3>
 
-      <hr>
+	<div class="section">
+		<div class="label">
+			Username
+		</div>
+		<div class="field">
+			<input type="text" name="user_name" value="<?php echo $_SESSION["username"] ?>" required="required">
+		</div>
+	</div>
 
-      <?php
-      	include("../conn.php");
-        $id = $_SESSION['userID'];
-      	$result = mysqli_query($con,"SELECT * FROM users WHERE ID = $id");
-      	$row = mysqli_fetch_array($result);
-        $_SESSION["auth_user_id"] = $row["ID"];
-        $_SESSION["firstname"] = $row["first_name"];
-        $_SESSION["lastname"] = $row["last_name"];
-        $_SESSION["phone"] = $row["phone"];
-        $_SESSION["IC"] = $row["IC"];
-        $_SESSION["email"] = $row["email"];
-        $_SESSION["address"] = $row["address"];
-        $_SESSION["income"] = $row["income"];
-        $_SESSION["username"] = $row["username"];
-        $_SESSION["userRole"] = $row["role"];
-      	//while($row = mysqli_fetch_array($result))
-      	//{
-      ?>
+	<div class="section">
+		<div class="label">
+			Password
+		</div>
+		<div class="field">
+			<input type="text" name="psw" value="<?php echo $_SESSION["psw"] ?>" required="required">
+		</div>
+	</div>
 
-      <label for="username"><b>Username</b></label> <br>
-      <input name="user_name" id="user_name" value="<?php echo $_SESSION["username"] ?>" required> <br>
-
-      <label for="email"><b>Email</b></label> <br>
-      <input name="email" id="email" value="<?php echo $_SESSION["email"] ?>" required> <br>
-
-      <label for="IC"><b>IC Number</b></label> <br>
-      <input  name="IC" id="IC" maxlength="12" value="<?php echo $_SESSION["IC"] ?>" required> <br>
-      <hr>
-
-      <label for="firstname"><b>First name</b></label> <br>
-      <input name="firstname" id="firstname" value="<?php echo $_SESSION["firstname"] ?>" required> <br>
-
-      <label for="new_Lname">Last name</label> <br>
-      <input id="Lname" name="lastname" value="<?php echo $_SESSION["lastname"] ?>" required> <br>
-
-      <label for="new_phone">Your Phone</label> <br>
-      <input  id="phone" name="new_phone" maxlength="10" value="<?php echo $_SESSION["phone"] ?>" required> <br>
-
-      <label for="address">Address</label> <br>
-      <input id="address" name="address" value="<?php echo $_SESSION["address"] ?>" required> <br>
-
-      <label for="income">Annual Income</label> <br>
-      <input type="number" id="income" name="income" maxlength="12" value="<?php echo $_SESSION["income"] ?>" required> <br> <br> <br>
-
-      <input type="submit" value = "Save">
+  <div class="section">
+    <div class="label">
+      Email Address
     </div>
+    <div class="field">
+      <input type="email" name="email" value="<?php echo $_SESSION["email"] ?>" required="required">
+    </div>
+  </div>
 
-  </form>
+	<div class="section">
+		<div class="label">
+			IC Number
+		</div>
+		<div class="field">
+			<input type="text" name="IC" maxlength="12" value="<?php echo $_SESSION["IC"] ?>" required="required">
+		</div>
+	</div>
+
+  <div class="section">
+		<div class="label">
+			First Name
+		</div>
+		<div class="field">
+			<input type="text" name="firstname" value="<?php echo $_SESSION["firstname"] ?>" required="required">
+		</div>
+	</div>
+
+  <div class="section">
+		<div class="label">
+			Last Name
+		</div>
+		<div class="field">
+			<input type="text" name="lastname" value="<?php echo $_SESSION["lastname"] ?>" required="required">
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="label">
+			Contact Number
+		</div>
+		<div class="field">
+			<input type="text" name="new_phone" maxlength="10" value="<?php echo $_SESSION["phone"] ?>" required="required">
+		</div>
+	</div>
+
+  <div class="section">
+		<div class="label">
+			Home Address
+		</div>
+		<div class="field" >
+			<textarea required="required" name="address"><?php echo $_SESSION["address"] ?></textarea>
+		</div>
+	</div>
+
+  <div class="section">
+		<div class="label">
+			Annual Income
+		</div>
+		<div class="field">
+			<input type="text" name="income" maxlength="12" value="<?php echo $_SESSION["income"] ?>" required="required">
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="label">
+			&nbsp;
+		</div>
+		<div class="field">
+			<button type="submit" class="btn" name="submitBtn">Save</button>
+      <button type="reset" onclick="location.href='../index.php';" class="btn">Exit</button>
+		</div>
+	</div>
+
+
+
+</div>
+</form>
+</body>
+</html>

@@ -4,7 +4,7 @@
 include("../conn.php");
 include("../session.php");
 
-$id = intval($_GET['id']); 
+$id = intval($_GET['id']);
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE ID=$id");
 $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$id");
 $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
@@ -108,7 +108,7 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 
 			echo "</div>";
 			echo "<br>";
-		} 
+		}
 
 ?>
 </div>

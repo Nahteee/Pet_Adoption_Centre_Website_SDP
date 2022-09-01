@@ -20,15 +20,6 @@
             <a href="https://www.twitter.com/" target=”_blank”><i class="bi-twitter"></i></a>
           </div>
         </div>
-        <div class="element2">
-          <h1>Useful Links</h1>
-          <ul>
-            <li> <a href="/SDP-Source-Code/member/browsepets.php">Pets</a> </li>
-            <li> <a href="/SDP-Source-Code/member/browsepages.php">Centres</a> </li>
-            <li> <a href="/SDP-Source-Code/member/indexforum.php">Forum</a> </li>
-            <li> <a href="/SDP-Source-Code/member/Quiz/quiz.php">Quiz</a> </li>
-          </ul>
-        </div>
         <div class="element3">
           <h1>Contact Us</h1>
           <ul>
@@ -40,6 +31,16 @@
             <li>Bandar Utara, Batu 12 Jalan Ipoh</li>
           </ul>
         </div>
+        <div class="element2">
+          <h1>Useful Links</h1>
+          <ul>
+            <li> <a href="/SDP-Source-Code/member/browsepets.php">Pets</a> </li>
+            <li> <a href="/SDP-Source-Code/member/browsepages.php">Centres</a> </li>
+            <li> <a href="/SDP-Source-Code/member/indexforum.php">Forum</a> </li>
+            <li> <a href="/SDP-Source-Code/member/Quiz/quiz.php">Quiz</a> </li>
+          </ul>
+        </div>
+
         <div class="element4">
           <h1> <i style="font-size: 18px;">Something wrong with our site? </i> <br> <i style="font-style: normal; weight: 50;">Send us your bug report.</i> </h1>
           <a href="/SDP-Source-Code/member/sendbug.php">Bug Report</a>
