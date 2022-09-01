@@ -46,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
 <body>
   <header>
-    <a href="index.php" class="header-brand"><img src="../Imgs/ForeverHome Logo.png" alt=""></a>
+    <a href="adminindex.php" class="header-brand"><img src="../Imgs/ForeverHome Logo.png" alt=""></a>
   </header>
 
   <main>

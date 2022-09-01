@@ -14,7 +14,7 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 <html>
 <body>
 	<head>
-		<link rel = "stylesheet" href = "../CSS/NEWstyle.css">
+		<link rel = "stylesheet" href = "../CSS/viewstyle.css">
 	</head>
 	<title>Centre Page</title>
 <body>

@@ -29,8 +29,8 @@ include("../conn.php");
     <a href="admin_users.php" class="header-brand"><img src="../Imgs/ForeverHome Logo.png" alt=""></a>
     <nav>
       <ul>
-        <li> <a href="admin_users.php" id="selected">Users</a> </li>
-        <li> <a href="admin_owners.php"> Owners</a> </li>
+        <li> <a href="admin_users.php" >Users</a> </li>
+        <li> <a href=".php" id="selected"> Owners</a> </li>
         <li> <a href="admin_pets.php">Pets</a> </li>
         <li> <a href="admin_centres.php">Centres</a> </li>
         <li> <a href="admin_view_forum.php">Forum</a> </li>
@@ -59,7 +59,7 @@ include("../conn.php");
         </tr>
         <?php
         $results_per_page = 04;
-        $sql = 'SELECT * FROM users WHERE role = "member"';
+        $sql = 'SELECT * FROM users WHERE role = "owner"';
         $result = mysqli_query($con, $sql);
         $number_of_results = mysqli_num_rows($result);
         $number_of_pages = ceil($number_of_results / $results_per_page);
@@ -69,7 +69,7 @@ include("../conn.php");
           $page = 1;
         }
         $this_page_first_result = ($page - 1) * 04;
-        $sql = 'SELECT * FROM users WHERE role = "member" LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
+        $sql = 'SELECT * FROM users WHERE role = "owner" LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
         $result = mysqli_query($con, $sql);
         while ($row = mysqli_fetch_array($result)) {
           // $product_image = "default1.jpg";
@@ -127,15 +127,15 @@ include("../conn.php");
       <?php
 
       if ($page > 1) {
-        echo "<a style='margin-right :5px' href='admin_users.php?page=" . ($page - 1) . "' class='btn btn-danger'>Previous</a>";
+        echo "<a style='margin-right :5px' href='admin_owners.php?page=" . ($page - 1) . "' class='btn btn-danger'>Previous</a>";
       }
 
       for ($i = 1; $i < $number_of_pages; $i++) {
-        echo '<a href="admin_users.php?page=' . $i . '" class="btn btn-primary">' . $i . '</a> ';
+        echo '<a href="admin_owners.php?page=' . $i . '" class="btn btn-primary">' . $i . '</a> ';
       }
 
       if ($i > $page) {
-        echo "<a href='admin_users.php?page=" . ($page + 1) . "' class='btn btn-danger'>Next</a>";
+        echo "<a href='admin_owners.php?page=" . ($page + 1) . "' class='btn btn-danger'>Next</a>";
       }
 
 

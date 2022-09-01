@@ -35,7 +35,7 @@
 <html>
 <head>
 <title>Add New Contact</title>
-<link href="../CSS/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../CSS/admin_style_2.css?v=<?php echo time(); ?>">
 </head>
 
 <body>

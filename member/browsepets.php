@@ -19,6 +19,13 @@ $result = mysqli_query($con, "SELECT * FROM pets");
 
 			<form method="post" class="pet-form-class">
 				<p>Search</p> <input placeholder="by species, breed, age." type="text" name="search_key"> <button class="button" name="searchBtn" type="submit" >Submit</button>
+				<?php
+				// session_start();
+				if (isset($_SESSION['owner'])) {
+					echo '<a class="owned-pets">View owned pets</a>';
+				}
+				 ?>
+
 			</form>
 
 			<?php

@@ -19,6 +19,15 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 
 			<form method="post" class="pet-form-class">
 				<p>Search</p> <input placeholder="by name or location." type="text" name="search_key"> <button class="button" name="searchBtn" type="submit" >Submit</button>
+				<?php
+				// session_start();
+				if (isset($_SESSION['owner'])) {
+					echo '<div class="owned-pages">';
+					echo '<a href="">View owned pages</a>';
+					echo '<a href="">Apply for new page</a>';
+					echo '</div>';
+				}
+				 ?>
 			</form>
 
 			<?php

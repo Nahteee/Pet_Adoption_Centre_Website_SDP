@@ -33,6 +33,58 @@ main {
   background-color: #F4ECD0;
 }
 
+.owned-pets {
+  text-decoration: none;
+  color: #444;
+  font-family: 'Tangerine', cursive;
+  weight: 300;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 15px;
+  /* display: block; */
+  /* height: auto; */
+  /* width: 250px; */
+  background-color: #f0c040;
+  transition: 0.2s ease-in-out;
+  line-height: 25px;
+  /* margin-top: 10px; */
+  /* justify-self: end; */
+  margin-left: 57%;
+}
+
+.owned-pets:hover {
+  background-color: #c0a020;
+}
+
+.owned-pages {
+  margin-left: 43%;
+}
+
+.owned-pages a {
+  text-decoration: none;
+  color: #444;
+  font-family: 'Tangerine', cursive;
+  weight: 300;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 15px;
+  /* display: block; */
+  /* height: auto; */
+  /* width: 250px; */
+  background-color: #f0c040;
+  transition: 0.2s ease-in-out;
+  line-height: 25px;
+  margin-left: 20px;
+  /* margin-top: 10px; */
+  /* justify-self: end; */
+}
+
+.owned-pages a:hover {
+  background-color: #c0a020;
+}
+
+
+
 .parentbox {
   width: 90%;
   /* background-color: blue; */

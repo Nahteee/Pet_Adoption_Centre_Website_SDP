@@ -75,12 +75,12 @@
                 echo '<li> <a href="#">View page request</a> </li>';
               }
               else {
-                echo '<li> <a href="#">View pending requests</a> </li>';
+                echo '<li> <a href="/SDP-Source-Code/member/view_request.php">View pending requests</a> </li>';
               }
               if (isset($_SESSION['owner'])) {
                 echo '<li> <a href="#">View adoption bookings</a> </li>';
               }
-              echo '<li> <a href="#">View forum posts</a> </li>
+              echo '<li> <a href="/SDP-Source-Code/member/view_forum_posted.php">View forum posts</a> </li>
               <li> <a href="#">View bug report status</a> </li>
               <li> <a href="/SDP-Source-Code/member/sendbug.php">Send Bug Report</a> </li>
               <li> <a href="/SDP-Source-Code/member/feedback.php">Send Site Feedback</a> </li>
