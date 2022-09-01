@@ -28,6 +28,7 @@ $result = mysqli_query($con, "SELECT * FROM pets");
 
 			</form>
 
+
 			<?php
 			$search_key = "";
 			if(isset($_POST['searchBtn'])){
