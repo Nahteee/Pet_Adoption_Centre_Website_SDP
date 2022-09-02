@@ -28,7 +28,7 @@ include("../conn.php");
         <li> <a href="admin_view_forum.php">Forum</a> </li>
         <li> <a href="admin_ticket.php" >Tickets</a> </li>
         <li> <a href="admin_feedback.php" id="selected">Feedback</a> </li>
-        <li> <a href="viewapplication.php">Page Requests</a> </li>
+        <li> <a href="admin_view_application.php">Page Requests</a> </li>
         <li> <a href="admin_view_report.php"> view Reports</a> </li>
       </ul>
       <a href="admin_logout.php" class="header-cases">Logout</a>
@@ -37,7 +37,7 @@ include("../conn.php");
   <main>
     <section class="main-wrapper">
       <div class="box-header">
-        <h1>Tickets</h1>
+        <h1>Admin View Feedback</h1>
       </div>
       <table>
         <tr>

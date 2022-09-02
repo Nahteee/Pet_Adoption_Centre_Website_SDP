@@ -29,7 +29,7 @@ include("../conn.php");
                 <li> <a href="admin_view_forum.php" id="selected">Forum</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_ticket.php">Tickets</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_feedback.php">Feedback</a> </li>
-                <li> <a style="text-decoration: none;" href="viewapplication.php">Page Requests</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_view_application.php">Page Requests</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_view_report.php"> view Reports</a> </li>
             </ul>
             <a href="admin_logout.php" class="header-cases">Logout</a>

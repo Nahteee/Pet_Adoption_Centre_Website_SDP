@@ -63,8 +63,6 @@ foreach ($fixed_query as $data) {
 $bug_fix = json_decode($fixed_bug);
 $bug_array = [];
 array_push($bug_array, $bug_fix, $bug_no_fix);
-
-//SELECT COUNT(ID) FROM `adoption_request` WHERE status = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,7 +100,7 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
                 <li> <a href="admin_view_forum.php">Forum</a> </li>
                 <li> <a href="admin_ticket.php">Tickets</a> </li>
                 <li> <a href="admin_feedback.php">Feedback</a> </li>
-                <li> <a href="viewapplication.php">Page Requests</a> </li>
+                <li> <a href="admin_view_application.php">Page Requests</a> </li>
                 <li> <a href="admin_view_report.php" id="selected"> view Reports</a> </li>
             </ul>
             <a href="admin_logout.php" class="header-cases">Logout</a>
@@ -128,11 +126,11 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
             </center>
             <canvas id="barChart"></canvas>
         </div>
+        <br><br>
         <center>
             <h4>Recent 5 members that registered</h4>
         </center>
         <div class="user">
-
             <?php
             $result = mysqli_query($con, "SELECT * FROM users WHERE role = 'member' ORDER BY ID DESC LIMIT 5;");
             echo "<ol>";

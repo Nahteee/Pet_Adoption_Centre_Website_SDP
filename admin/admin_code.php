@@ -1,8 +1,6 @@
 <?php
 session_start();
 include("../conn.php");
-
-
 if(isset($_POST['view_comment_data']))
 {
     $cmt_id = mysqli_real_escape_string($con,$_POST['cmt_id']);
@@ -48,8 +46,6 @@ if(isset($_POST['dlt_sub_cmt']))
 
 if(isset($_POST['comment_load_data']))
     {
-        // condition match with topic id
-        // $comments_query = "SELECT * FROM comments;"; //problem query
         $topicid = $_POST['t_id'];
         $comments_query = "SELECT * FROM forum_post INNER JOIN forum_comments ON forum_post.topic_id = forum_comments.post_ID WHERE forum_post.topic_id = $topicid";
 

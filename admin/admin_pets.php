@@ -28,7 +28,7 @@ include("../conn.php");
         <li> <a href="admin_view_forum.php">Forum</a> </li>
         <li> <a href="admin_ticket.php">Tickets</a> </li>
         <li> <a href="admin_feedback.php">Feedback</a> </li>
-        <li> <a href="viewapplication.php">Page Requests</a> </li>
+        <li> <a href="admin_view_application.php">Page Requests</a> </li>
         <li> <a href="admin_view_report.php"> view Reports</a> </li>
       </ul>
       <a href="admin_logout.php" class="header-cases">Logout</a>
@@ -38,7 +38,6 @@ include("../conn.php");
     <section class="main-wrapper">
       <div class="box-header">
         <h1>Pets List</h1>
-        <!-- <a href="admin_add_products.php" class="add">Add New Product ➕</a> -->
       </div>
       <table>
         <tr>
@@ -70,7 +69,7 @@ include("../conn.php");
           if ($row['image_name'] != "") {
             $product_image = $row['image_name'];
           }
-          echo "<tr>"; // alternative way is : echo ‘<trbgcolor="#99FF66">’;
+          echo "<tr>"; 
           echo "<td>";
           echo $row['ID'];
           echo "</td>";

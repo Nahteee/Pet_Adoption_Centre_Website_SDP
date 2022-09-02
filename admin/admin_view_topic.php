@@ -11,7 +11,6 @@ include("../conn.php");
     <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <head>
@@ -30,7 +29,7 @@ include("../conn.php");
                 <li> <a href="admin_view_forum.php" id="selected">Forum</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_ticket.php">Tickets</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_view_customers.php">Feedback</a> </li>
-                <li> <a style="text-decoration: none;" href="viewapplication.php">Page Requests</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_view_application.php">Page Requests</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_view_report.php"> view Reports</a> </li>
             </ul>
             <a href="admin_logout.php" class="header-cases">Logout</a>
