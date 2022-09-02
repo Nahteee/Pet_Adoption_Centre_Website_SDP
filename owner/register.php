@@ -1,4 +1,4 @@
-<?php 
+<?php
 //PHP to send new applications
 
 include("../conn.php");
@@ -13,8 +13,7 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-    echo "application submmited!";
-    header("location: ownerlogin.php");
+    echo '<script type="text/JavaScript"> alert("Account registration successful!"); window.location.href = "../login.php"; </script>';
 }
 
 mysqli_close($con);

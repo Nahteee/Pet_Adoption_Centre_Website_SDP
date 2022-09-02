@@ -147,7 +147,7 @@ $con->close();
 	</div>
 
   <p>Already have an account? <a href="login.php">Log in!</a></p>
-  <p>Want to register as centre owner? <a href="registerowner.php">Sign up!</a></p>
+  <p>Want to register as centre owner? <a href="owner/ownerregister.php">Sign up!</a></p>
 
 
 </div>
