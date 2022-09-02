@@ -6,38 +6,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>View Forum Posted</title>
-	<link rel="stylesheet" href="../CSS/POOP.css">
+	<title>View Appointment</title>
+	<link rel = "stylesheet" href = "../CSS/POOP.css?v=<?php echo time(); ?>">
 </head>
 <body>
-	<div class="center">
+  <div class="center">
 
 <?php
-$result = mysqli_query($con,"SELECT * FROM forum_post WHERE user_ID = $userid");
+$result = mysqli_query($con,"SELECT * FROM tickets AS t INNER JOIN users as u ON t.user_ID=u.ID WHERE t.user_ID = $userid");
 
 ?>
-<br><br>
-<center> <h1>Your Forum Posts</h1> </center>
 
+<h1>Bug Report Sent</h1>
+<br>
 
-
-<br><br>
 <table id="contacts">
 	<tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Time Posted</th>
+    <th>Status</th>
 	</tr>
 <?php
 	while($row=mysqli_fetch_array($result)){
-        $id = $row['topic_id'];
+        if($row['status']== true){
+            $stat = "Accepted";
+        }else{
+            $stat = "Pending";
+        }
 		echo "<tr>"; // alternative way is : echo ‘<trbgcolor="#99FF66">’;
-		echo "<td><b><a href='/SDP-Source-Code/member/Forum/topic.php?id=$id'>".$row['title']."</a></b></td>";
+		echo "<td>";
+		echo $row['title'];
+		echo "</td>";
 		echo "<td>";
 		echo $row['description'];
 		echo "</td>";
-        echo "<td>";
-		echo $row['time'];
+		echo "<td>";
+		echo $stat;
 		echo "</td>";
 		echo "</tr>";
 		}
@@ -45,6 +49,7 @@ $result = mysqli_query($con,"SELECT * FROM forum_post WHERE user_ID = $userid");
 ?>
 </table>
 </div>
+<br><br><br>
 <footer>
 <?php include("../footer.php") ?>
 </footer>

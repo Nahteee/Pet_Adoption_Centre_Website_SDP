@@ -1,7 +1,6 @@
 <?php
 // session_start();
 include('../../header.php');
-include('../../session.php');
 include('../../conn.php');
 // include('navbar.php');
 ?>

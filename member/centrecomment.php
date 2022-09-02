@@ -1,4 +1,4 @@
-<?php 
+<?php
 //PHP to send comments for centre pages
 
 include("../conn.php");
@@ -15,8 +15,8 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-    echo "application submmited!";
-    header("Location: viewpages.php?id=" . $centreID);
+    echo '<script>alert("Submitted Successful!"); window.location.href= "/SDP-Source-Code/member/viewpages.php?id='.$centreID.'";</script>';
+
 }
 
 mysqli_close($con);

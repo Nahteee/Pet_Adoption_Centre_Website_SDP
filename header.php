@@ -81,7 +81,7 @@
                 echo '<li> <a href="#">View adoption bookings</a> </li>';
               }
               echo '<li> <a href="/SDP-Source-Code/member/view_forum_posted.php">View forum posts</a> </li>
-              <li> <a href="#">View bug report status</a> </li>
+              <li> <a href="/SDP-Source-Code/member/view_bug_status.php">View bug report status</a> </li>
               <li> <a href="/SDP-Source-Code/member/sendbug.php">Send Bug Report</a> </li>
               <li> <a href="/SDP-Source-Code/member/feedback.php">Send Site Feedback</a> </li>
             </ul>

@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     }
     else {
         echo '<script>alert("Submitted Successful!");
-        window.location.href= "index_mem.php";
+        window.location.href= "/SDP-Source-Code/index.php";
         </script>';
     }
       mysqli_close($con);

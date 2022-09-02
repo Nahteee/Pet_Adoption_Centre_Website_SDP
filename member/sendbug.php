@@ -6,15 +6,14 @@ if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $content = $_POST['content'];
     $status = 0;
-    $user_id = $_SESSION["auth_user_id"];
-    $sql = "INSERT INTO tickets (user_ID,title,description,status) VALUES ('$user_id','$title','$content','$status')";
+    $sql = "INSERT INTO tickets (user_ID,title,description,status) VALUES ('$userid','$title','$content','$status')";
 
     if (!mysqli_query($con,$sql)){
         die('Error: ' . mysqli_error($con));
     }
     else {
         echo '<script>alert("Submitted Successful!");
-        window.location.href= "index_mem.php";
+        window.location.href= "view_bug_status.php";
         </script>';
     }
       mysqli_close($con);

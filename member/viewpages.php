@@ -66,8 +66,15 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 			echo "</div>";
 		}
 	?>
+	</div>
 </p>
-</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>

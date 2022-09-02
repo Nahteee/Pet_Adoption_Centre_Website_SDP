@@ -7,7 +7,7 @@
 <html>
 <head>
 	<title>View Appointment</title>
-	<link rel="stylesheet" href="POOP.css">
+	<link rel="stylesheet" href="../CSS/POOP.css">
 </head>
 <body>
 	<div class="center">
@@ -16,7 +16,10 @@
 $result = mysqli_query($con,"SELECT * FROM adoption_request AS ar INNER JOIN centre_pages as cp ON ar.centre_ID=cp.ID WHERE ar.user_ID = $userid");
 
 ?>
-<br><br><br><br><br><br>
+<br><br>
+<center> <h1>Pending Adoption Requests</h1> </center>
+
+<br><br>
 <table id="contacts">
 	<tr>
     <th>Species</th>
@@ -24,13 +27,13 @@ $result = mysqli_query($con,"SELECT * FROM adoption_request AS ar INNER JOIN cen
     <th>Center Name</th>
     <th>Status</th>
 	</tr>
-<?php 
+<?php
 	while($row=mysqli_fetch_array($result)){
         if($row['status']== true){
             $stat = "Accepted";
         }else{
             $stat = "Pending";
-        }		
+        }
 		echo "<tr>"; // alternative way is : echo ‘<trbgcolor="#99FF66">’;
 		echo "<td>";
 		echo $row['species'];
@@ -45,10 +48,13 @@ $result = mysqli_query($con,"SELECT * FROM adoption_request AS ar INNER JOIN cen
 		echo $stat;
 		echo "</td>";
 		echo "</tr>";
-		} 
+		}
 		mysqli_close($con);//to close the database connection
 ?>
-</div>
 </table>
+</div>
+<footer>
+<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>

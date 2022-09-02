@@ -73,8 +73,6 @@ if(isset($_POST['add_reply']))
 
 if(isset($_POST['comment_load_data']))
     {
-        //condition match with topic id
-        //$comments_query = "SELECT * FROM comments;"; //problem query
         $topicid = $_POST['t_id'];
         $comments_query = "SELECT * FROM forum_post INNER JOIN forum_comments ON forum_post.topic_id = forum_comments.post_ID WHERE forum_post.topic_id = $topicid";
 
@@ -103,7 +101,7 @@ if(isset($_POST['comment_load_data']))
     }
 
 if(isset($_POST['add_comment']))
-    if(!isset($userid))
+    if(!$userid)
     {
         echo "You have to login to comment!";
     }
