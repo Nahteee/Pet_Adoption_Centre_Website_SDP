@@ -7,7 +7,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
 ?>
 
 <html>
-<body style='background-image: url("/sdp/Imgs/bg.png");'>
+<body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'>
 	<head>
 		<link rel = "stylesheet" href = "../CSS/ownerstyle.css">
 	</head>

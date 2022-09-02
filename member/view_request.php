@@ -22,7 +22,7 @@ $result = mysqli_query($con,"SELECT * FROM adoption_request AS ar INNER JOIN cen
 <br><br>
 <table id="contacts">
 	<tr>
-    <th>Species</th>
+    <th>PetID</th>
     <th>Remarks</th>
     <th>Center Name</th>
     <th>Status</th>
@@ -36,7 +36,7 @@ $result = mysqli_query($con,"SELECT * FROM adoption_request AS ar INNER JOIN cen
         }
 		echo "<tr>"; // alternative way is : echo ‘<trbgcolor="#99FF66">’;
 		echo "<td>";
-		echo $row['species'];
+		echo $row['petID'];
 		echo "</td>";
 		echo "<td>";
 		echo $row['remarks'];

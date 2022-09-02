@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include("../header.php");
 ?>
@@ -12,7 +12,7 @@ include("../header.php");
 	<link rel = "stylesheet" href = "../CSS/ownerstyle.css">
 	<title>Adoption Centre Owner Homepage</title>
 </head>
-<body style='background-image: url("/sdp/Imgs/bg.png");'><br><br><br>
+<body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'><br><br><br>
 	<div class = "center" style='background-color: white;'>
 	<h1 style='font-size:40px;'>Adoption Centre Owner Homepage </h1>
 	<br><br><br><br><br><br><br><br>

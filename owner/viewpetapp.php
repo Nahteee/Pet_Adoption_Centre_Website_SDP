@@ -2,15 +2,16 @@
 //Page for center owners to view pet applications
 
 include("../conn.php");
+include("../session.php");
 
-$id = intval($_GET['id']);
+$id = $userid;
 $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 ?>
 
 <html>
 <head>
-	<link rel="stylesheet" href="../CSS/ownerstyle.css">
-<body style='background-image: url("/sdp/Imgs/bg.png");'>
+	<link rel="stylesheet" href="../CSS/style.css">
+<body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'>
 	<title>View adoption applications</title>
 	<div class = "beeg" style='background-color: white;'>
 	<h2>Pet adoption applications</h2>
@@ -69,7 +70,7 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 			echo "</td>";
 
 			echo "<td>";
-			$petID = $row['ID'];
+			$petID = $row['petID'];
 			$pet = mysqli_query($con, "SELECT * FROM pets WHERE ID = $petID");
 			$row2 = mysqli_fetch_array($pet);
 			echo $row2['name'];

@@ -8,7 +8,7 @@ include("../header.php");
     <link rel="stylesheet" href="../CSS/ownerstyle.css">
 </head>
 <title>Apply for page</title>
-<body style='background-image: url("/sdp/Imgs/bg.png");'>
+<body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'>
     <div class = "center" style='background-color: white;'>
     <h2>Apply for an Adoption Centre Page</h2>
     <h4>Please enter your details below: </h4>

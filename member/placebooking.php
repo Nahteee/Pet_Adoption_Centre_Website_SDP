@@ -31,9 +31,9 @@ $pets = mysqli_query($con, "SELECT * FROM pets WHERE ID=$petId");
 
 	<p class='uhh'>Adoption remarks:</p>
 	<form action = "sendbooking.php" method = "post">
-		<input type = "hidden" name = "bookingID" value = "<?php echo $row['ID']; ?>">
+		<input type = "hidden" name = "petID" value = "<?php echo $row['ID']; ?>">
 		<input type = "hidden" name = "userID" value = "<?php echo $_SESSION['userID']; ?>">
-		<input type = "hidden" name = "species" value = "<?php echo $row['species']; ?>">
+		<!-- <input type = "hidden" name = "petID" value = "<?php $petId ?>"> -->
 		<input type = "hidden" name = "centreID" value = "<?php echo $row['centre_ID']; ?>">
 		<textarea type="text" name="remarks"></textarea> <br>
 		<input type = "submit" value="Adopt <?php echo $row['name']; ?>">
