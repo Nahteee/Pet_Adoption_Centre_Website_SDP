@@ -33,7 +33,7 @@ $id = intval($_GET['id']);
         <input type="text" name="petBreed" required="required">
         </p>
         Pet photo: <br>
-        <input type="file" name="petPic" id="centrePic">
+        <input type="file" name="petPic" id="petPic">
         </p>
         <input type="submit" value="Submit Application">
     </form>

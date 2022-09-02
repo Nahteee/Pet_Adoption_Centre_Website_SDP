@@ -45,12 +45,7 @@ $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$i
 			<div class="flex2">
 				<form method="post" class="pet-form-class">
 					<p>Search</p> <input placeholder="by species, breed, age." type="text" name="search_key"> <button class="button" name="searchBtn" type="submit" >Submit</button>
-					<?php
-					// session_start();
-					if (isset($_SESSION['owner'])) {
-						echo '<a class="buttonlink" href="../owner/petform.php?id='.$_GET['id']. '">Add pet</a>';
-					}
-					 ?>
+
 				</form>
 					<?php
 					$search_key = "";
@@ -72,7 +67,7 @@ $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$i
 							<p> Breed: '.$row['breed'].' </p>
 							<p> Age: '.$row['age'].' </p>
 							<button class="small">
-							<a class="buttonlink" href="placebooking.php?id='.$row['ID'].'">
+							<a href="placebooking.php?id='.$row['ID'].'">
 							Adopt Me!
 							</a>
 							</button>

@@ -42,7 +42,7 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-    header("location: ../member/viewpages.php?id=" . $_POST['id']);
+    echo '<script type="text/JavaScript"> alert("Page Succesfully Updated!"); window.location.href = "../member/viewpages.php?id=' . $_POST['id']." </script>';
 }
 
 mysqli_close($con);

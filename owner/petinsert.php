@@ -3,7 +3,7 @@
 
 include("../conn.php");
 
-$image = $_FILES['centrePic']['name'];
+$image = $_FILES['$_POST[petPic]']['name'];
 
 $sql="INSERT INTO pets (name, age, species, breed, centre_ID, image_name)
 
@@ -15,8 +15,7 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-    echo "application submmited!";
-    header("location: /SDP-Source-Code/member/browsepages.php");
+  echo '<script type="text/JavaScript"> alert("Pet Succesfully Updated!"); window.location.href = "/SDP-Source-Code/member/browsepages.php"; </script>';
 }
 
 mysqli_close($con);
