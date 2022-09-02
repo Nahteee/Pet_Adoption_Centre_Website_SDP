@@ -2,7 +2,7 @@
 //PHP to edit pet details
 
 include("../conn.php");
-
+include("../header.php");
 include("../session.php");
 $id = intval($_GET['id']);
 $result = mysqli_query($con,"SELECT * FROM pets WHERE ID=$id");
@@ -46,6 +46,9 @@ while($row = mysqli_fetch_array($result)) {
         <input type="submit" value="Save changes">
     </form>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 
 <?php

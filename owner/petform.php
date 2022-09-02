@@ -22,7 +22,7 @@ $id = intval($_GET['id']);
         </p>
         <p>
         Pet Age: <br>
-        <input type="text" name="petAge" required="required">
+        <input type="number" name="petAge" required="required">
         </p>
         <p>
         Pet Species: <br>

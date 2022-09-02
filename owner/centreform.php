@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("../header.php");
 ?>
 
@@ -20,7 +20,7 @@ include("../header.php");
         </p>
         <p>
         SSM: <br>
-        <input type="text" name="centreSSM" required="required">
+        <input type="text" name="centreSSM" maxlength="10" required="required">
         </p>
         <p>
         Address: <br>
