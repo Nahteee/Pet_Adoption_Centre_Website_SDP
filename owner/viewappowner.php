@@ -1,8 +1,9 @@
-<?php 
+<?php
 //Page for owners to view their sent applications
 
 include("../conn.php");
-$id = intval($_GET['id']);
+include("../session.php");
+$id = $userid;
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
 ?>
 

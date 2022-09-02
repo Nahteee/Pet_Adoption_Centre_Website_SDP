@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 include("../conn.php");
-
-$id = intval($_GET['id']);
+include("../session.php");
+$id = $userid;
 
 mysqli_query($con,"UPDATE adoption_request SET status = 1 WHERE ID = $id");
 

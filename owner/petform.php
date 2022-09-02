@@ -1,5 +1,6 @@
 <?php
-$id = intval($_GET['id']);
+include("../session.php");
+$id = $userid;
 ?>
 <html>
 <!--Page to fill up form to add a new pet<-->

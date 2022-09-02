@@ -1,8 +1,9 @@
-<?php 
+<?php
 //PHP to send new applications
 
 include("../conn.php");
-session_start();
+include("../session.php");
+$id = $userid;
 
 $target_dir = "../Uploads/";
 $target_file = $target_dir . basename($_FILES["centrePic"]["name"]);
@@ -31,7 +32,7 @@ if (!mysqli_query($con, $sql)) {
 }
 else {
     echo "application submmited!";
-    header("location:centreowner.php");
+    header("location:/SDP-Source-Code/index.php");
 }
 
 mysqli_close($con);

@@ -3,7 +3,8 @@
 
 include("../conn.php");
 include("../header.php");
-$id = intval($_GET['id']);
+include("../session.php");
+$id = $userid;
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND verified = 1");
 ?>
 

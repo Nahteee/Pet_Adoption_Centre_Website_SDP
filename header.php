@@ -46,7 +46,7 @@
               echo '<ul class="uhh-class">
                 <li><a href="/SDP-Source-Code/member/profile.php">Edit profile</a></li>';
                 if (isset($_SESSION['owner'])) {
-                 echo '<li><a href="#">Edit page details</a></li>';
+                 echo '<li><a href="/SDP-Source-Code/owner/viewownedpages.php">Edit page details</a></li>';
                }
                echo '<li><a href="/SDP-Source-Code/logout.php">Logout</a></li>
              </ul>
@@ -72,13 +72,13 @@
               <li> <span>Hello!</span> </li>
               <li> <a href="/SDP-Source-Code/member/Quiz/quiz.php">Take our Pet Quiz!</a> </li>';
               if (isset($_SESSION['owner'])) {
-                echo '<li> <a href="#">View page request</a> </li>';
+                echo '<li> <a href="/SDP-Source-Code/owner/viewappowner.php">View page request</a> </li>';
               }
               else {
                 echo '<li> <a href="/SDP-Source-Code/member/view_request.php">View pending requests</a> </li>';
               }
               if (isset($_SESSION['owner'])) {
-                echo '<li> <a href="#">View adoption bookings</a> </li>';
+                echo '<li> <a href="/SDP-Source-Code/owner/viewpetapp.php">View adoption bookings</a> </li>';
               }
               echo '<li> <a href="/SDP-Source-Code/member/view_forum_posted.php">View forum posts</a> </li>
               <li> <a href="/SDP-Source-Code/member/view_bug_status.php">View bug report status</a> </li>

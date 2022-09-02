@@ -1,5 +1,5 @@
-<?php 
-//PHP to add new pets 
+<?php
+//PHP to add new pets
 
 include("../conn.php");
 
@@ -16,7 +16,7 @@ if (!mysqli_query($con, $sql)) {
 }
 else {
     echo "application submmited!";
-    header("location: centreowner.php");
+    header("location: editpage.php");
 }
 
 mysqli_close($con);

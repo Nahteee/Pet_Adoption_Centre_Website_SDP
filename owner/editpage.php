@@ -1,10 +1,10 @@
-<?php 
+<?php
 //PHP to edit centre details
 
 include("../conn.php");
 include("../header.php");
-
-$id = intval($_GET['id']);
+include("../session.php");
+$id = $userid;
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE ID=$id");
 $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 
@@ -101,9 +101,9 @@ while($row = mysqli_fetch_array($result)) {
 <br> <br>
 <button>
 <?php
-echo "<a class = 'buttonlink' href=\"petform.php?id=";
-echo $row['ID'];
-echo "\">Add pet</a>";
+echo '<a class="buttonlink" href="petform.php">Add pet</a>'
+
+
 ?>
 </button>
 </div>

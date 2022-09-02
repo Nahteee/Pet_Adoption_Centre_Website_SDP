@@ -23,8 +23,8 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 				// session_start();
 				if (isset($_SESSION['owner'])) {
 					echo '<div class="owned-pages">';
-					echo '<a href="">View owned pages</a>';
-					echo '<a href="">Apply for new page</a>';
+					echo '<a href="/SDP-Source-Code/owner/viewownedpages.php">View owned pages</a>';
+					echo '<a href="/SDP-Source-Code/owner/centreform.php">Apply for new page</a>';
 					echo '</div>';
 				}
 				 ?>

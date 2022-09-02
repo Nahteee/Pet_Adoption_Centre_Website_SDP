@@ -3,16 +3,18 @@
 
 include("../conn.php");
 include("../session.php");
-
 $id = $userid;
 $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 ?>
 
 <html>
 <head>
-	<link rel="stylesheet" href="../CSS/style.css">
+	<link rel="stylesheet" href="../CSS/POOP.css">
 <body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'>
 	<title>View adoption applications</title>
+	<div class="center">
+
+
 	<div class = "beeg" style='background-color: white;'>
 	<h2>Pet adoption applications</h2>
 	<br>
@@ -28,8 +30,8 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 			<th>Address</th>
 			<th>Remarks</th>
 			<th>Pet</th>
-			<td> </td>
-			<td> </td>
+			<th> </th>
+			<th> </th>
 		</tr>
 		<?php
 		while($row = mysqli_fetch_array($result)) {
@@ -89,6 +91,7 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 		mysqli_close($con);
 		?>
 	</table>
+</div>
 </div>
 </body>
 </html>

@@ -1,9 +1,10 @@
-<?php 
+<?php
 //PHP to edit pet details
 
 include("../conn.php");
 
-$id = intval($_GET['id']);
+include("../session.php");
+$id = $userid;
 $result = mysqli_query($con,"SELECT * FROM pets WHERE ID=$id");
 
 while($row = mysqli_fetch_array($result)) {

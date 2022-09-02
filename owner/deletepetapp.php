@@ -1,9 +1,9 @@
-<?php 
+<?php
 //PHP for deleting a page application (admin)
 
 include("../conn.php");
-
-$id = intval($_GET['id']);
+include("../session.php");
+$id = $userid;
 
 mysqli_query($con,"DELETE FROM adoption_request WHERE ID=$id");
 
