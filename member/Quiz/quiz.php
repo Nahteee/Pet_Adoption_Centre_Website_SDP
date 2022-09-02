@@ -222,7 +222,9 @@
               });
            }(jQuery))
     </script>
-
+    <footer>
+      <?php include("../../footer.php") ?>
+    </footer>
    </body>
    <script src="../../JS/main.js?v=<?php echo time(); ?>"></script>
  </html>

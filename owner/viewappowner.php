@@ -2,6 +2,7 @@
 //Page for owners to view their sent applications
 
 include("../conn.php");
+include("../header.php");
 include("../session.php");
 $id = $userid;
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
@@ -67,5 +68,8 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
 		?>
 	</table>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>

@@ -48,7 +48,7 @@ $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$i
 					<?php
 					// session_start();
 					if (isset($_SESSION['owner'])) {
-						echo '<a class="buttonlink" href="petform.php?id='.$_GET['id']. '">Add pet</a>';
+						echo '<a class="buttonlink" href="../owner/petform.php?id='.$_GET['id']. '">Add pet</a>';
 					}
 					 ?>
 				</form>

@@ -1,4 +1,5 @@
 <?php
+include("../header.php");
 include("../session.php");
 $id = intval($_GET['id']);
 ?>
@@ -37,5 +38,8 @@ $id = intval($_GET['id']);
         <input type="submit" value="Submit Application">
     </form>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>

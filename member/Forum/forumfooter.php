@@ -225,15 +225,6 @@
             <a href="https://www.twitter.com/" target=”_blank”><i class="bi-twitter"></i></a>
           </div>
         </div>
-        <div class="element2">
-          <h1>Useful Links</h1>
-          <ul>
-            <li> <a href="/SDP-Source-Code/member/browsepets.php">Pets</a> </li>
-            <li> <a href="/SDP-Source-Code/member/browsepages.php">Centres</a> </li>
-            <li> <a href="/SDP-Source-Code/member/indexforum.php">Forum</a> </li>
-            <li> <a href="/SDP-Source-Code/member/Quiz/quiz.php">Quiz</a> </li>
-          </ul>
-        </div>
         <div class="element3">
           <h1>Contact Us</h1>
           <ul>
@@ -245,14 +236,24 @@
             <li>Bandar Utara, Batu 12 Jalan Ipoh</li>
           </ul>
         </div>
+        <div class="element2">
+          <h1>Useful Links</h1>
+          <ul>
+            <li> <a href="/SDP-Source-Code/member/browsepets.php">Pets</a> </li>
+            <li> <a href="/SDP-Source-Code/member/browsepages.php">Centres</a> </li>
+            <li> <a href="/SDP-Source-Code/member/Forum/indexforum.php">Forum</a> </li>
+            <li> <a href="/SDP-Source-Code/member/Quiz/quiz.php">Quiz</a> </li>
+          </ul>
+        </div>
+
         <div class="element4">
-          <h1> <i style="font-size: 18px;">Something wrong with our site? </i> <br> <i style="font-style: normal; height: 50;">Send us your bug report.</i> </h1>
-          <a href="/SDP-Source-Code/member/sendbug.php">Bug Report</a>
-          <h1> <i style="font-size: 18px;">What do you think of our website? </i> <br> <i style="font-style: normal;">Send us your feedback</i> </h1>
-          <a href="/SDP-Source-Code/member/feedback.php">Feedback</a>
+          <p> <br><i style="font-size: 18px;"><b>Something wrong with our site?</b> </i> <br> <i style="font-size: 18px;"><b>Send us your bug report.</b></i> </p>
+          <a style="margin-top: 0px; margin-bottom: 10px;"href="/SDP-Source-Code/member/sendbug.php">Bug Report</a>
+          <p> <i style="font-size: 18px;"><b>What do you think of our website?</b> </i> <br> <i style="font-style: normal;"><b>Send us your feedback</b></i> </p>
+          <a style="margin-top: -5px; margin-bottom: 10px;" href="/SDP-Source-Code/member/feedback.php">Feedback</a>
         </div>
       </div>
-      <h2>Adoption 2022 ©. All Rights Reserved</h2>
+      <h2 style="font-size: 18px;">Adoption 2022 ©. All Rights Reserved</h2>
     </footer>
   </body>
 </html>

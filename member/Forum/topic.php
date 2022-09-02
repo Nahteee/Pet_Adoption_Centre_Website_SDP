@@ -22,10 +22,10 @@
               <div class="container">
                   <div class="row justify-content-center">
                       <div class="col-md-8">
-
+                        <br><br><br>
                           <h1>ForeverHome Forum</h1>
                           <br>
-                          <div class="card">
+                          <div style="position: static;" class="card">
           <?php
               if($_GET["id"]){
                   $check = mysqli_query($con,"SELECT * FROM forum_post INNER JOIN users ON forum_post.user_ID = users.ID WHERE forum_post.topic_id=" . $_GET["id"] . "");
@@ -37,7 +37,7 @@
                               echo "<div class='card-header'><h4>". $row['title']."</h4>";
                           echo "<h6>By : ". $row['username']."<br> Posted on : ".$row['time']."</h6></div>";
                           echo "<div class='card-body' style='text-align: left'>". $row['description']."
-                          <hr>";
+                          <br><br>";
                           echo "<div class='main-comment'></div>
                           <div id='error_status'></div>
                           <textarea  class='comment_textbox form-control mb-1' rows='2'></textarea>
@@ -75,7 +75,22 @@
       </div>
           <br>
           <br>
-          <a href="post.php"><button>Post topic</button></a>
+          <a href="post.php" style="text-decoration: none;
+          color: #444;
+          font-family: 'Tangerine', cursive;
+          weight: 300;
+          font-size: 16px;
+          padding: 10px;
+          border-radius: 15px;
+          /* display: block; */
+          /* height: auto; */
+          /* width: 250px; */
+          background-color: #f0c040;
+          transition: 0.2s ease-in-out;
+          line-height: 25px;
+          margin-top: 10px;
+          /* margin-left: 150px; */">Post topic</a>
+          <br><br>
     </body>
 </html>
 

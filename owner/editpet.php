@@ -40,7 +40,8 @@ while($row = mysqli_fetch_array($result)) {
         <p>
         Pet photo: <br>
         <img src = "<?php echo "../Uploads/" . $row['image_name']?>" style = 'width: 300px; height: auto;'> <br>
-        <input type="file" name="petPic" id="petPic" value = "<?php echo $row['image_name'] ?>">
+        <input type="hidden" name="oldpic" value="<?php echo $row['image_name']; ?>">
+        <input type="file" name="petPic" id="petPic">
         </p>
         <input type="submit" value="Save changes">
     </form>

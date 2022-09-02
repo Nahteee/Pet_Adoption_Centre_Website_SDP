@@ -63,6 +63,10 @@ if(isset($_POST['submit'])){
         </center>
     </form>
     <center><a href="../index.php" class="Hbtn">Back</a></center>
+    <br><br><br>
+    <footer>
+    	<?php include("../footer.php") ?>
+    </footer>
 </body>
 
 </html>

@@ -2,6 +2,7 @@
 //Page for center owners to view pet applications
 
 include("../conn.php");
+include("../header.php");
 include("../session.php");
 $id = $userid;
 $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
@@ -93,5 +94,8 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 	</table>
 </div>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>

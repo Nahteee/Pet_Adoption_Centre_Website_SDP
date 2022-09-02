@@ -36,7 +36,7 @@
           <ul>
             <li> <a href="/SDP-Source-Code/member/browsepets.php">Pets</a> </li>
             <li> <a href="/SDP-Source-Code/member/browsepages.php">Centres</a> </li>
-            <li> <a href="/SDP-Source-Code/member/indexforum.php">Forum</a> </li>
+            <li> <a href="/SDP-Source-Code/member/Forum/indexforum.php">Forum</a> </li>
             <li> <a href="/SDP-Source-Code/member/Quiz/quiz.php">Quiz</a> </li>
           </ul>
         </div>

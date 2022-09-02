@@ -47,5 +47,8 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND
 		?>
 	</table>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>

@@ -55,6 +55,7 @@ while($row = mysqli_fetch_array($result)) {
     </form>
 <br> <br> <br>
 <h3>Center pets</h3>
+<br>
     <table>
         <tr>
                 <th>Pet's Name</th>
@@ -111,3 +112,7 @@ echo '<a class="buttonlink" href="petform.php?id='.$_GET['id']. '">Add pet</a>';
 <?php
 mysqli_close($con);
 ?>
+
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
