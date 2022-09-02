@@ -21,7 +21,10 @@ main {
   margin-right: 5px;
   height: 30px;
   width: 200px;
+  border-radius: 7px;
+  padding-left: 15px;
 }
+
 
 .pet-form-class button {
   height: 35px;
@@ -31,6 +34,11 @@ main {
   /* font-family: 'Tangerine', cursive; */
   border-radius: 7px;
   background-color: #F4ECD0;
+  transition: 0.2s ease-in-out;
+}
+
+.pet-form-class button:hover {
+  background-color: #f0c040;
 }
 
 .owned-pets {
