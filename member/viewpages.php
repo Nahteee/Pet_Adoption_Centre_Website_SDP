@@ -108,7 +108,10 @@ $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$i
 				}
 
 		?>
+		<br><br>
 	</main>
-
+	<footer>
+	<?php include("../footer.php") ?>
+	</footer>
 </body>
 </html>
