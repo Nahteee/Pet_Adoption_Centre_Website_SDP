@@ -83,7 +83,7 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 			echo $row['ID'];
 			echo "\">Verify</a> </button> </td>";
 
-			echo "<td> <button class = 'small'><a href class = 'buttonlink' =\"deletepetapp.php?id=";
+			echo "<td> <button class = 'small'><a class = 'buttonlink' href=\"deletepetapp.php?id=";
 			echo $row['ID'];
 			echo "\" onClick=\"return confirm('Delete ";
 			echo " application details?');\">Delete</a></td> </button></tr>";
