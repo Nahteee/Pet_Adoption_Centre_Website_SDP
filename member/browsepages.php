@@ -35,7 +35,7 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 			if(isset($_POST['searchBtn'])){
 				$search_key = $_POST['search_key'];
 			}
-			$result=mysqli_query($con,"SELECT * FROM centre_pages WHERE CONCAT(centre_name, location) LIKE '%".$search_key."%'");
+			$result=mysqli_query($con,"SELECT * FROM centre_pages WHERE verified = 1 AND CONCAT(centre_name, location) LIKE '%".$search_key."%'");
 			?>
 			<div class="parentbox">
 				<?php

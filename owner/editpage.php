@@ -65,34 +65,34 @@ while($row = mysqli_fetch_array($result)) {
                 <th>Delete record</th>
         </tr>
         <?php
-        while($row = mysqli_fetch_array($pets)) {
+        while($row1 = mysqli_fetch_array($pets)) {
                 echo "<tr>";
                 echo "<td>";
-                echo $row['name'];
+                echo $row1['name'];
                 echo "</td>";
 
                 echo "<td>";
-                echo $row['age'];
+                echo $row1['age'];
                 echo "</td>";
 
                 echo "<td>";
-                echo $row['species'];
+                echo $row1['species'];
                 echo "</td>";
 
                 echo "<td>";
-                echo $row['breed'];
+                echo $row1['breed'];
                 echo "</td>";
 
                 echo "<td>";
                 echo "<a href=\"editpet.php?id=";
-                echo $row['ID'];
+                echo $row1['ID'];
                 echo "\">Edit</a></td>";
 
 
                 echo "<td><a href=\"deletepet.php?id=";
-                echo $row['ID'];
+                echo $row1['ID'];
                 echo "\" onClick=\"return confirm('Delete ";
-                echo $row['name'];
+                echo $row1['name'];
                 echo " details?');\">Delete</a></td></tr>";;
         }
         echo "</table>";
@@ -101,8 +101,9 @@ while($row = mysqli_fetch_array($result)) {
 <br> <br>
 <button>
 <?php
-echo '<a class="buttonlink" href="petform.php">Add pet</a>'
-
+// while($row = mysqli_fetch_array($result)) {
+echo '<a class="buttonlink" href="petform.php?id='.$_GET['id']. '">Add pet</a>';
+// }
 
 ?>
 </button>

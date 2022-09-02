@@ -20,7 +20,7 @@ if (!mysqli_query($con, $sql)) {
 }
 else {
     echo "Page updated!";
-    header("location: editpage.php");
+    header("location: /SDP-Source-Code/member/browsepages.php");
 }
 
 mysqli_close($con);
