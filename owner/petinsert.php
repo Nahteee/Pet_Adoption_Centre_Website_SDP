@@ -2,8 +2,9 @@
 //PHP to add new pets
 
 include("../conn.php");
-
-$image = $_FILES['$_POST[petPic]']['name'];
+$target_dir = "../Uploads/";
+$target_file = $target_dir . basename($_FILES["petPic"]["name"]);
+$image = $_FILES['petPic']['name'];
 
 $sql="INSERT INTO pets (name, age, species, breed, centre_ID, image_name)
 
