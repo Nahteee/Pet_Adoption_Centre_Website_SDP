@@ -15,7 +15,6 @@
                 },
                 success: function(response) {
                     $('.comment-container').html("");
-                    // console.log(response);
                     $.each(response, function(key, value) {
                         $('.comment-container').
                         append('<div class="reply_box border p-2 mb-2">\

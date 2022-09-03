@@ -63,8 +63,6 @@ foreach ($fixed_query as $data) {
 $bug_fix = json_decode($fixed_bug);
 $bug_array = [];
 array_push($bug_array, $bug_fix, $bug_no_fix);
-
-//SELECT COUNT(ID) FROM `adoption_request` WHERE status = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,14 +74,15 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <title>Forever Home Report</title>
     <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../CSS/admin_style_2.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../CSS/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
     <style>
-        .wrapper{
+        .wrapper {
             margin: 0 auto;
             width: 50%;
         }
-        .user{
+
+        .user {
             margin-left: 47%;
         }
     </style>
@@ -101,7 +100,7 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
                 <li> <a href="admin_view_forum.php">Forum</a> </li>
                 <li> <a href="admin_ticket.php">Tickets</a> </li>
                 <li> <a href="admin_feedback.php">Feedback</a> </li>
-                <li> <a href="viewapplication.php">Page Requests</a> </li>
+                <li> <a href="admin_view_application.php">Page Requests</a> </li>
                 <li> <a href="admin_view_report.php" id="selected"> view Reports</a> </li>
             </ul>
             <a href="admin_logout.php" class="header-cases">Logout</a>
@@ -127,9 +126,11 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
             </center>
             <canvas id="barChart"></canvas>
         </div>
-        <center><h4>Recent 5 members that registered</h4></center>
+        <br><br>
+        <center>
+            <h4>Recent 5 members that registered</h4>
+        </center>
         <div class="user">
-
             <?php
             $result = mysqli_query($con, "SELECT * FROM users WHERE role = 'member' ORDER BY ID DESC LIMIT 5;");
             echo "<ol>";
@@ -144,18 +145,18 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
     </div>
     <br>
     <footer>
-    <div class="footer-content">
-      <p class="company-name">© 2022 ForeverHome, Inc</p>
-      <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
-      <nav>
-        <ul>
-          <li> <a href="admin_products.php">Products</a> </li>
-          <li> <a href="admin_orders.php">Orders</a> </li>
-          <li> <a href="admin_view_customers.php">Customers</a> </li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+        <div class="footer-content">
+            <p class="company-name">© 2022 ForeverHome, Inc</p>
+            <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li> <a href="admin_pets.php">Pets</a> </li>
+                    <li> <a href="admin_centres.php">Centres</a> </li>
+                    <li> <a href="admin_users.php">Users</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 
 </html>

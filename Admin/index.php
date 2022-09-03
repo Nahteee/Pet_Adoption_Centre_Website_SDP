@@ -41,12 +41,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   <!--So that the browser will render the width of the page at the width of its own screen-->
   <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/admin_login_style.css?v=<?php echo time(); ?>">
-  <title></title>
+  <title>Admin login</title>
 </head>
 
 <body>
   <header>
-    <a href="adminindex.php" class="header-brand"><img src="../Imgs/ForeverHome Logo.png" alt=""></a>
+    <a href="index.php" class="header-brand"><img src="../Imgs/ForeverHome Logo.png" alt=""></a>
   </header>
 
   <main>

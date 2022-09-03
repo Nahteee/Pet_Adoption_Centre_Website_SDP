@@ -28,7 +28,7 @@ include("../conn.php");
         <li> <a href="admin_view_forum.php">Forum</a> </li>
         <li> <a href="admin_ticket.php" >Tickets</a> </li>
         <li> <a href="admin_feedback.php" id="selected">Feedback</a> </li>
-        <li> <a href="viewapplication.php">Page Requests</a> </li>
+        <li> <a href="admin_view_application.php">Page Requests</a> </li>
         <li> <a href="admin_view_report.php"> view Reports</a> </li>
       </ul>
       <a href="admin_logout.php" class="header-cases">Logout</a>
@@ -37,7 +37,7 @@ include("../conn.php");
   <main>
     <section class="main-wrapper">
       <div class="box-header">
-        <h1>Tickets</h1>
+        <h1>Admin View Feedback</h1>
       </div>
       <table>
         <tr>
@@ -75,7 +75,7 @@ include("../conn.php");
             echo $row['description'];
             echo "</td>";
             echo "</tr>";
-            }
+            } 
             mysqli_close($con);//to close the database connection
         ?>
       </table>
@@ -95,23 +95,23 @@ include("../conn.php");
 
       <div class="box-header">
       </div>
-
+      
 
     </section>
   </main>
   <footer>
-    <div class="footer-content">
-      <p class="company-name">© 2022 Company, Inc</p>
-      <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
-      <nav>
-        <ul>
-          <li> <a href="admin_products.php">Products</a> </li>
-          <li> <a href="admin_orders.php">Orders</a> </li>
-          <li> <a href="admin_view_customers.php">Customers</a> </li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+			<div class="footer-content">
+			  <p class="company-name">© 2022 ForeverHome, Inc</p>
+			  <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+			  <nav>
+				<ul>
+				  <li> <a href="admin_pets.php">Pets</a> </li>
+				  <li> <a href="admin_centres.php">Centres</a> </li>
+				  <li> <a href="admin_users.php">Users</a> </li>
+				</ul>
+			  </nav>
+			</div>
+		</footer>
 
 </body>
 

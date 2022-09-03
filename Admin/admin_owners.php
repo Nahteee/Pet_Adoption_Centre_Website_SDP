@@ -15,9 +15,6 @@ include("../conn.php");
   <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-  <!-- <link rel="stylesheet" href="../CSS/bootstrap.css" /> -->
-  <!-- <script src="../JS/jquery-3.3.1.min.js"></script> -->
   <script src="../JS/bootstrap.js"></script>
   <script defer src="../JS/script.js"></script>
 
@@ -36,7 +33,7 @@ include("../conn.php");
         <li> <a href="admin_view_forum.php">Forum</a> </li>
         <li> <a href="admin_ticket.php">Tickets</a> </li>
         <li> <a href="admin_feedback.php">Feedback</a> </li>
-        <li> <a href="viewapplication.php">Page Requests</a> </li>
+        <li> <a href="admin_view_application.php">Page Requests</a> </li>
         <li> <a href="admin_view_report.php"> view Reports</a> </li>
       </ul>
       <a href="admin_logout.php" class="header-cases">Logout</a>
@@ -45,7 +42,7 @@ include("../conn.php");
   <main>
     <section class="main-wrapper">
       <div class="box-header">
-        <h1>Members</h1>
+        <h1>Adoption Centre Owners</h1>
       </div>
       <table>
         <tr>
@@ -137,29 +134,29 @@ include("../conn.php");
       if ($i > $page) {
         echo "<a href='admin_owners.php?page=" . ($page + 1) . "' class='btn btn-danger'>Next</a>";
       }
-
+      
 
       ?>
 
       <div class="box-header">
       </div>
-
+      
 
     </section>
   </main>
   <footer>
-    <div class="footer-content">
-      <p class="company-name">© 2022 Company, Inc</p>
-      <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
-      <nav>
-        <ul>
-          <li> <a href="admin_products.php">Products</a> </li>
-          <li> <a href="admin_orders.php">Orders</a> </li>
-          <li> <a href="admin_view_customers.php">Customers</a> </li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+			<div class="footer-content">
+			  <p class="company-name">© 2022 ForeverHome, Inc</p>
+			  <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+			  <nav>
+				<ul>
+				  <li> <a href="admin_pets.php">Pets</a> </li>
+				  <li> <a href="admin_centres.php">Centres</a> </li>
+				  <li> <a href="admin_users.php">Users</a> </li>
+				</ul>
+			  </nav>
+			</div>
+		</footer>
 
 </body>
 

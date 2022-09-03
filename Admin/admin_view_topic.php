@@ -11,7 +11,6 @@ include("../conn.php");
     <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/admin_style_2.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <head>
@@ -30,7 +29,7 @@ include("../conn.php");
                 <li> <a href="admin_view_forum.php" id="selected">Forum</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_ticket.php">Tickets</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_view_customers.php">Feedback</a> </li>
-                <li> <a style="text-decoration: none;" href="viewapplication.php">Page Requests</a> </li>
+                <li> <a style="text-decoration: none;" href="admin_view_application.php">Page Requests</a> </li>
                 <li> <a style="text-decoration: none;" href="admin_view_report.php"> view Reports</a> </li>
             </ul>
             <a href="admin_logout.php" class="header-cases">Logout</a>
@@ -60,8 +59,8 @@ include("../conn.php");
                         <hr>";
                                         echo "<div class='main-comment'></div>
                         <div id='error_status'></div>
-
-
+                        
+                        
                         <hr>
                         <div class='comment-container'></div>";
                                     } else {
@@ -72,8 +71,8 @@ include("../conn.php");
                             <hr>";
                                         echo "<div class='main-comment'></div>
                             <div id='error_status'></div>
-
-
+                            
+                            
                             <hr>
                             <div class='comment-container'></div>";
                                     }
@@ -94,6 +93,20 @@ include("../conn.php");
     <br>
 
 
+    <footer>
+        <div class="footer-content">
+            <p class="company-name">© 2022 ForeverHome, Inc</p>
+            <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li> <a style="text-decoration: none;" href="admin_pets.php">Pets</a> </li>
+                    <li> <a style="text-decoration: none;" href="admin_centres.php">Centres</a> </li>
+                    <li> <a style="text-decoration: none;" href="admin_users.php">Users</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    </body>
 
 </html>
 

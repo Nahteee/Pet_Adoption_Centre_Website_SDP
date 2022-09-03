@@ -15,9 +15,6 @@ include("../conn.php");
   <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-  <!-- <link rel="stylesheet" href="../CSS/bootstrap.css" /> -->
-  <!-- <script src="../JS/jquery-3.3.1.min.js"></script> -->
   <script src="../JS/bootstrap.js"></script>
   <script defer src="../JS/script.js"></script>
 
@@ -36,7 +33,7 @@ include("../conn.php");
         <li> <a href="admin_view_forum.php">Forum</a> </li>
         <li> <a href="admin_ticket.php">Tickets</a> </li>
         <li> <a href="admin_feedback.php">Feedback</a> </li>
-        <li> <a href="viewapplication.php">Page Requests</a> </li>
+        <li> <a href="admin_view_application.php">Page Requests</a> </li>
         <li> <a href="admin_view_report.php"> view Reports</a> </li>
       </ul>
       <a href="admin_logout.php" class="header-cases">Logout</a>
@@ -72,10 +69,6 @@ include("../conn.php");
         $sql = 'SELECT * FROM users WHERE role = "member" LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
         $result = mysqli_query($con, $sql);
         while ($row = mysqli_fetch_array($result)) {
-          // $product_image = "default1.jpg";
-          // if ($row['product_image']!=""){
-          // 	$product_image = $row['product_image'];
-          // }
           echo "<tr>"; // alternative way is : echo ‘<trbgcolor="#99FF66">’;
           echo "<td>";
           echo $row['ID'];
@@ -83,24 +76,15 @@ include("../conn.php");
           echo "<td>";
           echo $row['username'];
           echo "</td>";
-          // echo "<td>";
-          // echo '<img style="vertical-align: middle; margin-left: 10px; padding-right: 0px" src="'.$product_image.'" width="60px">';
-          // echo "</td>";
           echo "<td>";
           echo $row['first_name'];
           echo "</td>";
-          // echo "<td>";
-          // echo number_format($row['product_price'],2);
-          // echo "</td>";
           echo "<td>";
           echo $row['last_name'];
           echo "</td>";
           echo "<td>";
           echo $row['phone'];
           echo "</td>";
-          // echo "<td><a href=\"admin_view_info_user.php?id="; //edit.php will be created in Lab 8
-          // echo $row['ID'];
-          // echo "\">View</a></td>";
           echo "<td id='fix'>
             <button data-modal-target='#modal' class='view' id=";
           echo $row['ID'];
@@ -149,13 +133,13 @@ include("../conn.php");
   </main>
   <footer>
     <div class="footer-content">
-      <p class="company-name">© 2022 Company, Inc</p>
+      <p class="company-name">© 2022 ForeverHome, Inc</p>
       <a href="admin_products.php" class="header-brand"><img src="../images/Brand_Logo.png" alt=""></a>
       <nav>
         <ul>
-          <li> <a href="admin_products.php">Products</a> </li>
-          <li> <a href="admin_orders.php">Orders</a> </li>
-          <li> <a href="admin_view_customers.php">Customers</a> </li>
+          <li> <a href="admin_pets.php">Pets</a> </li>
+          <li> <a href="admin_centres.php">Centres</a> </li>
+          <li> <a href="admin_users.php">Users</a> </li>
         </ul>
       </nav>
     </div>
