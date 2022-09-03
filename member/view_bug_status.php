@@ -28,7 +28,7 @@ $result = mysqli_query($con,"SELECT * FROM tickets AS t INNER JOIN users as u ON
 	</tr>
 <?php
 	while($row=mysqli_fetch_array($result)){
-        if($row['status']== true){
+        if($row['status']== 'Fixed'){
             $stat = "Accepted";
         }else{
             $stat = "Pending";

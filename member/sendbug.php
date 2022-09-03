@@ -5,7 +5,7 @@ include("../session.php");
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $content = $_POST['content'];
-    $status = 0;
+    $status = 'Not Fixed';
     $sql = "INSERT INTO tickets (user_ID,title,description,status) VALUES ('$userid','$title','$content','$status')";
 
     if (!mysqli_query($con,$sql)){
