@@ -128,7 +128,7 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
         </div>
         <div class="donut" style="width: 50%;float :right">
             <center>
-                <h4>Adoption Report</h4>
+                <h4>Centre Report</h4>
             </center>
             <canvas id="donutChart"></canvas>
         </div>

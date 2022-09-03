@@ -78,7 +78,7 @@
           <a href="post.php" style="text-decoration: none;
           color: #444;
           font-family: 'Tangerine', cursive;
-          weight: 300;
+          height: 300;
           font-size: 16px;
           padding: 10px;
           border-radius: 15px;
