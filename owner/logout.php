@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-header("location: ownerlogin.php");
+header("location: /SDP-Source-Code/login.php");
 
 session_destroy();
 ?>

@@ -2,115 +2,118 @@
 //View a selected centre page in more detail
 
 include("../conn.php");
+include("../header.php");
 include("../session.php");
 
-$id = intval($_GET['id']); 
+$id = intval($_GET['id']);
 $result = mysqli_query($con,"SELECT * FROM centre_pages WHERE ID=$id");
 $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$id");
-$pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
+// $pets = mysqli_query($con, "SELECT * FROM pets WHERE centre_ID=$id");
 ?>
 
 <html>
 <body>
 	<head>
-		<link rel = "stylesheet" href = "../style.css">
+		<link rel = "stylesheet" href = "../CSS/viewstyle.css?v=<?php echo time(); ?>">
+		<title>Centre Page</title>
 	</head>
-	<title>Centre Page</title>
-<body>
-	<div class = "center">
-		<p>
+	<main>
+		<div class="page-flex">
+			<div class="flex1">
 
-	<?php
-		while($row = mysqli_fetch_array($result)) {
+			<?php
+				while($row = mysqli_fetch_array($result)) {
 
-			echo "<img src = '../uploads/" . $row['centre_pic'] . "' style = 'width: 300px; height: auto;'>";
-			echo "<h1>" . $row['centre_name'] . "</h1>";
+					$data = '<div class= "centre_img" style=" border-radius:15px; background-image: url(../Uploads/'.$row['centre_pic'].');
+				  background-repeat: no-repeat;
+				  background-position: top;
+				  background-size: cover;"></div>
+					<div class="text-wrap">
+					<h1>' . $row['centre_name'] . '</h1>
+					<p>'.$row['description']. '</p> <br><br>
+					<p><b>Located at:</b> <br>' . $row['location'] . '</p> <br>
+					<p><b>Contact Number:</b> ' . $row['phone'].'</p>
+					<p><b>Email: </b>' . $row['email'].'</p>
+					</div>
+					';
+					echo $data;
 
-			echo "Located at: " . $row['location'];
-			echo "<br>";
-			echo $row['description'];
-			echo "<br>";
-		}
-	?>
+				}
+			?>
 
-</p>
-<p> <br>
-	<h3>Pets up for adoption</h3>
-	<div class = "container">
-	<?php
-		while($row = mysqli_fetch_array($pets)) {
-			echo "<div class = 'child'>";
-				echo "<img src = '../uploads/" . $row['image_name'] . "' style = 'width: 250px; height: auto;'>";
-				echo "<br>";
-				echo "<br>";
-				echo "Name: " . $row['name'] . "<br>";
+			</div>
+			<div class="flex2">
+				<form method="post" class="pet-form-class">
+					<p>Search</p> <input placeholder="by species, breed, age." type="text" name="search_key"> <button class="button" name="searchBtn" type="submit" >Submit</button>
 
-				echo "Age: " . $row['age'] . "<br>";
-
-				echo "Species: " . $row['species'] . "<br>";
-
-				echo "Breed: " . $row['breed'] . "<br";
-				echo "<br><br><br>";
-				echo "<button class = 'small' onclick = \"window.location='placebooking.php?id=";
-				echo $row['ID'];
-				echo "';\"> Adopt Me! </button>";
-			echo "</div>";
-		}
-	?>
-</p>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<center>
-
-<form action = "centrecomment.php" method = "post">
-		<input type="hidden" name="centreId" value="<?php echo $id ?>">
-		<input type="hidden" name="userID" value="<?php echo $_SESSION['userID'] ?>">
-		<textarea type = "text"  name = "centreComment"> </textarea>
-	<input type = "submit" value = "Submit comment">
-</form>
+				</form>
+					<?php
+					$search_key = "";
+					if(isset($_POST['searchBtn'])){
+						$search_key = $_POST['search_key'];
+					}
+					$result=mysqli_query($con,"SELECT * FROM pets WHERE centre_ID=$id AND CONCAT(age, species, breed) LIKE '%".$search_key."%'" );
+					?>
+					<div class="parentbox">
+						<?php
+						while($row=mysqli_fetch_array($result))
+						{
+							$data = '<div class="childbox">
+							<div class="align-img" style="float: left; margin-right: 15px; border-radius:15px; background-image: url(../Uploads/'.$row['image_name'].');
+						  background-repeat: no-repeat;
+						  background-position: top;
+						  background-size: cover;">
+							</div>
+							<h1 class="child-h1"> '.$row['name'].' </h1>
+							<p> Species: '.$row['species'].' </p>
+							<p> Breed: '.$row['breed'].' </p>
+							<p> Age: '.$row['age'].' </p>
+							<button class="small">
+							<a href="placebooking.php?id='.$row['ID'].'">
+							Adopt Me!
+							</a>
+							</button>
 
 
-<?php
-//display comments
-		while($row = mysqli_fetch_array($comments)) {
-			echo "<div class = 'comment'>";
-			$uid = $row['user_ID'];
-			$username = mysqli_query($con, "SELECT * FROM users WHERE ID=$uid");
-			while($row2 = mysqli_fetch_array($username)) {
-				echo "<b>" . $row2['username'] . "</b>";
-			}
-			echo " posted at " . $row['time'];
-			echo "<br>";
-			echo $row['comment'];
+							</div>
+							';
+							echo $data;
 
-			echo "</div>";
-			echo "<br>";
-		} 
+							}?>
+			</div>
+		</div>
+	</div>
+		<h1 class="comment-h1"> Page Comment Section</h1>
+		<form action = "centrecomment.php" method = "post" class="comment-form">
+			<input type="hidden" name="userID" value="<?php echo $userid ?>">
+				<input type="hidden" name="centreId" value="<?php echo $id ?>">
+				<textarea class="input-box" type = "text"  name = "centreComment" placeholder="Type a comment!"></textarea> <br> <br>
+			<input type = "submit" value = "Submit comment"> <br> <br>
+		</form>
 
-?>
-</div>
+
+		<?php
+		//display comments
+				while($row = mysqli_fetch_array($comments)) {
+					echo "<div class = 'comment'>";
+					$uid = $row['user_ID'];
+					$username = mysqli_query($con, "SELECT * FROM users WHERE ID=$uid");
+					while($row2 = mysqli_fetch_array($username)) {
+						echo "<b>" . $row2['username'] . "</b>";
+					}
+					echo " posted at " . $row['time'];
+					echo "<br>";
+					echo $row['comment'];
+
+					echo "</div>";
+					echo "<br>";
+				}
+
+		?>
+		<br><br>
+	</main>
+	<footer>
+	<?php include("../footer.php") ?>
+	</footer>
 </body>
 </html>

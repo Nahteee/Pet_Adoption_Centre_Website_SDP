@@ -1,24 +1,25 @@
 <?php
-session_start();
+// session_start();
 include("../conn.php");
-$userid = $_SESSION['auth_user_id'];
+include("../header.php");
+include("../session.php");
 
 if(isset($_POST['submit'])){
     $title = $_POST['title'];
       $content = $_POST['content'];
-    $sql="INSERT INTO feedback (user_ID, title, description) 
+    $sql="INSERT INTO feedback (user_ID, title, description)
     VALUES ('$userid','$title','$content')";
-    
+
     if (!mysqli_query($con,$sql)){
         die('Error: ' . mysqli_error($con));
     }
     else {
         echo '<script>alert("Submitted Successful!");
-        window.location.href= "index_mem.php";
+        window.location.href= "/SDP-Source-Code/index.php";
         </script>';
     }
       mysqli_close($con);
-  
+
   }
 ?>
 
@@ -31,11 +32,16 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FeedBack to Us!</title>
     <style>
+
+    .feedback-form {
+      padding-top: 150px;
+    }
+
     input {
-      width: 250px; 
+      width: 250px;
       padding: 8px;
       margin: 3px 0 11px 0;
-      display: inline-block; 
+      display: inline-block;
       font-size:12pt;
       text-decoration: none;
     }
@@ -46,7 +52,7 @@ if(isset($_POST['submit'])){
 </head>
 
 <body>
-    <form method="post">
+    <form method="post" class="feedback-form">
         <center>
             <h1>Send a Feedback to Us!</h1>
             <label for="title">Title:</label><br>
@@ -56,6 +62,11 @@ if(isset($_POST['submit'])){
             <br><input type="submit" name="submit" value="Send">
         </center>
     </form>
+    <center><a href="../index.php" class="Hbtn">Back</a></center>
+    <br><br><br>
+    <footer>
+    	<?php include("../footer.php") ?>
+    </footer>
 </body>
 
 </html>

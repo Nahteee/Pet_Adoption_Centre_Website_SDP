@@ -1,19 +1,19 @@
 <?php
-session_start();
-include('../conn.php');
+include("../conn.php");
+include("../header.php");
+include("../session.php");
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $content = $_POST['content'];
-    $status = 0;
-    $user_id = $_SESSION["auth_user_id"];
-    $sql = "INSERT INTO tickets (user_ID,title,description,status) VALUES ('$user_id','$title','$content','$status')";
+    $status = 'Not Fixed';
+    $sql = "INSERT INTO tickets (user_ID,title,description,status) VALUES ('$userid','$title','$content','$status')";
 
     if (!mysqli_query($con,$sql)){
         die('Error: ' . mysqli_error($con));
     }
     else {
         echo '<script>alert("Submitted Successful!");
-        window.location.href= "index_mem.php";
+        window.location.href= "view_bug_status.php";
         </script>';
     }
       mysqli_close($con);
@@ -31,6 +31,10 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send Bug Report</title>
     <style>
+        .bug-form {
+          padding-top: 150px;
+        }
+
         input {
             width: 250px;
             padding: 8px;
@@ -47,7 +51,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <form method="post">
+    <form method="post" class="bug-form">
         <center>
             <h1>Send a Bug Report</h1>
             <label for="title">Title:</label><br>
@@ -58,7 +62,11 @@ if (isset($_POST['submit'])) {
             <input type="hidden" name="status" value="Not Fixed">
         </center>
     </form>
-    <center><a href="index_mem.php" class="Hbtn">Back</a></center>
+    <center><a href="../index.php" class="Hbtn">Back</a></center>
+    <br><br><br>
+    <footer>
+    	<?php include("../footer.php") ?>
+    </footer>
 </body>
 
 </html>

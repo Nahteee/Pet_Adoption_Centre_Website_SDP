@@ -6,50 +6,67 @@ include("../conn.php");
 $result = mysqli_query($con, "SELECT * FROM pets");
 ?>
 
-<html>
-<head>
-	<link rel = "stylesheet" href = "../style.css">
-</head>
-<body>
-	<title>Browse Pets</title>
-	<div class = "center">
-	<h2>All pets</h2>
-	<br>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Browse Pets</title>
+		<link rel = "stylesheet" href = "../CSS/memberstyle.css?v=<?php echo time(); ?>">
+	</head>
+	<body>
+		<?php include("../header.php"); ?>
+		<main>
 
-	<table>
-		<tr>
-			<th> </th>
-			<th>Species</th>
-			<th>Breed</th>
-			<th> </th>
-		</tr>
+			<form method="post" class="pet-form-class">
+				<p>Search</p> <input placeholder="by species, breed, age." type="text" name="search_key"> <button class="button" name="searchBtn" type="submit" >Submit</button>
 
-		<?php
-		while($row = mysqli_fetch_array($result)) {
-			echo "<tr>";
+			</form>
 
-			echo "<td>";
-			echo "<img src = '../uploads/" . $row['image_name'] . "' style = 'width:100px; height:auto;'>";
-			echo "</td>";
 
-			echo "<td>";
-			echo $row['species'];
-			echo "</td>";
+			<?php
+			$search_key = "";
+			if(isset($_POST['searchBtn'])){
+				$search_key = $_POST['search_key'];
+			}
+			$result=mysqli_query($con,"SELECT * FROM pets WHERE CONCAT(age, species, breed) LIKE '%".$search_key."%'");
+			?>
+			<div class="parentbox">
+				<?php
+				while($row=mysqli_fetch_array($result))
+				{
+					$data = '<div class="childbox">
+					<div class="align-img" style="float: left; margin-right: 15px; border-radius:15px; background-image: url(../Uploads/'.$row['image_name'].');
+				  background-repeat: no-repeat;
+				  background-position: top;
+				  background-size: cover;">
+					</div>
+					<h1 class="child-h1"> '.$row['name'].' </h1>
+					<p> Species: '.$row['species'].' </p>
+					<p> Breed: '.$row['breed'].' </p>
+					<p> Age: '.$row['age'].' </p>
+					<button class="small">
+					<a class="buttonlink" href="viewpages.php?id='.$row['centre_ID'].'">
+					View page
+					</a>
+					</button>
 
-			echo "<td>";
-			echo $row['breed'];
-			echo "</td>";
-		
-			echo "<td>";
-			echo "<button class='small'><a class='buttonlink' href=\"viewpages.php?id=";
-			echo $row['ID'];
-			echo "\">View page</a></button></td>";
-			echo "</tr>";
-		}
-		mysqli_close($con);
-		?>
 
-	</table>
-</div>
-</body>
+					</div>
+					';
+					echo $data;
+
+					}
+				mysqli_close($con);
+
+
+				 ?>
+			</div>
+
+
+		</main>
+
+	<footer>
+	<?php include("../footer.php") ?>
+	</footer>
+	</body>
 </html>

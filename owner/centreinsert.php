@@ -1,10 +1,11 @@
-<?php 
+<?php
 //PHP to send new applications
 
 include("../conn.php");
 include("../session.php");
+$id = $userid;
 
-$target_dir = "../uploads/";
+$target_dir = "../Uploads/";
 $target_file = $target_dir . basename($_FILES["centrePic"]["name"]);
 $id = $_SESSION['userID'];
 
@@ -19,11 +20,12 @@ VALUES
 }
 
 else {
-    $sql="INSERT INTO centre_pages (user_ID, centre_name, ssm, location, phone, email, description, verified)
+    $file_name="default.jpg";
+    $sql="INSERT INTO centre_pages (user_ID, centre_name, ssm, location, phone, email, description, verified, centre_pic)
 
 VALUES
 
-('$id', '$_POST[centreName]', '$_POST[centreSSM]', '$_POST[address]', '$_POST[centrePhone]', '$_POST[centreEmail]', '$_POST[centreDesc]', 0)";
+('$id', '$_POST[centreName]', '$_POST[centreSSM]', '$_POST[address]', '$_POST[centrePhone]', '$_POST[centreEmail]', '$_POST[centreDesc]', 0, '$file_name')";
 }
 
 if (!mysqli_query($con, $sql)) {
@@ -31,7 +33,7 @@ if (!mysqli_query($con, $sql)) {
 }
 else {
     echo "application submmited!";
-    header("location:centreowner.php");
+    header("location:/SDP-Source-Code/index.php");
 }
 
 mysqli_close($con);

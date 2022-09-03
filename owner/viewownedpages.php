@@ -2,17 +2,19 @@
 //Page where owners can view all their owned pages
 
 include("../conn.php");
-$id = intval($_GET['id']); 
+include("../header.php");
+include("../session.php");
+$id = $userid;
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND verified = 1");
 ?>
 
 <html>
 <head>
-	<link rel = "stylesheet" href = "../style.css">
+	<link rel = "stylesheet" href = "../CSS/ownerstyle.css">
 </head>
 <title>View owned pages</title>
-<div class = "center">
-<body>
+<div class = "center" style='background-color: white;'>
+<body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'>
 	<title>View Adoption Centre Pages</title>
 	<h2>Owned Adoption Centres</h2>
 	<br>
@@ -34,16 +36,19 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id AND
 			echo "<a href=\"../member/viewpages.php?id=";
 			echo $row['ID'];
 			echo "\">Visit page</a></td>";
-			
+
 			echo "<td>";
 			echo "<a href=\"editpage.php?id=";
 			echo $row['ID'];
 			echo "\">Edit</a></td>";
-			
+
 		}
 		mysqli_close($con);
 		?>
 	</table>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>

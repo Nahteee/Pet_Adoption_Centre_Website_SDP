@@ -1,18 +1,20 @@
-<?php 
+<?php
 //Page for owners to view their sent applications
 
 include("../conn.php");
-$id = intval($_GET['id']);
+include("../header.php");
+include("../session.php");
+$id = $userid;
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
 ?>
 
 <html>
-<body>
+<body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'>
 	<head>
-		<link rel = "stylesheet" href = "../style.css">
+		<link rel = "stylesheet" href = "../CSS/ownerstyle.css">
 	</head>
 	<title>View applications as Centre Owner</title>
-	<div class = "center">
+	<div class = "center" style='background-color: white;'>
 	<h2>Adoption centre page applications</h2>
 	<br>
 	<body>
@@ -48,11 +50,11 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
 			echo "<td>";
 			echo $row['email'];
 			echo "</td>";
-			
+
 			echo "<td>";
 			echo $row['description'];
 			echo "</td>";
-			
+
 			echo "<td>";
 			if ($row['verified'] == 1) {
 				echo "Verified";
@@ -66,5 +68,8 @@ $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE user_ID = $id");
 		?>
 	</table>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>

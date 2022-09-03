@@ -1,18 +1,22 @@
-<?php 
+<?php
 //Page for center owners to view pet applications
 
 include("../conn.php");
-
-$id = intval($_GET['id']);
+include("../header.php");
+include("../session.php");
+$id = $userid;
 $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 ?>
 
 <html>
 <head>
-	<link rel="stylesheet" href="../style.css">
-<body>
+	<link rel="stylesheet" href="../CSS/POOP.css">
+<body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'>
 	<title>View adoption applications</title>
-	<div class = "beeg">
+	<div class="center">
+
+
+	<div class = "beeg" style='background-color: white;'>
 	<h2>Pet adoption applications</h2>
 	<br>
 
@@ -27,8 +31,8 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 			<th>Address</th>
 			<th>Remarks</th>
 			<th>Pet</th>
-			<td> </td>
-			<td> </td>
+			<th> </th>
+			<th> </th>
 		</tr>
 		<?php
 		while($row = mysqli_fetch_array($result)) {
@@ -59,17 +63,17 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 			echo "<td>";
 			echo $row1['income'];
 			echo "</td>";
-			
+
 			echo "<td>";
 			echo $row1['address'];
 			echo "</td>";
-			
+
 			echo "<td>";
 			echo $row['remarks'];
 			echo "</td>";
 
 			echo "<td>";
-			$petID = $row['ID'];
+			$petID = $row['petID'];
 			$pet = mysqli_query($con, "SELECT * FROM pets WHERE ID = $petID");
 			$row2 = mysqli_fetch_array($pet);
 			echo $row2['name'];
@@ -79,8 +83,8 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 			echo "<button class = 'small'> <a class = 'buttonlink' href=\"approvepetapp.php?id=";
 			echo $row['ID'];
 			echo "\">Verify</a> </button> </td>";
-			
-			echo "<td> <button class = 'small'><a href class = 'buttonlink' =\"deletepetapp.php?id=";
+
+			echo "<td> <button class = 'small'><a class = 'buttonlink' href=\"deletepetapp.php?id=";
 			echo $row['ID'];
 			echo "\" onClick=\"return confirm('Delete ";
 			echo " application details?');\">Delete</a></td> </button></tr>";
@@ -89,5 +93,9 @@ $result = mysqli_query($con, "SELECT * FROM adoption_request WHERE status = 0");
 		?>
 	</table>
 </div>
+</div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>

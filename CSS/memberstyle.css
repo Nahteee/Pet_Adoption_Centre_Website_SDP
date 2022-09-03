@@ -1,0 +1,203 @@
+main {
+  padding-top: 55px;
+}
+
+.pet-form-class {
+  display: flex;
+  /* background-color: blue; */
+  margin-bottom: 20px;
+  margin-left: 6%;
+  align-items: center;
+}
+
+.pet-form-class p {
+  font-family: 'Tangerine', cursive;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.pet-form-class input {
+  line-height: 20px;
+  margin-right: 5px;
+  height: 30px;
+  width: 200px;
+  border-radius: 7px;
+  padding-left: 15px;
+}
+
+
+.pet-form-class button {
+  height: 35px;
+  line-height: 20px;
+  padding: 0 10px;
+  font-size: 16px;
+  /* font-family: 'Tangerine', cursive; */
+  border-radius: 7px;
+  background-color: #F4ECD0;
+  transition: 0.2s ease-in-out;
+}
+
+.pet-form-class button:hover {
+  background-color: #f0c040;
+}
+
+.owned-pets {
+  text-decoration: none;
+  color: #444;
+  font-family: 'Tangerine', cursive;
+  weight: 300;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 15px;
+  /* display: block; */
+  /* height: auto; */
+  /* width: 250px; */
+  background-color: #f0c040;
+  transition: 0.2s ease-in-out;
+  line-height: 25px;
+  /* margin-top: 10px; */
+  /* justify-self: end; */
+  margin-left: 57%;
+}
+
+.owned-pets:hover {
+  background-color: #c0a020;
+}
+
+.owned-pages {
+  margin-left: 43%;
+}
+
+.owned-pages a {
+  text-decoration: none;
+  color: #444;
+  font-family: 'Tangerine', cursive;
+  weight: 300;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 15px;
+  /* display: block; */
+  /* height: auto; */
+  /* width: 250px; */
+  background-color: #f0c040;
+  transition: 0.2s ease-in-out;
+  line-height: 25px;
+  margin-left: 20px;
+  /* margin-top: 10px; */
+  /* justify-self: end; */
+}
+
+.owned-pages a:hover {
+  background-color: #c0a020;
+}
+
+
+
+.parentbox {
+  width: 90%;
+  /* background-color: blue; */
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.childbox {
+  /*
+  flex: flex-grow flex-shrink flex-basis;
+  flex-grow 	A number specifying how much the item will grow relative to the rest of the flexible items
+  flex-shrink 	A number specifying how much the item will shrink relative to the rest of the flexible items
+  flex-basis 	The length of the item. Legal values: "auto", "inherit", or a number followed by "%", "px", "em" or any other length unit
+  */
+  flex: 0 0 30%;
+  margin: 10px;
+  height: auto;
+  background-color: #F4ECD0;
+  border-radius: 15px;
+  border: #d4d4d4 solid 2px;
+  padding: 10px;
+  width:
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.align-img {
+  /* background-color: blue; */
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.childbox h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-family: 'Tangerine', cursive;
+  weight: 500;
+  line-height: 30px;
+}
+
+.h1-wrap {
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.childbox p {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Tangerine', cursive;
+  /* weight: 300; */
+}
+
+.p-wrap {
+  height: 60px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  overflow: hidden;
+}
+
+.childbox button {
+  margin-top: 25px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.view-button {
+
+}
+
+
+.childbox a {
+  text-decoration: none;
+  color: #444;
+  font-family: 'Tangerine', cursive;
+  weight: 300;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 15px;
+  /* display: block; */
+  /* height: auto; */
+  /* width: 250px; */
+  background-color: #f0c040;
+  transition: 0.2s ease-in-out;
+  line-height: 25px;
+  margin-top: 10px;
+  /* text-align: center; */
+  /* margin-left: 150px; */
+
+}
+
+.childbox a:hover {
+  background-color: #c0a020;
+}

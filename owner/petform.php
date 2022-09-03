@@ -1,14 +1,16 @@
 <?php
-$id = intval($_GET['id']); 
+include("../header.php");
+include("../session.php");
+$id = intval($_GET['id']);
 ?>
 <html>
 <!--Page to fill up form to add a new pet<-->
 <head>
-    <link rel = "stylesheet" href = "../style.css">
+    <link rel = "stylesheet" href = "../CSS/ownerstyle.css">
 </head>
-<body>
+<body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'>
     <title>Add a pet</title>
-    <div class = "center">
+    <div class = "center" style='background-color: white;'>
     <h2>Add a pet to your Centre Page</h2>
     <h4>Please enter your pet's details below: </h4>
     <br>
@@ -20,7 +22,7 @@ $id = intval($_GET['id']);
         </p>
         <p>
         Pet Age: <br>
-        <input type="text" name="petAge" required="required">
+        <input type="number" name="petAge" required="required">
         </p>
         <p>
         Pet Species: <br>
@@ -31,11 +33,13 @@ $id = intval($_GET['id']);
         <input type="text" name="petBreed" required="required">
         </p>
         Pet photo: <br>
-        <input type="file" name="petPic" id="centrePic">
+        <input type="file" name="petPic" id="petPic">
         </p>
         <input type="submit" value="Submit Application">
     </form>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 </html>
-

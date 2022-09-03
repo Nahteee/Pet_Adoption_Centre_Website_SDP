@@ -1,9 +1,10 @@
-<?php 
+<?php
 //PHP to edit pet details
 
 include("../conn.php");
-
-$id = intval($_GET['id']); 
+include("../header.php");
+include("../session.php");
+$id = intval($_GET['id']);
 $result = mysqli_query($con,"SELECT * FROM pets WHERE ID=$id");
 
 while($row = mysqli_fetch_array($result)) {
@@ -11,12 +12,12 @@ while($row = mysqli_fetch_array($result)) {
 ?>
 <html>
 <head>
-        <link rel = "stylesheet" href = "../style.css">
+        <link rel = "stylesheet" href = "../CSS/ownerstyle.css">
 </head>
 <title>Edit pet details</title>
 
-<body>
-        <div class = "center">
+<body style='background-image: url("/SDP-Source-Code/Imgs/bg.png");'>
+        <div class = "center" style='background-color: white;'>
                 <h1>Centre pets </h1>
 <form action="updatepet.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $row['ID'] ?>">
@@ -38,12 +39,16 @@ while($row = mysqli_fetch_array($result)) {
         </p>
         <p>
         Pet photo: <br>
-        <img src = "<?php echo "../uploads/" . $row['image_name']?>" style = 'width: 300px; height: auto;'> <br>
-        <input type="file" name="petPic" id="petPic" value = "<?php echo $row['image_name'] ?>">
+        <img src = "<?php echo "../Uploads/" . $row['image_name']?>" style = 'width: 300px; height: auto;'> <br>
+        <input type="hidden" name="oldpic" value="<?php echo $row['image_name']; ?>">
+        <input type="file" name="petPic" id="petPic">
         </p>
         <input type="submit" value="Save changes">
     </form>
 </div>
+<footer>
+	<?php include("../footer.php") ?>
+</footer>
 </body>
 
 <?php

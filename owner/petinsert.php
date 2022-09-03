@@ -1,9 +1,10 @@
-<?php 
-//PHP to add new pets 
+<?php
+//PHP to add new pets
 
 include("../conn.php");
-
-$image = $_FILES['centrePic']['name'];
+$target_dir = "../Uploads/";
+$target_file = $target_dir . basename($_FILES["petPic"]["name"]);
+$image = $_FILES['petPic']['name'];
 
 $sql="INSERT INTO pets (name, age, species, breed, centre_ID, image_name)
 
@@ -15,8 +16,7 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-    echo "application submmited!";
-    header("location: centreowner.php");
+  echo '<script type="text/JavaScript"> alert("Pet Succesfully Updated!"); window.location.href = "/SDP-Source-Code/member/browsepages.php"; </script>';
 }
 
 mysqli_close($con);

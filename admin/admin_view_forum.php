@@ -9,7 +9,7 @@ include("../conn.php");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../CSS/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../CSS/admin_style_2.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -41,17 +41,19 @@ include("../conn.php");
         <br>
         <br>
         <h1>Admin View Forum</h1>
-        <?php echo '<table border="1px;">'; ?>
+        <?php echo '<table style="max-width:700px;border:none">'; ?>
         <tr>
-
-            <td width="400px;" style="text-align: center;">
-                Name
+            <td width="400px;" style="text-align:center;background-color:#f0c040;line-height:50px;height:0px">
+                Title
             </td>
-            <td width="80px;" style="text-align: center;">
+            <td width="80px;" style="text-align:center;background-color:#f0c040;line-height:50px;height:0px">
                 Creator
             </td>
-            <td width="190px;" style="text-align: center;">
+            <td width="190px;" style="text-align:center;background-color:#f0c040;line-height:50px;height:0px">
                 Date
+            </td>
+            <td width="80px;" style="text-align:center;background-color:#f0c040;line-height:50px;height:0px">
+                Delete
             </td>
         </tr>
 
@@ -64,9 +66,14 @@ include("../conn.php");
             $id = $row['topic_id'];
             echo "<tr>";
 
-            echo "<td style='text-align: center;'><a href='admin_view_topic.php?id=$id'>" . $row['title'] . "</a></td>";
-            echo "<td style='text-align: center;'>" . $row['username'] . "</td>";
-            echo "<td style='text-align: center;'>" . $row['time'] . "</td>";
+            echo "<td><a href='admin_view_topic.php?id=$id'>" . $row['title'] . "</a></td>";
+            echo "<td>" . $row['username'] . "</td>";
+            echo "<td>" . $row['time'] . "</td>";
+            echo "<td><a href=\"admin_delete_topic.php?id="; //hyperlink to delete.php page with ‘id’ parameter
+            echo $row['topic_id'];
+            echo "\" onClick=\"return confirm('Delete "; //JavaScript to confirm the deletion of the record
+            echo $row['title'];
+            echo " details?');\">Delete</a></td>";
             echo "</tr>";
         }
     } else {

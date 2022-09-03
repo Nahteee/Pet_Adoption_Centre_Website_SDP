@@ -6,45 +6,76 @@ include("../conn.php");
 $result = mysqli_query($con, "SELECT * FROM centre_pages WHERE verified = 1");
 ?>
 
-<html>
-<head>
-	<link rel = "stylesheet" href = "../style.css">
-</head>
-<body>
-	<title>Browse Adoption Centre Pages</title>
-	<div class = "center">
-	<h2>All Adoption Centres</h2>
-	<br>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Browse Adoption Centre Pages</title>
+		<link rel = "stylesheet" href = "../CSS/memberstyle.css?v=<?php echo time(); ?>">
+	</head>
+	<body>
+		<?php include("../header.php"); ?>
+		<main>
 
-	<table>
+			<form method="post" class="pet-form-class">
+				<p>Search</p> <input placeholder="by name or location." type="text" name="search_key"> <button class="button" name="searchBtn" type="submit" >Submit</button>
+				<?php
+				// session_start();
+				if (isset($_SESSION['owner'])) {
+					echo '<div class="owned-pages">';
+					echo '<a href="/SDP-Source-Code/owner/viewownedpages.php">View owned pages</a>';
+					echo '<a href="/SDP-Source-Code/owner/centreform.php">Apply for new page</a>';
+					echo '</div>';
+				}
+				 ?>
+			</form>
 
-		<?php
-		while($row = mysqli_fetch_array($result)) {
-			echo "<tr>";
+			<?php
+			$search_key = "";
+			if(isset($_POST['searchBtn'])){
+				$search_key = $_POST['search_key'];
+			}
+			$result=mysqli_query($con,"SELECT * FROM centre_pages WHERE verified = 1 AND CONCAT(centre_name, location) LIKE '%".$search_key."%'");
+			?>
+			<div class="parentbox">
+				<?php
+				while($row=mysqli_fetch_array($result))
+				{
+					$data = '<div class="childbox">
+					<div class="align-img" style="float: left; margin-right: 15px; border-radius:15px; background-image: url(../Uploads/'.$row['centre_pic'].');
+				  background-repeat: no-repeat;
+				  background-position: top;
+				  background-size: cover;">
+					</div>
+					<div class="h1-wrap">
+					<h1 class="child-h1"> '.$row['centre_name'].' </h1>
+					</div>
+					<div class="p-wrap">
+					<p> Location: '.$row['location'].' </p>
+					</div>
+					<button class="view-button">
+					<a class="buttonlink" href="viewpages.php?id='.$row['ID'].'">
+					View page
+					</a>
+					</button>
 
-			echo "<td>";
-			echo "<img src = '../uploads/" . $row['centre_pic'] . "' style = 'width:100px; height:auto;'>";
-			echo "</td>";
 
-			echo "<td>";
-			echo "<a href=\"viewpages.php?id=";
-			echo $row['ID'];
-			echo "\">" . $row['centre_name'] . "</a></td>";
+					</div>
+					';
+					echo $data;
 
-			echo "<td>";
-			echo $row['location'];
-			echo "</td>";
+					}
+				mysqli_close($con);
 
-			echo "<td>";
-			echo $row['description'];
-			echo "</td>";
-			echo "</tr>";
-			
-		}
-		mysqli_close($con);
-		?>
 
-	</table>
-</div>
-</body>
+				 ?>
+			</div>
+
+
+		</main>
+
+	<footer>
+	<?php include("../footer.php") ?>
+	</footer>
+	</body>
 </html>

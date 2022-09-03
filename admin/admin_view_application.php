@@ -11,7 +11,7 @@ include("../conn.php");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--So that the browser will render the width of the page at the width of its own screen-->
   <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
-  <link rel="stylesheet" href="../CSS/style.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="../CSS/admin_style_2.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
   <title>Centre Application</title>
 </head>
@@ -105,9 +105,7 @@ include("../conn.php");
           echo "<td>";
           echo "<button class = 'small'> <a class = 'buttonlink' href=\"admin_delete_application.php?id=";
           echo $row['ID'];
-          echo "\" onClick=\"return confirm('Delete "; //JavaScript to confirm the deletion of the record
-          echo $row['centre_name'];
-          echo " details?');\">Delete</a></td></tr>";
+          echo "\">Delete</a> </button> </td></tr>";
         }
         mysqli_close($con);
         ?>
