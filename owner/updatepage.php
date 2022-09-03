@@ -4,7 +4,7 @@
 include("../conn.php");
 include("../session.php");
 
-$target_dir = "../uploads/";
+$target_dir = "/SDP-Source-Code/Uploads/";
 $target_file = $target_dir . basename($FILES["centrePic"]["name"]);
 
 if(move_uploaded_file($FILES["centrePic"]["tmp_name"], $target_file)) {
@@ -42,7 +42,7 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-    echo '<script type="text/JavaScript"> alert("Page Succesfully Updated!"); window.location.href = "../member/viewpages.php?id=' . $_POST['id']." </script>';
+    // echo '<script type="text/JavaScript"> alert("Page Succesfully Updated!"); window.location.href = "../member/viewpages.php?id=' . $_POST['id'].'" </script>';
 }
 
 mysqli_close($con);
