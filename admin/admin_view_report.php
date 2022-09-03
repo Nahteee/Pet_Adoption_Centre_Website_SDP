@@ -45,8 +45,20 @@ $bug_value = json_decode($amount_bug);
 $array = [];
 array_push($array, $user_value, $pet_value, $owner_value, $forum_value, $feedback_value, $bug_value);
 
-//latest member registered
-//SELECT * FROM `users` WHERE role = 'member' ORDER BY ID DESC LIMIT 5;
+//get verified centre pages 
+$veri_query = $con->query("SELECT COUNT(ID) AS total_verified FROM centre_pages WHERE verified = false;");
+foreach ($veri_query as $data) {
+    $amount_verified = $data['total_verified'];
+}
+
+//get not verified centre pages
+$no_veri_query = $con->query("SELECT COUNT(ID) AS total_not_verified FROM centre_pages WHERE verified = true;");
+foreach ($no_veri_query as $data) {
+    $amount_no_verified = $data['total_not_verified'];
+}
+
+$stat = [];
+array_push($stat,$amount_verified,$amount_no_verified);
 
 //get amount of unfixed bugs
 $unfixed_query = $con->query("SELECT COUNT(ID) as unfixed_bug FROM tickets WHERE status = 'Not Fixed'");
@@ -239,12 +251,12 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
     );
 
     //adoption donut chart
-    const labeldonut = ['Total Pet Adopted', 'Pet pending for Adoption'];
+    const labeldonut = ['Total Centre Verified', 'Centre Pending Verification'];
     const datadonut = {
         labels: labeldonut,
         datasets: [{
             label: 'Amount',
-            data: ['3', '4'],
+            data: <?= json_encode(array_values($stat)); ?>,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(201, 203, 207, 0.2)'

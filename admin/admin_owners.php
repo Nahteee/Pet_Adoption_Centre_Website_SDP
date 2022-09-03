@@ -69,10 +69,6 @@ include("../conn.php");
         $sql = 'SELECT * FROM users WHERE role = "owner" LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
         $result = mysqli_query($con, $sql);
         while ($row = mysqli_fetch_array($result)) {
-          // $product_image = "default1.jpg";
-          // if ($row['product_image']!=""){
-          // 	$product_image = $row['product_image'];
-          // }
           echo "<tr>"; // alternative way is : echo ‘<trbgcolor="#99FF66">’;
           echo "<td>";
           echo $row['ID'];
@@ -80,24 +76,15 @@ include("../conn.php");
           echo "<td>";
           echo $row['username'];
           echo "</td>";
-          // echo "<td>";
-          // echo '<img style="vertical-align: middle; margin-left: 10px; padding-right: 0px" src="'.$product_image.'" width="60px">';
-          // echo "</td>";
           echo "<td>";
           echo $row['first_name'];
           echo "</td>";
-          // echo "<td>";
-          // echo number_format($row['product_price'],2);
-          // echo "</td>";
           echo "<td>";
           echo $row['last_name'];
           echo "</td>";
           echo "<td>";
           echo $row['phone'];
           echo "</td>";
-          // echo "<td><a href=\"admin_view_info_user.php?id="; //edit.php will be created in Lab 8
-          // echo $row['ID'];
-          // echo "\">View</a></td>";
           echo "<td id='fix'>
             <button data-modal-target='#modal' class='view' id=";
           echo $row['ID'];

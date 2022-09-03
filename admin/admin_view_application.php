@@ -74,27 +74,21 @@ include("../conn.php");
           echo "<td>";
           echo $row['ID'];
           echo "</td>";
-
           echo "<td>";
           echo $row['centre_name'];
           echo "</td>";
-
           echo "<td>";
           echo "<img src = '../Uploads/" . $row['centre_pic'] . "' style = 'width:100px; height:auto;'>";
           echo "</td>";
-
           echo "<td>";
           echo $row['description'];
           echo "</td>";
-
           echo "<td>";
           echo $row['ssm'];
           echo "</td>";
-
           echo "<td>";
           echo $row['location'];
           echo "</td>";
-
           echo "<td>";
           echo $row['phone'];
           echo "</td>";

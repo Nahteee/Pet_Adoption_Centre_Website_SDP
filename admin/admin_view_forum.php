@@ -65,7 +65,6 @@ include("../conn.php");
         while ($row = mysqli_fetch_assoc($check)) {
             $id = $row['topic_id'];
             echo "<tr>";
-
             echo "<td><a href='admin_view_topic.php?id=$id'>" . $row['title'] . "</a></td>";
             echo "<td>" . $row['username'] . "</td>";
             echo "<td>" . $row['time'] . "</td>";
