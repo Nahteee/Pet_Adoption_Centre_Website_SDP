@@ -85,7 +85,7 @@ $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$i
 	</div>
 		<h1 class="comment-h1"> Page Comment Section</h1>
 		<form action = "centrecomment.php" method = "post" class="comment-form">
-			<input type="hidden" name="userID" value="<?php echo $userid ?>">
+			<input type="hidden" name="userID" value="<?php echo $_SESSION['userID'] ?>">
 				<input type="hidden" name="centreId" value="<?php echo $id ?>">
 				<textarea class="input-box" type = "text"  name = "centreComment" placeholder="Type a comment!"></textarea> <br> <br>
 			<input type = "submit" value = "Submit comment"> <br> <br>
