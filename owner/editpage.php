@@ -49,7 +49,8 @@ while($row = mysqli_fetch_array($result)) {
         <p>
         Centre photo: <br>
         <img src = "<?php echo "../Uploads/" . $row['centre_pic']?>" style = 'width: 300px; height: auto;'> <br>
-        <input type="file" name="centrePic" value = "<?php echo $row['centre_pic'] ?>">
+        <input type="hidden" name="oldcentrepic" value="<?php echo $row['centre_pic']; ?>">
+        <input type="file" name="centrePic">
         </p>
         <input type="submit" value="Save changes">
     </form>
