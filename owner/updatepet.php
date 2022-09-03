@@ -46,7 +46,7 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-	  // echo '<script type="text/JavaScript"> alert("Pet Succesfully Updated!"); window.location.href = "/SDP-Source-Code/member/browsepages.php" </script>';
+	  echo '<script type="text/JavaScript"> alert("Pet Succesfully Updated!"); window.location.href = "/SDP-Source-Code/member/browsepages.php" </script>';
 }
 
 mysqli_close($con);

@@ -20,7 +20,7 @@ if (basename($_FILES["centrePic"]["name"])) {
         email='$_POST[centreEmail]',
         description='$_POST[centreDesc]',
         centre_pic= '$file_name'
-        
+
         WHERE ID=$_POST[id];";
 } else {
     $sql = "UPDATE centre_pages
@@ -40,7 +40,7 @@ WHERE ID=$_POST[id];";
 if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 } else {
-    // echo '<script type="text/JavaScript"> alert("Page Succesfully Updated!"); window.location.href = "../member/viewpages.php?id=' . $_POST['id'].'" </script>';
+    echo '<script type="text/JavaScript"> alert("Page Succesfully Updated!"); window.location.href = "../member/viewpages.php?id=' . $_POST['id'].'" </script>';
 }
 
 mysqli_close($con);
