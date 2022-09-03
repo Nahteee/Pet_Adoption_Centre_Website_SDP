@@ -59,8 +59,10 @@ $comments = mysqli_query($con, "SELECT * FROM centre_comments WHERE centre_ID=$i
 						while($row=mysqli_fetch_array($result))
 						{
 							$data = '<div class="childbox">
-							<div class="align-img" style="float: left; margin-right: 15px;">
-							<img src="../Uploads/'.$row['image_name'].'" height="200" style="border-radius:15px;">
+							<div class="align-img" style="float: left; margin-right: 15px; border-radius:15px; background-image: url(../Uploads/'.$row['image_name'].');
+						  background-repeat: no-repeat;
+						  background-position: top;
+						  background-size: cover;">
 							</div>
 							<h1 class="child-h1"> '.$row['name'].' </h1>
 							<p> Species: '.$row['species'].' </p>
