@@ -18,7 +18,7 @@ include("../conn.php");
   <script src="../JS/bootstrap.js"></script>
   <script defer src="../JS/script.js"></script>
 
-  <title></title>
+  <title>View Centres</title>
 </head>
 
 <body>

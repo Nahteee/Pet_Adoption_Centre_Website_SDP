@@ -18,7 +18,7 @@ include("../conn.php");
   <script src="../JS/bootstrap.js"></script>
   <script defer src="../JS/script.js"></script>
 
-  <title></title>
+  <title>View Page Owners</title>
 </head>
 
 <body>
@@ -121,13 +121,13 @@ include("../conn.php");
       if ($i > $page) {
         echo "<a href='admin_owners.php?page=" . ($page + 1) . "' class='btn btn-danger'>Next</a>";
       }
-      
+
 
       ?>
 
       <div class="box-header">
       </div>
-      
+
 
     </section>
   </main>

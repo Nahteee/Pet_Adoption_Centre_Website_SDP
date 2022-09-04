@@ -13,7 +13,7 @@ include("../conn.php");
   <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/admin_style_2.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
-  <title></title>
+  <title>View pets</title>
 </head>
 
 <body>
@@ -69,7 +69,7 @@ include("../conn.php");
           if ($row['image_name'] != "") {
             $product_image = $row['image_name'];
           }
-          echo "<tr>"; 
+          echo "<tr>";
           echo "<td>";
           echo $row['ID'];
           echo "</td>";

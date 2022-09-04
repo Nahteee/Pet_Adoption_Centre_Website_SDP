@@ -13,7 +13,7 @@ include("../conn.php");
   <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/admin_style_2.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
-  <title></title>
+  <title>Feedback</title>
 </head>
 
 <body>
@@ -75,7 +75,7 @@ include("../conn.php");
             echo $row['description'];
             echo "</td>";
             echo "</tr>";
-            } 
+            }
             mysqli_close($con);//to close the database connection
         ?>
       </table>
@@ -95,7 +95,7 @@ include("../conn.php");
 
       <div class="box-header">
       </div>
-      
+
 
     </section>
   </main>

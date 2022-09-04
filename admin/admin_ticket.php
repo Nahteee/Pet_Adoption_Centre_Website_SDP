@@ -13,7 +13,7 @@ include("../conn.php");
     <link rel="stylesheet" href="../CSS/reset.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/admin_style_2.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/admin_style.css?v=<?php echo time(); ?>">
-    <title></title>
+    <title>Bug Reports</title>
 </head>
 
 <body>
