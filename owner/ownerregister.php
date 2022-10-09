@@ -93,7 +93,7 @@
 			Annual Income
 		</div>
 		<div class="field">
-			<input type="text" name="income" maxlength="12">
+			<input type="number" name="income" maxlength="12">
 		</div>
 	</div>
 
@@ -107,7 +107,7 @@
 		</div>
 	</div>
 
-  <p>Already have an account? <a href="login.php">Log in!</a></p>
+  <p>Already have an account? <a href="../login.php">Log in!</a></p>
 
 
 </div>

@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
 
 
 if ($valid == 0){
-    echo '<script type="text/JavaScript"> alert("This username has been taken. Please pick another username"); window.location.href = "createaccount.php"; </script>';
+    echo '<script type="text/JavaScript"> alert("This username has been taken. Please pick another username"); window.location.href = "register.php"; </script>';
 
 } else {
     $sql="INSERT INTO users (username, password, role, IC, email, first_name, last_name, phone, income, address)
@@ -132,7 +132,7 @@ $con->close();
 			Annual Income
 		</div>
 		<div class="field">
-			<input type="text" name="income" maxlength="12">
+			<input type="number" name="income" maxlength="12">
 		</div>
 	</div>
 

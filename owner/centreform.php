@@ -36,7 +36,7 @@ include("../header.php");
         </p>
         <p>
         Centre description: <br>
-        <textarea type="text" name="centreDesc"> </textarea>
+        <textarea type="text" name="centreDesc" required="required"> </textarea>
         </p>
         <p>
         Centre photo: <br>

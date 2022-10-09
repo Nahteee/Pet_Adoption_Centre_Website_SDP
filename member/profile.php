@@ -169,7 +169,7 @@ if (!isset($_SESSION['username']))  //do not allow non members to access this pa
 			Annual Income
 		</div>
 		<div class="field">
-			<input type="text" name="income" maxlength="12" value="<?php echo $_SESSION["income"] ?>" required="required">
+			<input type="number" name="income" maxlength="12" value="<?php echo $_SESSION["income"] ?>" required="required">
 		</div>
 	</div>
 

@@ -32,8 +32,7 @@ if (!mysqli_query($con, $sql)) {
     die("Error: " . mysqli_error($con));
 }
 else {
-    echo "application submmited!";
-    header("location:/SDP-Source-Code/index.php");
+    echo '<script type="text/JavaScript"> alert("Adoption Page Request Sent!"); window.location.href = "/SDP-Source-Code/index.php"; </script>';
 }
 
 mysqli_close($con);

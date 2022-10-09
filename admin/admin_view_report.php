@@ -45,7 +45,7 @@ $bug_value = json_decode($amount_bug);
 $array = [];
 array_push($array, $user_value, $pet_value, $owner_value, $forum_value, $feedback_value, $bug_value);
 
-//get verified centre pages 
+//get verified centre pages
 $veri_query = $con->query("SELECT COUNT(ID) AS total_verified FROM centre_pages WHERE verified = false;");
 foreach ($veri_query as $data) {
     $amount_verified = $data['total_verified'];
@@ -251,7 +251,7 @@ array_push($bug_array, $bug_fix, $bug_no_fix);
     );
 
     //adoption donut chart
-    const labeldonut = ['Total Centre Verified', 'Centre Pending Verification'];
+    const labeldonut = ['Centre Pending Verification', 'Total Centre Verified'];
     const datadonut = {
         labels: labeldonut,
         datasets: [{

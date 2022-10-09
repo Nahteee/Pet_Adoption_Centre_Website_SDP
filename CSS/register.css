@@ -34,7 +34,7 @@ margin:0 auto;
 }
 
 /* Full-width input fields */
-input[type=text], input[type=file], input[type=password], input[type=date], input[type=email], input[type=tel], textarea, select {
+input[type=text],input[type=number], input[type=file], input[type=password], input[type=date], input[type=email], input[type=tel], textarea, select {
 width: 100%;
 padding: 15px;
 margin: 5px 0 22px 0;
