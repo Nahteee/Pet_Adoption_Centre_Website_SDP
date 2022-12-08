@@ -1,4 +1,2 @@
-DONT COMMIT TO MY BRANCH WITHOUT ASKING ME FIRST
+# Software Development Project Pet Adoption Website
 
-COMMITTING LITERALLY FUCKS UP MY SIDE ENTIRELY
-sorry ethan - Branch Coloniser
